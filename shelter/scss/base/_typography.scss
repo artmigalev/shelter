@@ -18,3 +18,55 @@ p {
   line-height: 160%;
   color: $color-dark-xl;
 }
+//**---------LOGO HEADER ----**//
+.logo__name {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+}
+.logo__description {
+  font-family: $second-family;
+
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: $color-light-xl;
+}
+
+//**-------- NAV HEADER --------**//
+.nav-list__links {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: $color-dark-s;
+}
+
+.list:first-child {
+  color: $color-light-s;
+  border-bottom: 3px solid $color-primary;
+}
+
+.content__title {
+  color: $color-light-xl;
+  margin: 0 0 42px 0;
+  letter-spacing: 2.6px;
+}
+.content__text {
+  color: $color-dark-s;
+  line-height: 160%;
+  font-weight: 400;
+  margin: 0 0 42px 0;
+}
+
+//**----------BUTTONS---------**//
+.not-only__button {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  color: $color-dark-3xl;
+}

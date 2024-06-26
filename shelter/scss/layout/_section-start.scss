@@ -1,3 +1,45 @@
-.not-only{
+.not-only {
+  background: $start-screen-gradient-background;
+  width: 100%;
+  padding-top: 30px;
+  .not-only__wrapper {
+    @include fl-clmn;
+    gap: 90px;
+    .header {
+      @include fl-row;
+      align-items: center;
+      justify-content: space-between;
 
+      .header__logo {
+        text-align: left;
+        @include fl-clmn;
+        gap: 10px;
+      }
+      .header__navigation {
+        .nav__list{
+          padding-left: 0;
+          @include fl-row;
+          gap: 35px;
+          .list{
+            list-style: none;
+            .nav-list__links{
+              text-decoration: none;
+            }
+          }
+
+        }
+      }
+    }
+    .not-only__container{
+      @include fl-row;
+      justify-content: space-between;
+      align-items: center;
+
+      .not-only__content{
+        @include fl-clmn;
+        max-width: 460px;
+
+      }
+    }
+  }
 }

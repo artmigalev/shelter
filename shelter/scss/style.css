@@ -330,8 +330,61 @@ p {
   color: #4c4c4c;
 }
 
+.logo__name {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+}
+
+.logo__description {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.nav-list__links {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #cdcdcd;
+}
+
+.list:first-child {
+  color: #fafafa;
+  border-bottom: 3px solid #f1cdb3;
+}
+
+.content__title {
+  color: #fff;
+  margin: 0 0 42px 0;
+  letter-spacing: 2.6px;
+}
+
+.content__text {
+  color: #cdcdcd;
+  line-height: 160%;
+  font-weight: 400;
+  margin: 0 0 42px 0;
+}
+
+.not-only__button {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  color: #292929;
+}
+
 body {
   max-width: 1280px;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -341,4 +394,67 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.not-only__button {
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 207px;
+  height: 52px;
+  background: #f1cdb3;
+  border: none;
+}
+
+.not-only {
+  background: #211f20;
+  width: 100%;
+  padding-top: 30px;
+}
+.not-only .not-only__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+.not-only .not-only__wrapper .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.not-only .not-only__wrapper .header .header__logo {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.not-only .not-only__wrapper .header .header__navigation .nav__list {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+.not-only .not-only__wrapper .header .header__navigation .nav__list .list {
+  list-style: none;
+}
+.not-only .not-only__wrapper .header .header__navigation .nav__list .list .nav-list__links {
+  text-decoration: none;
+}
+.not-only .not-only__wrapper .not-only__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.not-only .not-only__wrapper .not-only__container .not-only__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 460px;
 }/*# sourceMappingURL=style.css.map */

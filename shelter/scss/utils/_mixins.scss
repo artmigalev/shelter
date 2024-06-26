@@ -9,3 +9,13 @@
 
   }
 }
+
+//**-------flex------**//
+@mixin fl-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin fl-clmn{
+  display: flex;
+  flex-direction: column;
+}
