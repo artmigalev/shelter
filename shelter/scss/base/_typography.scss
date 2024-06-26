@@ -1,4 +1,5 @@
 h1 {
+  margin-top: 0;
   font-family: $primary-family;
   font-weight: 400;
   font-size: 44px;
@@ -6,6 +7,7 @@ h1 {
   color: $color-dark-l;
 }
 h2 {
+  margin-top: 0;
   font-family: $primary-family;
   font-weight: 400;
   font-size: 35px;
@@ -17,6 +19,13 @@ p {
   font-size: 15px;
   line-height: 160%;
   color: $color-dark-xl;
+}
+.section-title {
+  font-family: var$primary-family;
+  font-weight: 400;
+  font-size: 35px;
+
+  color: $color-dark-l;
 }
 //**---------LOGO HEADER ----**//
 .logo__name {
@@ -69,4 +78,12 @@ p {
   font-size: 17px;
   line-height: 130%;
   color: $color-dark-3xl;
+}
+//**--------ABOUT---------**//
+.about__title{
+  margin-bottom: 25px;
+}
+.about-content__text{
+  margin-bottom: 25px;
+  max-width: 430px;
 }

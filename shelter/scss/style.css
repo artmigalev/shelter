@@ -309,6 +309,7 @@ template {
 }
 
 h1 {
+  margin-top: 0;
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   font-size: 44px;
@@ -316,6 +317,7 @@ h1 {
 }
 
 h2 {
+  margin-top: 0;
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   font-size: 35px;
@@ -328,6 +330,13 @@ p {
   font-size: 15px;
   line-height: 160%;
   color: #4c4c4c;
+}
+
+.section-title {
+  font-family: var "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  color: #545454;
 }
 
 .logo__name {
@@ -379,6 +388,15 @@ p {
   font-size: 17px;
   line-height: 130%;
   color: #292929;
+}
+
+.about__title {
+  margin-bottom: 25px;
+}
+
+.about-content__text {
+  margin-bottom: 25px;
+  max-width: 430px;
 }
 
 body {
@@ -457,4 +475,27 @@ button {
   display: flex;
   flex-direction: column;
   max-width: 460px;
+}
+
+.section-about {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background: #fff;
+}
+.section-about .about__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.section-about .about__wrapper .about__img {
+  width: 300px;
+  height: 408px;
+}
+.section-about .about__wrapper .about__content {
+  text-align: left;
+}
+.section-about .about__wrapper .about__content .about__title {
+  max-width: 370px;
+  letter-spacing: 0.4px;
 }/*# sourceMappingURL=style.css.map */
