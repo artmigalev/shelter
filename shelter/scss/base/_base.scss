@@ -1,0 +1,12 @@
+body{
+  max-width: $body-sz;
+}
+
+.wrapper{
+  max-width: $wrapper-sz;
+  margin: 0 auto;
+}
+
+*{
+  box-sizing: border-box;
+}

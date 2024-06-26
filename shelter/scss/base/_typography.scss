@@ -1,0 +1,20 @@
+h1 {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 44px;
+
+  color: $color-dark-l;
+}
+h2 {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 35px;
+  color: $color-dark-l;
+}
+p {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: $color-dark-xl;
+}
