@@ -19,3 +19,8 @@
   display: flex;
   flex-direction: column;
 }
+
+
+@mixin bord {
+  border: 1px solid;
+}

@@ -431,6 +431,15 @@ button {
   border: none;
 }
 
+.button-slider {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid #f1cdb3;
+  background: transparent;
+  font-size: 0%;
+}
+
 .not-only {
   background: #211f20;
   width: 100%;
@@ -498,4 +507,46 @@ button {
 .section-about .about__wrapper .about__content .about__title {
   max-width: 370px;
   letter-spacing: 0.4px;
+}
+
+.section-pets {
+  background-color: #f6f6f6;
+  padding: 80px 0 100px 0;
+}
+.section-pets .pets__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+.section-pets .pets__wrapper .pets__title {
+  max-width: 400px;
+  text-align: center;
+}
+.section-pets .pets__wrapper .pets__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-pets .pets__wrapper .pets__container .arr-right {
+  transform: rotateY(180deg);
+}
+.section-pets .pets__wrapper .pets__container .pets__block-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 90px;
+}
+.section-pets .pets__wrapper .pets__container .pets__block-card .pets__card {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  padding: 30px 35px;
+  max-width: 270px;
+  background-color: #fafafa;
 }/*# sourceMappingURL=style.css.map */

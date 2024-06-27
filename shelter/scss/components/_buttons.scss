@@ -10,3 +10,13 @@ button{
   background: $color-primary;
   border: none;
 }
+.button-slider{
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid $color-primary;
+  background: transparent;
+  
+  font-size: 0%;
+
+}

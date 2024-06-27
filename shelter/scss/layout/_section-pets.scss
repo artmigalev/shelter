@@ -1,0 +1,38 @@
+.section-pets {
+  background-color: $color-light-l;
+  padding: 80px 0 100px 0;
+  .pets__wrapper {
+    @include fl-clmn;
+    align-items: center;
+    gap: 60px;
+    .pets__title {
+      max-width: 400px;
+      text-align: center;
+    }
+    .pets__container {
+      width: 100%;
+      @include fl-row;
+      align-items: center;
+      justify-content: space-between;
+      .arr-right {
+        transform: rotateY(180deg);
+      }
+      .pets__block-card {
+        @include fl-row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 90px;
+        .pets__card {
+          @include bord;
+          @include fl-clmn;
+          align-items: center;
+          border-radius: 9px;
+          padding: 30px 35px;
+          max-width: 270px;
+          background-color: $color-light-s;
+
+        }
+      }
+    }
+  }
+}
