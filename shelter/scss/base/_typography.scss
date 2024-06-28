@@ -87,3 +87,13 @@ p {
   margin-bottom: 25px;
   max-width: 430px;
 }
+.card__name{
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+.pets__title{
+  margin-bottom: 0;
+}

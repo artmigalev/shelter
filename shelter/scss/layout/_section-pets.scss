@@ -23,13 +23,14 @@
         justify-content: space-between;
         gap: 90px;
         .pets__card {
-          @include bord;
+          // @include bord;
           @include fl-clmn;
           align-items: center;
           border-radius: 9px;
           padding: 30px 35px;
           max-width: 270px;
           background-color: $color-light-s;
+          gap: 30px;
 
         }
       }

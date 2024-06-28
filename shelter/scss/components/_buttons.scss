@@ -1,5 +1,8 @@
-button{
+button {
   cursor: pointer;
+  font-family: $primary-family;
+
+
 }
 
 .not-only__button {
@@ -10,13 +13,33 @@ button{
   background: $color-primary;
   border: none;
 }
-.button-slider{
+.button-slider {
   width: 52px;
   height: 52px;
   border-radius: 100px;
   border: 2px solid $color-primary;
   background: transparent;
-  
-  font-size: 0%;
 
+  font-size: 0%;
+}
+.card__btn {
+  width: 187px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  padding: 15px 45px;
+  background-color: transparent;
+}
+.pets__button {
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 261px;
+  height: 52px;
+  background: $color-primary;
+  border: none;
+
+
+font-weight: 400;
+font-size: 17px;
+color: $color-dark-3xl;
 }

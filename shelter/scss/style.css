@@ -399,6 +399,18 @@ p {
   max-width: 430px;
 }
 
+.card__name {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.pets__title {
+  margin-bottom: 0;
+}
+
 body {
   max-width: 1280px;
   display: flex;
@@ -420,6 +432,7 @@ a {
 
 button {
   cursor: pointer;
+  font-family: "Georgia", sans-serif;
 }
 
 .not-only__button {
@@ -438,6 +451,27 @@ button {
   border: 2px solid #f1cdb3;
   background: transparent;
   font-size: 0%;
+}
+
+.card__btn {
+  width: 187px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  padding: 15px 45px;
+  background-color: transparent;
+}
+
+.pets__button {
+  border-radius: 100px;
+  padding: 15px 45px;
+  width: 261px;
+  height: 52px;
+  background: #f1cdb3;
+  border: none;
+  font-weight: 400;
+  font-size: 17px;
+  color: #292929;
 }
 
 .not-only {
@@ -541,7 +575,6 @@ button {
   gap: 90px;
 }
 .section-pets .pets__wrapper .pets__container .pets__block-card .pets__card {
-  border: 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -549,4 +582,5 @@ button {
   padding: 30px 35px;
   max-width: 270px;
   background-color: #fafafa;
+  gap: 30px;
 }/*# sourceMappingURL=style.css.map */
