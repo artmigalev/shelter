@@ -1,0 +1,71 @@
+.inAdition{
+    .wrapper__inAdition{
+        @include flex-row;
+        align-items: center;
+        justify-content: center;
+
+        gap: 30px;
+        .inAdition-dog{
+            background-image: url('/shelter/assets/png/donation-dog.png');
+            width: 505px;
+            height: 261px;
+            flex-shrink: 0;
+        }
+        .inAdition-content{
+            max-width: 380px;
+            @include flex-column;
+            align-items: start;
+            gap: 20px;
+            .section__title{
+                @include flex-column;
+                align-items: start;
+                .inAdition__title{
+                    margin: 0;
+
+                }
+            }
+            .inAdition_subheading{
+                .subheading_text{
+                    font-family: $fontFamily-primary;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 110%;
+                    letter-spacing: 0.9px;
+                    margin: 0;
+                }
+            }
+            .inAdition_creadit_card{
+                width: 349px;
+                height: 43px;
+                background: $color-primary;
+                border-radius: 9px;
+                @include flex-row;
+                // gap: 15px;
+                align-items: center;
+                justify-content: space-around;
+                .creadit_card{
+                    background-image: url('/shelter/assets/svg/credit-card.svg');
+                    width: 30px;
+                    height: 23px;
+                }
+                .number_card{
+                    text-decoration: none;
+                    color: $colorDefault-font;
+                    font-family: $fontFamily-primary;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 115%;
+                    letter-spacing: 1.2px;
+                }
+            }
+            .donat__footerText{
+                font-size: 12px;
+                line-height: 150%;
+                font-style: italic;
+                color: #B2B2B2;
+                margin: 0;
+            }
+        }
+    }
+}

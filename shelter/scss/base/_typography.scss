@@ -1,0 +1,19 @@
+h1{
+    font: 44px $fontFamily-primary;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 57.2px */
+    color: $colorDefault-bg;
+}
+h2 {
+    @include logo;
+    color:$color-primary;
+}
+h3{
+    @include title-font;
+
+
+}
+p{
+    @include textPrimary-font;
+}

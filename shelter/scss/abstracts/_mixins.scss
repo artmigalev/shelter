@@ -1,0 +1,121 @@
+@mixin title-font {
+    font: 35px $fontFamily-primary,serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 129%; /* 45.5px */
+    letter-spacing: 2.1px;
+    color: $colorDefault-font;
+}
+@mixin textPrimary-font {
+    font-family: $fontFamily-second;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 24px */
+}
+@mixin logo{
+    font: 32px $fontFamily-primary;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 1.92px;
+}
+@mixin card-name{
+    font-family: $fontFamily-primary;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.2px;
+}
+@mixin footer-links {
+    font-family: $fontFamily-primary;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    color: $color-primary;
+}
+//*         BUTTONS         //
+@mixin btn-font{
+    font-family: Georgia;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    // line-height: 130%; /* 22.1px */
+    // letter-spacing: 1.02px;
+}
+@mixin btn-startScreen {
+    width: 207px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+}
+@mixin btn-pets {
+
+    width: 261px;
+    height: 52px;
+    display: flex;
+    padding: 15px 45px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    border: 2px solid;
+    border-radius: 100px;
+}
+@mixin btn-card{
+    width: 187px;
+    height: 52px;
+    display: flex;
+    padding: 15px 45px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+
+}
+@mixin btn-round {
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    /* padding: 23px 19px; */
+    /* flex-direction: column; */
+    align-items: center;
+    border: 2px solid #F1CDB3;
+    justify-content: center;
+}
+//* POSSITION
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin card-possition{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+
+}
+
+//* MEDIA-OUERY
+
+@mixin media-tablet-size {
+    @media(max-width:$tablets-width ){@content}
+};
+@mixin media-mobile-size {
+    @media(max-width: $mobile-width){@content}
+};
+@mixin media-computed-size{
+    @media(max-width: $computed-width){@content}
+};

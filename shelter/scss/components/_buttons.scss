@@ -1,0 +1,56 @@
+.notOnly__btn{
+    @include btn-startScreen;
+    background: $color-primary;
+    border: none;
+    a{
+        text-decoration: none;
+        @include btn-font;
+        color: $colorDefault-font
+
+    }
+}
+.btn_slider{
+    @include btn-round;
+    border: 2px solid #F1CDB3;
+
+    .arrow_left{
+        background-image: url(/shelter/assets/svg/Arrow_left.svg);
+        width: 14px;
+        height: 6px;
+
+    }
+    .arrow_right{
+        background-image: url(/shelter/assets/svg/Arrow_right.svg);
+        width: 14px;
+        height: 6px;
+
+    }
+}
+.btn_slider:hover{
+    cursor: pointer;
+    background: $color-primary;
+    transition: .3s;
+}
+.btn__card{
+    @include btn-card;
+    background: $colorbg-cardPets;
+    @include btn-font;
+    border-radius: 100px;
+    border: 2px solid #F1CDB3;
+}
+.btn__card:hover{
+    background:$color-primary;
+    transition: .3s;
+}
+.ourFriends__btn{
+    @include btn-pets;
+    background: $color-primary;
+    border: none;
+    text-align: center;
+
+    a{
+        text-decoration: none;
+        @include btn-font;
+        color: $colorDefault-font;
+    }
+}

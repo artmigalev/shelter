@@ -1,0 +1,28 @@
+.about{
+    background: $colorDefault-bg;
+    .about__wrapper{
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        gap: 120px;
+        .about-pets{
+            display: block;
+        }
+        .about__content{
+            width: 430px;
+            height: 380px;
+            @include flex-column;
+            gap: 25px;
+            .about__titleCont{
+                margin: 0;
+                letter-spacing:3.1px;
+            }
+            .about__textCont{
+                margin: 0;
+            }
+            .about__textCont2{
+                margin: 0;
+            }
+        }
+    }
+}

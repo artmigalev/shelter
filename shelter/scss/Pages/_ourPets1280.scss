@@ -1,0 +1,136 @@
+.header-pets {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .wrapper__header-pets {
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+
+        .header-pets__logo {
+            @include flex-column;
+            gap: 10px;
+            .logo__link{
+                text-decoration: none;
+            }
+            .logo__title {
+                margin: 0;
+                color: $colorDefault-font;
+            }
+
+            .logo__subtitle {
+                font: 13px $fontFamily-second;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1.3px;
+                color: #292929;
+            }
+
+        }
+
+        .header-pets_navigation {
+            .nav__list {
+                @include flex-row;
+                list-style: none;
+                justify-content: space-between;
+                gap: 35px;
+                padding-left: 0;
+                margin: 0;
+
+                .list {
+                    @include flex-row;
+                    position: relative;
+
+                    .list__link {
+                        text-decoration: none;
+                        @include textPrimary-font;
+                        color: $colorDefault-font;
+                    }
+
+                }
+
+                .list:hover::after {
+                    content: '';
+                    height: 3px;
+                    width: 100%;
+                    background: $color-primary;
+                    position: absolute;
+                    bottom: 0;
+
+                }
+
+                .list:nth-child(2):after {
+                    content: '';
+                    height: 3px;
+                    width: 100%;
+                    background: $color-primary;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.main {
+    .ourFriends-pets {
+        background: $colorbg-subRrimary;
+
+        .ourFriends-pets__wrapper {
+            @include flex-column;
+            align-items: center;
+            gap: 45px;
+            .ourFriends-pets__header {
+                .ourFriends-pets__title {
+                    max-width: 400px;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+
+            .ourFriends-pets__slider {
+                @include flex-column;
+                gap: 60px;
+                align-items: center;
+                padding: 14px;
+                .slider__container-pets {
+                    display: grid;
+                    grid-template-columns: 270px 270px 270px 270px;
+                    grid-template-rows: 435px 435px;
+                    gap: 30px 40px;
+
+                    .card-pets {
+                        background: $colorbg-cardPets;
+                        @include card-possition;
+                        width: 270px;
+                        height: 435px;
+                        .namecard {
+                            @include card-name;
+                        }
+                    }
+                }
+                .pagination{
+                    @include flex-row;
+                    align-items: center;
+                    gap: 20px;
+                    .dubbleArr-left,.arr-left{
+                        border-color: #CDCDCD;
+                        display: flex;
+                        align-items: center;
+
+                    }
+                    .dubbleArr-left,.arr-left:hover{
+                        background: none;
+                    }
+                    .midle{
+                        background:$color-primary;
+                    }
+
+
+                }
+            }
+        }
+    }
+}

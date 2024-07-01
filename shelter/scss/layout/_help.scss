@@ -1,0 +1,95 @@
+.help{
+    background: $colorDefault-bg;
+    .wrapper__help{
+        @include flex-column;
+        align-items: center;
+        .section__title{
+            @include flex-column;
+            align-items: center;
+            .sec__titl{
+                margin: 0;
+                line-height: 125%
+            }
+        }
+        .help_content{
+            @include flex-column;
+            margin-top: 60px;
+            gap: 55px;
+            .help__contPossition1{
+                @include flex-row;
+                gap: 120px;
+                .possition__block{
+                    height: 113px;
+                    @include flex-column;
+                    align-items: center;
+                    justify-content: space-between;
+                    .possit__icon{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    .text__possit{
+                        font-family: Georgia;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 115%; /* 23px */
+                        letter-spacing: 1.2px;
+                    }
+                    .food{
+                        background-image: url('/shelter/assets/svg/icon-pet-food.svg');
+                    }
+                    .transport{
+                        background-image: url('/shelter/assets/svg/icon-transportation.svg');
+                    }
+                    .toys{
+                        background-image: url('/shelter/assets/svg/icon-toys.svg');
+                    }
+                    .bow-cup{
+                        background-image: url('/shelter/assets/svg/icon-bowls-and-cups.svg');
+                    }
+                    .shamp{
+                        background-image: url('/shelter/assets/svg/icon-shampoos.svg');
+                    }
+                }
+
+            }
+            .help__contPossition2{
+                @include flex-row;
+                justify-content: space-around;
+                // gap: 120px;
+                .possition__block{
+                    height: 113px;
+                    @include flex-column;
+                    justify-content: space-between;
+                    align-items: center;
+                    .possit__icon{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    .text__possit{
+                        font-family: Georgia;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 115%; /* 23px */
+                        letter-spacing: 1.2px;
+                    }
+                    .vitaminis{
+                        background-image: url('/shelter/assets/svg/icon-vitamins.svg');
+                    }
+                    .medicine{
+                        background-image: url('/shelter/assets/svg/icon-medicines.svg');
+                    }
+                    .collars{
+                        background-image: url('/shelter/assets/svg/icon-collars-leashes.svg');
+                    }
+                    .sleeping-area{
+                        background-image: url('/shelter/assets/svg/icon-sleeping-area.svg');
+                    }
+
+                }
+
+            }
+        }
+    }
+}

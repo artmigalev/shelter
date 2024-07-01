@@ -1,0 +1,77 @@
+.footer{
+    background-image: url('/shelter/assets/png/start-screen-background.jpg');
+    .wrapper__footer{
+        @include flex-row;
+        justify-content: space-between;
+        padding-top: 40px;
+        .contacts{
+            @include flex-column;
+            gap: 40px;
+            .contacts__title{
+                .title_block{
+                    margin: 0;
+                    color: $colorbg-subRrimary;
+
+                }
+            }
+            .contacts__mail{
+                @include flex-row;
+                gap: 20px;
+                .mail-icon{
+                    background-image: url('/shelter/assets/svg/icon-email.svg');
+                    width: 40px;
+                    height: 32px;
+                }
+                .mail{
+                    @include footer-links;
+                }
+            }
+            .contacts__phone{
+                @include flex-row;
+                gap: 20px;
+                .phone-icon{
+                    background-image: url('/shelter/assets/svg/icon-phone.svg');
+                    width: 40px;
+                    height: 32px;
+                }
+                .tel{
+                    @include footer-links;
+                }
+            }
+
+        }
+        .location{
+            @include flex-column;
+            gap: 40px;
+            .location__title{
+                .title_block{
+                    margin: 0;
+                    color: $colorbg-subRrimary;
+
+                }
+            }
+            .location__adress{
+                @include flex-row;
+                align-items: center;
+                gap: 20px;
+                .adress-icon{
+                    background-image: url("/shelter/assets/svg/icon-marker.svg");
+                    width: 22px;
+                    height: 32px;
+                }
+                .adress1{
+                    max-width: 260px;
+                }
+                .adress{
+                    @include footer-links;
+                }
+            }
+        }
+        .footer-puppy{
+            background-image: url('/shelter/assets/png/footer-puppy.png');
+            width: 300px;
+            height: 310px;
+            flex-shrink: 0;
+        }
+    }
+}

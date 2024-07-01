@@ -1,0 +1,22 @@
+.notOnly{
+    .wrapper_notOn{
+        @include flex-row;
+        align-items: center;
+        gap: 42px;
+        margin-top: 90px;
+        .notOnly__content{
+            @include flex-column;
+            gap: 42px;
+            .notOnly_title{
+                margin: 0;
+                letter-spacing: 4px;
+
+            }
+            .notOnly__subheading{
+                margin-top: 0;
+                margin-bottom: 0;
+                color: $colorDefault-font;
+            }
+        }
+    }
+}

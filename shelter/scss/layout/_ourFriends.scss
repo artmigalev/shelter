@@ -1,0 +1,36 @@
+.ourFriends{
+    background: $colorbg-subRrimary;
+    .ourFriends__wrapper{
+        @include flex-column;
+        align-items: center;
+
+        gap: 60px;
+        .ourFriends__title{
+            max-width: 400px;
+            text-align: center;
+            margin: 0;
+        }
+        .ourFriends__slider{
+            @include flex-row;
+            align-items: center;
+            gap: 53px;
+            .slider__container{
+                @include flex-row;
+                gap: 90px;
+                .card-pets{
+                    background: $colorbg-cardPets;
+                    @include card-possition;
+                    width: 270px;
+                    height: 435px;
+                    .namecard{
+                        @include card-name;
+                        color: $colorDefault-font;
+                    }
+
+                }
+
+            }
+        }
+
+    }
+}

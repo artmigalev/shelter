@@ -1,0 +1,68 @@
+.start_screen{
+    background-image: url('/shelter/assets/png/start-screen-background.jpg');
+    background-repeat: no-repeat;
+    .header{
+        padding-top: 30px;
+        .wrapper__header{
+            @include flex-row;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+
+            .header__logo{
+                @include flex-column;
+                gap: 10px;
+                .logo__link{text-decoration: none;}
+                .logo__title{
+                    margin: 0;
+                }
+
+                .logo__subtitle{
+                    font: 13px $fontFamily-second;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 1.3px;
+                    color: $color-primary;
+                }
+
+            }.header_navigation{
+                .nav__list{
+                    @include flex-row;
+                    list-style: none;
+                    justify-content: space-between;
+                    gap: 35px;
+                    padding-left: 0;
+                    margin: 0;
+                    .list{
+                        @include flex-row;
+                        position: relative;
+                        .list__link{
+                            text-decoration: none;
+                            @include textPrimary-font;
+                            color: $colorLight-font;
+                        }
+
+                    }
+                    .list:hover::after{
+                        content: '';
+                        height: 3px;
+                        width: 100%;
+                        background: $color-primary;
+                        position: absolute;
+                        bottom: 0;
+
+                    }
+                    .list:first-child::after{
+                        content: '';
+                        height: 3px;
+                        width: 100%;
+                        background: $color-primary;
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
