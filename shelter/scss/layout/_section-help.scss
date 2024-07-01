@@ -1,0 +1,33 @@
+.section-help{
+  background-color: $color-light-xl;
+  .help__wrapper{
+    @include fl-clmn;
+    align-items: center;
+    gap: 60px;
+    .help__list{
+      padding-left: 0;
+      flex-wrap: wrap;
+      @include fl-row;
+      justify-content: center;
+      margin: 0;
+      column-gap: 120px;
+      row-gap: 55px;
+      height: max-content;
+      .help-list__container{
+
+        list-style: none;
+        @include fl-clmn;
+        align-items: center;
+        gap: 30px;
+        .container__icon{
+          width: 60px;
+          height: 60px;
+        }
+
+
+      }
+
+    }
+
+  }
+}

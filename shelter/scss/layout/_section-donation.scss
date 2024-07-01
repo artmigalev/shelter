@@ -1,0 +1,17 @@
+.section-donation {
+  .donation__wrapper {
+    @include fl-row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    .donation__img {
+      width: 505px;
+      height: 261px;
+    }
+    .donation__content{
+      max-width: 380px;
+      @include fl-clmn;
+      gap: 20px;
+    }
+  }
+}

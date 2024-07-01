@@ -21,9 +21,10 @@ p {
   color: $color-dark-xl;
 }
 .section-title {
-  font-family: var$primary-family;
+  font-family: $primary-family;
   font-weight: 400;
   font-size: 35px;
+  line-height: 130%;
 
   color: $color-dark-l;
 }
@@ -64,7 +65,7 @@ p {
   margin: 0 0 42px 0;
   letter-spacing: 2.6px;
 }
-.content__text {
+.not-only__text {
   color: $color-dark-s;
   line-height: 160%;
   font-weight: 400;
@@ -80,20 +81,63 @@ p {
   color: $color-dark-3xl;
 }
 //**--------ABOUT---------**//
-.about__title{
+.about__title {
   margin-bottom: 25px;
 }
-.about-content__text{
+.about-content__text {
   margin-bottom: 25px;
   max-width: 430px;
 }
-.card__name{
+.card__name {
   font-family: $primary-family;
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.06em;
   color: $color-dark-l;
 }
-.pets__title{
+.pets__title {
   margin-bottom: 0;
+}
+//*----------HELP--------*//
+.help__title {
+  text-align: center;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+.container__text {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 20px;
+
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: $color-dark-l;
+}
+//*----------DONATION--------*//
+.donation__title {
+  text-align: left;
+  margin: 0;
+}
+.donation__text {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+.donation__card-number {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+}
+.donation__text-cursive {
+  font-family: $second-family;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: $color-dark-m;
 }

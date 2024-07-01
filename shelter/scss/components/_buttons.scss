@@ -1,8 +1,6 @@
 button {
   cursor: pointer;
   font-family: $primary-family;
-
-
 }
 
 .not-only__button {
@@ -38,8 +36,18 @@ button {
   background: $color-primary;
   border: none;
 
-
-font-weight: 400;
-font-size: 17px;
-color: $color-dark-3xl;
+  font-weight: 400;
+  font-size: 17px;
+  color: $color-dark-3xl;
+}
+.donation__btn {
+  border-radius: 9px;
+  padding: 10px 15px;
+  width: 349px;
+  height: 43px;
+  background: $color-primary;
+  border: none;
+  @include fl-row;
+  align-items: center;
+  gap: 10px;
 }
