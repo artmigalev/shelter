@@ -1,0 +1,24 @@
+.header {
+  @include fl-row;
+  align-items: center;
+  justify-content: space-between;
+
+  .header__logo {
+    text-align: left;
+    @include fl-clmn;
+    gap: 10px;
+  }
+  .header__navigation {
+    .nav__list {
+      padding-left: 0;
+      @include fl-row;
+      gap: 35px;
+      .list {
+        list-style: none;
+        .nav-list__links {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

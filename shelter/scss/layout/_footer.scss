@@ -1,0 +1,33 @@
+.footer{
+  // background: $footer-gradient-background;
+  background:radial-gradient(549.89% 73.65% at 5.73% 50%, rgb(81, 61, 47) 0%, rgb(26, 26, 28) 100%);
+  // background: url(noise_lines _transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;;
+  padding: 40px 40px 0 40px;
+  .footer__wrapper{
+    @include fl-row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 160px;
+
+
+    .footer-block{
+      @include fl-clmn;
+      .contact__list{
+        @include fl-clmn;
+        gap: 40px;
+      }
+      .location__list{
+        @include fl-clmn;
+        gap: 32px;
+      }
+      ul{
+        .footer__list{
+          @include fl-row;
+          gap: 20px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

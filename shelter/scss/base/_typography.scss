@@ -141,3 +141,28 @@ p {
   line-height: 150%;
   color: $color-dark-m;
 }
+//*----------FOOTER--------*//
+.footer__title {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-light-xl;
+  margin: 0;
+}
+.contact__link {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+}
+.location__link {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  color: $color-primary;
+}
