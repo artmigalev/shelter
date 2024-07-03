@@ -56,7 +56,9 @@ p {
 }
 
 .list:first-child {
-  color: $color-light-s;
+  .nav-list__links {
+    color: $color-light-s;
+  }
   border-bottom: 3px solid $color-primary;
 }
 
@@ -95,8 +97,10 @@ p {
   letter-spacing: 0.06em;
   color: $color-dark-l;
 }
+//*----------PETS--------*//
 .pets__title {
   margin-bottom: 0;
+  text-align: center;
 }
 //*----------HELP--------*//
 .help__title {
@@ -165,4 +169,30 @@ p {
   font-size: 20px;
   line-height: 115%;
   color: $color-primary;
+}
+
+//*-------PAGE-PETS----*//
+body.page-pets .nav-list__links {
+  color: $color-dark-l;
+}
+body.page-pets .list:first-child {
+  border: none;
+}
+body.page-pets .list:first-child {
+  .nav-list__links {
+    color: $color-dark-l;
+  }
+}
+
+body.page-pets .list:nth-child(2) {
+  .nav-list__links {
+    color: $color-dark-3xl;
+  }
+  border-bottom: 3px solid $color-primary;
+}
+body.page-pets .logo__name {
+  color: $color-dark-3xl;
+}
+body.page-pets .logo__description {
+  color: $color-dark-3xl;
 }

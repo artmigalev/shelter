@@ -51,3 +51,26 @@ button {
   align-items: center;
   gap: 10px;
 }
+//**----------page-PETS--------**//
+body.page-pets .btn-double-arrow__left,
+.btn-single-arrow__left {
+  border: 2px solid $color-dark-s;
+  border-radius: 100px;
+  color: $color-dark-s;
+
+  width: 52px;
+  height: 52px;
+}
+body.page-pets .button-slider {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+}
+body.page-pets .btn-number{
+  background: $color-primary;
+}
+

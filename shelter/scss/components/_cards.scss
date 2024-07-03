@@ -1,0 +1,9 @@
+.pets__card {
+  @include fl-clmn;
+  align-items: center;
+  border-radius: 9px;
+  padding: 30px 35px;
+  max-width: 270px;
+  background-color: $color-light-s;
+  gap: 30px;
+}

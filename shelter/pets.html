@@ -1,47 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./scss/style.css">
-  <title>Shelter</title>
-</head>
-<body>
-  <header class="header">
-    <div class="header__logo">
-      <span class="logo__name">Cozy House</span>
-      <span class="logo__description">Shelter for pets in Boston</span>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Shelter</title>
+  </head>
+  <body class="page-pets">
+    <div class="wrapper pets__wrapper">
+      <header class="header">
+        <div class="header__logo">
+          <span class="logo__name">Cozy House</span>
+          <span class="logo__description">Shelter for pets in Boston</span>
+        </div>
+        <nav class="header__navigation">
+          <ul class="nav__list">
+            <li class="list">
+              <a href="#main.html" target="_blank" class="nav-list__links"
+                >About the shelter</a
+              >
+            </li>
+            <li class="list">
+              <a href="#$" class="nav-list__links">Our pets</a>
+            </li>
+            <li class="list">
+              <a href="#$" class="nav-list__links">Help the shelter</a>
+            </li>
+            <li class="list">
+              <a href="#$" class="nav-list__links">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
-    <nav class="header__navigation">
-      <ul class="nav__list">
-        <li class="list"><a href="#$" class="nav-list__links">About the shelter</a></li>
-        <li class="list"><a href="#$" class="nav-list__links">Our pets</a></li>
-        <li class="list"><a href="#$" class="nav-list__links">Help the shelter</a></li>
-        <li class="list"><a href="#$" class="nav-list__links">Contacts</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class='main'>
-    <div class="wrapper pets__wrapper"></div>
-  </main>
-  <footer class="footer">
-    <div class="wrapper footer__wrapper">
-      <div class="footer__contact">
-        <h3 class="footer__title">For questions and suggestions</h3>
-        <ul class="contact__list">
-          <li class="list__email"><object class="contact__icon" data="./assets/svg/icon-email.svg" type="image/svg+xml"></object><a class="contact__link" href="mailto:email@shelter.com">email@shelter.com</a></li>
-          <li class="list__phone"><object class="contact__icon" data="./assets/svg/icon-phone.svg" type="image/svg+xml"></object><a class="contact__link" href="tel:+136745677554">+13 674 567 75 54</a></li>
-        </ul>
+    <main class="main">
+      <div class="wrapper pets__wrapper">
+        <h2 class="section-title pets__title">
+          Our friends who <br> are looking for a house
+        </h2>
+        <div class="cards_container">
+          <div class="pets__card" id="card__katrine">
+              <img
+                class="card__img"
+                src="./assets/png/pets-katrine.png"
+                alt="pets-katrine"
+              />
+              <span class="card__name">Katrine</span>
+              <button class="card__btn">Learn more</button>
+          </div>
+          <div class="pets__card" id="card__jennifer">
+            <img
+              class="card__img"
+              src="./assets/png/pets-jennifer.png"
+              alt="pets-jennifer"
+            />
+            <span class="card__name">Jennifer</span>
+            <button class="card__btn">Learn more</button>
+          </div>
+          <div class="pets__card" id="card__woody">
+            <img
+              class="card__img"
+              src="./assets/png/pets-woody.png"
+              alt="pets-woody"
+            />
+            <span class="card__name">Woody</span>
+            <button class="card__btn">Learn more</button>
+          </div>
+          <div class="pets__card" id="card__sophia">
+            <img
+              class="card__img"
+              src="./assets/png/pets-sophia.png"
+              alt="pets-sophia"
+            />
+            <span class="card__name">Sophia</span>
+            <button class="card__btn">Learn more</button>
+          </div>
+          <div class="pets__card" id="card__timmy">
+            <img
+              class="card__img"
+              src="./assets/png/pets-timmy.png"
+              alt="pets-timmy"
+            />
+            <span class="card__name">Timmy</span>
+            <button class="card__btn">Learn more</button>
+          </div>
+          <div class="pets__card" id="card__charly">
+            <img
+              class="card__img"
+              src="./assets/png/pets-charly.png"
+              alt="pets-charly"
+            />
+            <span class="card__name">Charly</span>
+            <button class="card__btn">Learn more</button>
+          </div>
+          <div class="pets__card" id="card__scarlett">
+            <img
+              class="card__img"
+              src="./assets/png/pets-scarlet.png"
+              alt="pets-scarlett"
+            />
+            <span class="card__name">Scarlett</span>
+            <button class="card__btn">Learn more</button>
+          </div>
+          <div class="pets__card" id="card__freddie">
+            <img
+              class="card__img"
+              src="./assets/png/pets-freddie.png"
+              alt="pets-freddie"
+            />
+            <span class="card__name">Freddie</span>
+            <button class="card__btn">Learn more</button>
+          </div>
+        </div>
+        <div class="pets__btn-container">
+          <button class="button-slider btn-double-arrow__left"><<</button>
+          <button class="button-slider btn-single-arrow__left"><</button>
+          <button class="button-slider btn-number">1</button>
+          <button class="button-slider btn-single-arrow__right">>></button>
+          <button class="button-slider btn-double-arrow__right">></button>
+        </div>
       </div>
-      <div class="footer__location">
-        <h3 class="footer__title">We are waiting for your visit</h3>
-        <ul class="location__list">
-          <li class="list__adress"><object class="location__icon" data="./assets/svg/icon-marker.svg" type="image/svg+xml"></object><a class="location__link" href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585559,-71.0573012,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.358552!4d-71.0547263?entry=ttu">1 Central Street, Boston (entrance from the store)</a></li>
-          <li class="list__adress"><object class="location__icon" data="./assets/svg/icon-marker.svg" type="image/svg+xml"></object><a class="location__link" href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585559,-71.0573012,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.358552!4d-71.0547263?entry=ttu">18 South Park, London </a></li>
-        </ul>
+    </main>
+    <footer class="footer">
+      <div class="wrapper footer__wrapper">
+        <div class="footer-block footer__contact">
+          <h3 class="footer__title">For questions and suggestions</h3>
+          <ul class="contact__list">
+            <li class="footer__list list__email">
+              <object
+                class="contact__icon"
+                data="./assets/svg/icon-email.svg"
+                type="image/svg+xml"
+              ></object
+              ><a class="contact__link" href="mailto:email@shelter.com"
+                >email@shelter.com</a
+              >
+            </li>
+            <li class="footer__list list__phone">
+              <object
+                class="contact__icon"
+                data="./assets/svg/icon-phone.svg"
+                type="image/svg+xml"
+              ></object
+              ><a class="contact__link" href="tel:+136745677554"
+                >+13 674 567 75 54</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-block footer__location">
+          <h3 class="footer__title">We are waiting for your visit</h3>
+          <ul class="location__list">
+            <li class="footer__list list__adress">
+              <object
+                class="location__icon"
+                data="./assets/svg/icon-marker.svg"
+                type="image/svg+xml"
+              ></object
+              ><a
+                class="location__link"
+                href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585559,-71.0573012,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.358552!4d-71.0547263?entry=ttu"
+                >1 Central Street, Boston (entrance from the store)</a
+              >
+            </li>
+            <li class="footer__list list__adress">
+              <object
+                class="location__icon"
+                data="./assets/svg/icon-marker.svg"
+                type="image/svg+xml"
+              ></object
+              ><a
+                class="location__link"
+                href="https://www.google.com/maps/place/1+Central+St,+Boston,+MA+02109,+%D0%A1%D0%A8%D0%90/@42.3585559,-71.0573012,17z/data=!3m1!4b1!4m5!3m4!1s0x89e370868bc2ce7b:0x82fa7db94f5fea9e!8m2!3d42.358552!4d-71.0547263?entry=ttu"
+                >18 South Park, London
+              </a>
+            </li>
+          </ul>
+        </div>
+        <img
+          class="footer__img"
+          src="./assets/png/footer-puppy.png"
+          alt="footer-puppy"
+        />
       </div>
-      <img class="footer__img" src="./assets/png/footer-puppy.png" alt="footer-puppy">
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
