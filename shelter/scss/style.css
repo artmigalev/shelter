@@ -533,6 +533,7 @@ section {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -587,6 +588,7 @@ button {
   height: 52px;
   background: #f1cdb3;
   border: none;
+  text-align: center;
   font-weight: 400;
   font-size: 17px;
   color: #292929;
