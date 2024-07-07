@@ -394,11 +394,11 @@ p {
 }
 
 .about__title {
-  margin-bottom: 25px;
+  margin: 0;
 }
 
 .about-content__text {
-  margin-bottom: 25px;
+  margin: 0;
   max-width: 430px;
 }
 
@@ -413,6 +413,16 @@ p {
 .pets__title {
   margin-bottom: 0;
   text-align: center;
+  letter-spacing: 1.24px;
+}
+
+.card__btn {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.16px;
+  color: #292929;
 }
 
 .help__title {
@@ -433,6 +443,8 @@ p {
 .donation__title {
   text-align: left;
   margin: 0;
+  letter-spacing: 3.61px;
+  word-spacing: 12.1px;
 }
 
 .donation__text {
@@ -459,6 +471,7 @@ p {
   font-size: 12px;
   line-height: 150%;
   color: #b2b2b2;
+  margin: 0;
 }
 
 .footer__title {
@@ -577,7 +590,6 @@ button {
   height: 52px;
   border: 2px solid #f1cdb3;
   border-radius: 100px;
-  padding: 15px 45px;
   background-color: transparent;
 }
 
@@ -634,10 +646,11 @@ body.page-pets .btn-number {
   flex-direction: column;
   align-items: center;
   border-radius: 9px;
-  padding: 30px 35px;
+  padding: 0 35px;
   max-width: 270px;
   background-color: #fafafa;
   gap: 30px;
+  height: 435px;
 }
 
 .header {
@@ -680,24 +693,26 @@ body.page-pets .btn-number {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 .not-only .not-only__wrapper .not-only__container .not-only__content {
   display: flex;
   flex-direction: column;
   max-width: 460px;
+  position: relative;
+  top: 163px;
 }
 
 .section-about {
   padding-top: 80px;
   padding-bottom: 100px;
   background: #fff;
+  margin: 0 auto;
 }
 .section-about .about__wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  gap: 120px;
 }
 .section-about .about__wrapper .about__img {
   width: 300px;
@@ -705,10 +720,13 @@ body.page-pets .btn-number {
 }
 .section-about .about__wrapper .about__content {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .section-about .about__wrapper .about__content .about__title {
   max-width: 370px;
-  letter-spacing: 0.4px;
+  letter-spacing: 2.6px;
 }
 
 .section-pets {
@@ -802,29 +820,35 @@ body.page-pets .btn-number {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: nowrap;
   gap: 160px;
 }
 .footer .footer__wrapper .footer-block {
   display: flex;
   flex-direction: column;
+  position: relative;
+  top: 16px;
 }
 .footer .footer__wrapper .footer-block .contact__list {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  margin: 36.4px 0;
 }
 .footer .footer__wrapper .footer-block .location__list {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin: 31.4px 0;
 }
 .footer .footer__wrapper .footer-block ul .footer__list {
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
+}
+.footer .footer__wrapper .footer__location {
+  right: 14px;
 }
 
 .header {
@@ -861,21 +885,22 @@ body.page-pets .btn-number {
   padding-top: 80px;
   padding-bottom: 100px;
 }
-.page-pets .main .pets__wrapper {
+.page-pets .main .main-pets__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 45px;
 }
-.page-pets .main .pets__wrapper .cards_container {
+.page-pets .main .main-pets__wrapper .cards_container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   -moz-column-gap: 40px;
        column-gap: 40px;
   row-gap: 30px;
+  padding: 15px 0;
 }
-.page-pets .main .pets__wrapper .pets__btn-container {
+.page-pets .main .main-pets__wrapper .pets__btn-container {
   display: flex;
   flex-direction: row;
   align-items: center;
