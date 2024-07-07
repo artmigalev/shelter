@@ -84,10 +84,11 @@ p {
 }
 //**--------ABOUT---------**//
 .about__title {
-  margin-bottom: 25px;
+  margin: 0;
 }
+
 .about-content__text {
-  margin-bottom: 25px;
+  margin: 0;
   max-width: 430px;
 }
 .card__name {
@@ -101,6 +102,15 @@ p {
 .pets__title {
   margin-bottom: 0;
   text-align: center;
+  letter-spacing: 1.24px;
+}
+.card__btn {
+  font-family: $primary-family;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.16px;
+  color: $color-dark-3xl;
 }
 //*----------HELP--------*//
 .help__title {
@@ -121,6 +131,8 @@ p {
 .donation__title {
   text-align: left;
   margin: 0;
+  letter-spacing: 3.61px;
+  word-spacing: 12.1px;
 }
 .donation__text {
   font-family: $primary-family;
@@ -144,6 +156,7 @@ p {
   font-size: 12px;
   line-height: 150%;
   color: $color-dark-m;
+  margin: 0;
 }
 //*----------FOOTER--------*//
 .footer__title {

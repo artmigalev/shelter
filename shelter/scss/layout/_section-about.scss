@@ -2,10 +2,11 @@
   padding-top: 80px;
   padding-bottom: 100px;
   background: $color-light-xl;
+  margin: 0 auto;
   .about__wrapper{
     @include fl-row;
     align-items: center;
-    justify-content: space-around;
+    gap: 120px;
 
     .about__img {
       width: 300px;
@@ -13,9 +14,11 @@
     }
     .about__content{
       text-align: left;
+      @include fl-clmn;
+      gap: 25px;
       .about__title{
         max-width: 370px;
-        letter-spacing: 0.4px;
+        letter-spacing: 2.6px;
       }
 
     }

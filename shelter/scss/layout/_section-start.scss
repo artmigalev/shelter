@@ -10,11 +10,13 @@
     .not-only__container {
       @include fl-row;
       justify-content: space-between;
-      align-items: center;
+      // align-items: center;
 
       .not-only__content {
         @include fl-clmn;
         max-width: 460px;
+        position: relative;
+        top: 163px;
       }
     }
   }
