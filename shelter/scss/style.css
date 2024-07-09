@@ -657,6 +657,12 @@ body.page-pets .btn-double-arrow__left,
   height: 52px;
 }
 
+body.page-pets .btn-double-arrow__left,
+.btn-single-arrow__left {
+  pointer-events: none;
+  cursor: default;
+}
+
 body.page-pets .pagination-slider {
   width: 52px;
   height: 52px;
