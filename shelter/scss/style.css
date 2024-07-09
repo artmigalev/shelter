@@ -308,6 +308,26 @@ template {
   display: none;
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+  body .not-only .wrapper {
+    max-width: 44.25em;
+  }
+  body .not-only .wrapper .not-only__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .not-only .wrapper .not-only__container .not-only__img {
+    width: 35.563em;
+    height: 37.063em;
+  }
+  body .not-only .not-only__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 h1 {
   margin-top: 0;
   font-family: "Georgia", sans-serif;
@@ -532,6 +552,16 @@ body {
   max-width: 1280px;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    max-width: 320px;
+  }
 }
 
 section {

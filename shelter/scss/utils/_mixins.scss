@@ -24,3 +24,10 @@
 @mixin bord {
   border: 1px solid;
 }
+//**---------BREAKPOINTS--------**//
+@mixin tablet-width {
+  @media (min-width: 321px) and (max-width: $tablet-size){@content;}
+}
+@mixin mobile-width {
+  @media (min-width: 321px) and (max-width:$mobile-size){@content;}
+}
