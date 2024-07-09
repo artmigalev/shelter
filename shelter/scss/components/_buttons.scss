@@ -11,6 +11,9 @@ button {
   background: $color-primary;
   border: none;
 }
+.not-only__button:hover{
+  background: $color-primary-light;
+}
 .button-slider {
   width: 52px;
   height: 52px;
@@ -20,12 +23,20 @@ button {
 
   font-size: 0%;
 }
+.button-slider:hover{
+  background: $color-primary-light;
+  border: none;
+}
 .card__btn {
   width: 187px;
   height: 52px;
   border: 2px solid $color-primary;
   border-radius: 100px;
   background-color: transparent;
+}
+.card__btn:hover{
+  background: $color-primary-light;
+  border: none;
 }
 .pets__button {
   border-radius: 100px;
@@ -61,7 +72,11 @@ body.page-pets .btn-double-arrow__left,
   width: 52px;
   height: 52px;
 }
-body.page-pets .button-slider {
+body.page-pets .pagination-slider {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+
   font-family: $primary-family;
   font-weight: 400;
   font-size: 20px;
@@ -69,6 +84,11 @@ body.page-pets .button-slider {
   letter-spacing: 0.06em;
   text-align: center;
 
+}
+body.page-pets .btn-single-arrow__right,
+.btn-double-arrow__right,
+.btn-number{
+  border: 2px solid $color-primary;
 }
 body.page-pets .btn-number{
   background: $color-primary;

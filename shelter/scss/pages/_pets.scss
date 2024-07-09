@@ -4,6 +4,17 @@
   .pets__wrapper {
     width: 100%;
     padding: 30px 0;
+    .header{
+      .header__navigation{
+        .nav__list{
+          .list{
+            .nav-list__links:hover{
+              color: #292929;
+            }
+          }
+        }
+      }
+    }
   }
   .main {
     background: $color-light-l;

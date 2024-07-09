@@ -8,3 +8,7 @@
   gap: 30px;
   height: 435px;
 }
+.pets__card:hover{
+  cursor: pointer;
+  background: $color-light-xl;
+}
