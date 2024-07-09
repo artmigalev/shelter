@@ -11,7 +11,7 @@ button {
   background: $color-primary;
   border: none;
 }
-.not-only__button:hover{
+.not-only__button:hover {
   background: $color-primary-light;
 }
 .button-slider {
@@ -23,7 +23,7 @@ button {
 
   font-size: 0%;
 }
-.button-slider:hover{
+.button-slider:hover {
   background: $color-primary-light;
   border: none;
 }
@@ -34,7 +34,7 @@ button {
   border-radius: 100px;
   background-color: transparent;
 }
-.card__btn:hover{
+.card__btn:hover {
   background: $color-primary-light;
   border: none;
 }
@@ -72,6 +72,11 @@ body.page-pets .btn-double-arrow__left,
   width: 52px;
   height: 52px;
 }
+body.page-pets .btn-double-arrow__left,
+.btn-single-arrow__left {
+  pointer-events: none;
+  cursor: default;
+}
 body.page-pets .pagination-slider {
   width: 52px;
   height: 52px;
@@ -83,14 +88,12 @@ body.page-pets .pagination-slider {
   line-height: 115%;
   letter-spacing: 0.06em;
   text-align: center;
-
 }
 body.page-pets .btn-single-arrow__right,
 .btn-double-arrow__right,
-.btn-number{
+.btn-number {
   border: 2px solid $color-primary;
 }
-body.page-pets .btn-number{
+body.page-pets .btn-number {
   background: $color-primary;
 }
-
