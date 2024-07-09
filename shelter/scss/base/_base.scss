@@ -2,6 +2,12 @@ body{
   max-width: $body-sz;
   display: flex;
   flex-direction: column;
+  @include media-tablet{
+    max-width: $tablet-size;
+  }
+  @include media-mobile{
+    max-width: $mobile-size;
+  }
 
 
 }
