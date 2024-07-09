@@ -58,6 +58,8 @@ p {
 .list:first-child {
   .nav-list__links {
     color: $color-light-s;
+    pointer-events: none;
+    cursor: default;
   }
   border-bottom: 3px solid $color-primary;
 }
@@ -190,16 +192,21 @@ body.page-pets .nav-list__links {
 }
 body.page-pets .list:first-child {
   border: none;
+
 }
 body.page-pets .list:first-child {
   .nav-list__links {
     color: $color-dark-l;
+    pointer-events: all;
+    cursor: pointer;
   }
 }
 
 body.page-pets .list:nth-child(2) {
   .nav-list__links {
     color: $color-dark-3xl;
+    pointer-events: none;
+    cursor: default;
   }
   border-bottom: 3px solid $color-primary;
 }
