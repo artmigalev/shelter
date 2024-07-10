@@ -538,16 +538,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 481px) and (max-width: 768px) {
-  body {
-    max-width: 768px;
-  }
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  body {
-    max-width: 320px;
-  }
-}
 
 section {
   padding-top: 80px;
@@ -577,6 +567,27 @@ li {
   list-style: none;
 }
 
+@media (min-width: 321px) and (max-width: 768px) {
+  main .not-only .not-only__wrapper {
+    max-width: 44.25rem;
+    gap: 3.75rem;
+  }
+  main .not-only .not-only__wrapper .header {
+    width: inherit;
+  }
+  main .not-only .not-only__wrapper .not-only__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.25rem;
+  }
+  main .not-only .not-only__wrapper .not-only__container .not-only__content {
+    top: 0;
+  }
+  main .not-only .not-only__wrapper .not-only__container .not-only__img {
+    width: 35.563rem;
+  }
+}
 button {
   cursor: pointer;
   font-family: "Georgia", sans-serif;
