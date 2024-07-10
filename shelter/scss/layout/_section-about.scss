@@ -1,9 +1,9 @@
-.section-about{
+.section-about {
   padding-top: 80px;
   padding-bottom: 100px;
   background: $color-light-xl;
   margin: 0 auto;
-  .about__wrapper{
+  .about__wrapper {
     @include fl-row;
     align-items: center;
     gap: 120px;
@@ -12,16 +12,25 @@
       width: 300px;
       height: 408px;
     }
-    .about__content{
+    .about__content {
       text-align: left;
       @include fl-clmn;
       gap: 25px;
-      .about__title{
+      .about__title {
         max-width: 370px;
         letter-spacing: 2.6px;
       }
-
     }
-
   }
+}
+@include tablet-width {
+  .section-about {
+    .about__wrapper {
+      gap: 80px;
+
+      flex-direction: column-reverse;
+    }
+  }
+}
+@include mobile-width {
 }

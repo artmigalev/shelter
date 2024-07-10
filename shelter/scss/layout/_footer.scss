@@ -4,7 +4,7 @@
   .footer__wrapper {
     @include fl-row;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
     gap: 160px;
 
     .footer-block {
@@ -29,8 +29,32 @@
         }
       }
     }
-    .footer__location{
+    .footer__location {
       right: 14px;
     }
   }
+}
+
+@include tablet-width {
+  .footer {
+    padding: 30px 30px 0 30px;
+    .footer__wrapper {
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      .footer-block {
+        max-width: 19rem;
+      }
+      .footer__location {
+        right: 0px;
+      }
+      .footer__img {
+        max-width: 18.75rem;
+      }
+    }
+  }
+}
+
+@include mobile-width {
 }

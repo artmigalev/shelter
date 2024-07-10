@@ -1,10 +1,10 @@
-.section-help{
+.section-help {
   background-color: $color-light-xl;
-  .help__wrapper{
+  .help__wrapper {
     @include fl-clmn;
     align-items: center;
     gap: 60px;
-    .help__list{
+    .help__list {
       padding-left: 0;
       flex-wrap: wrap;
       @include fl-row;
@@ -13,21 +13,29 @@
       column-gap: 120px;
       row-gap: 55px;
       height: max-content;
-      .help-list__container{
-
+      .help-list__container {
+        width: 170px;
         list-style: none;
         @include fl-clmn;
         align-items: center;
         gap: 30px;
-        .container__icon{
+        .container__icon {
           width: 60px;
           height: 60px;
         }
+      }
+    }
+  }
+}
 
+@include tablet-width {
+  .section-help {
+    .help__wrapper {
+      .help__list {
+        row-gap: 60px;
+        column-gap: 55px;
 
       }
-
     }
-
   }
 }

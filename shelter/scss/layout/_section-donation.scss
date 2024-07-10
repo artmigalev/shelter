@@ -1,4 +1,5 @@
 .section-donation {
+  background: $color-light-l;
   .donation__wrapper {
     @include fl-row;
     align-items: center;
@@ -12,6 +13,15 @@
       max-width: 380px;
       @include fl-clmn;
       gap: 20px;
+    }
+  }
+}
+@include tablet-width{
+  .section-donation{
+
+    .donation__wrapper{
+      @include fl-clmn;
+      flex-direction: column-reverse;
     }
   }
 }

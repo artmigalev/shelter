@@ -1,23 +1,24 @@
 body{
-  // max-width: $body-sz;
+
   display: flex;
   flex-direction: column;
-  // @include media-tablet{
-  //   max-width: $tablet-size;
-  // }
-  // @include media-mobile{
-  //   max-width: $mobile-size;
-  // }
+
 
 
 }
 section{
   padding-top: 80px;
   padding-bottom: 100px;
+
 }
 .wrapper{
   max-width: $wrapper-sz;
   margin: 0 auto;
+  @include tablet-width{
+    max-width: $tablet-wrapper-size;
+    width: 100%;
+  }
+ 
 }
 
 *{
