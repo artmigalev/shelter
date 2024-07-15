@@ -7,7 +7,6 @@
   .footer__wrapper {
     @include fl-row;
     justify-content: space-between;
-    // flex-wrap: nowrap;
     gap: 160px;
 
     .footer-block {
