@@ -781,6 +781,7 @@ body.page-pets .btn-number {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 120px;
 }
 .section-about .about__wrapper .about__img {
@@ -868,7 +869,6 @@ body.page-pets .btn-number {
   height: max-content;
 }
 .section-help .help__wrapper .help__list .help-list__container {
-  width: 170px;
   list-style: none;
   display: flex;
   flex-direction: column;
