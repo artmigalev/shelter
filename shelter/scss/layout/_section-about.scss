@@ -6,6 +6,7 @@
   .about__wrapper{
     @include fl-row;
     align-items: center;
+    justify-content: center;
     gap: 120px;
 
     .about__img {
