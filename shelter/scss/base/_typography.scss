@@ -192,7 +192,6 @@ body.page-pets .nav-list__links {
 }
 body.page-pets .list:first-child {
   border: none;
-
 }
 body.page-pets .list:first-child {
   .nav-list__links {
@@ -215,4 +214,39 @@ body.page-pets .logo__name {
 }
 body.page-pets .logo__description {
   color: $color-dark-3xl;
+}
+
+///***--------BREAKPOINTS------------***////
+@include mobile-width {
+  .section-title {
+    font-size: 1.56rem;
+  }
+  .content__title {
+    font-size: convertRem(25);
+    text-align: center;
+    word-spacing: 1.6px;
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+    text-align: center;
+    letter-spacing: -0.1px;
+  }
+  .about__title {
+    text-align: center;
+    font-size: 1.56rem;
+  }
+  .about-content__text {
+    font-size: 0.94rem;
+    letter-spacing: 0;
+    text-align: justify;
+    letter-spacing: 0.4px;
+  }
+  .card__name {
+    font-size: 1.25rem;
+  }
+
+  .card__btn{
+    font-size: 1.06rem;
+  }
+  
 }

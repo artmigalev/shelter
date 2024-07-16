@@ -97,3 +97,19 @@ body.page-pets .btn-single-arrow__right,
 body.page-pets .btn-number {
   background: $color-primary;
 }
+
+//**---------BREAKPOINTS--------**//
+@include mobile-width {
+  .not-only__button {
+    border-radius: 6.25rem;
+    padding: 0.94rem 2.81rem;
+    width: 12.94rem;
+    height: 3.25rem;
+  }
+  .button-slider {
+    display: none;
+  }
+  .pets__button {
+    font-size: 1.06rem;
+  }
+}
