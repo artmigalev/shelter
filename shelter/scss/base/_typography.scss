@@ -245,8 +245,39 @@ body.page-pets .logo__description {
     font-size: 1.25rem;
   }
 
-  .card__btn{
+  .card__btn {
     font-size: 1.06rem;
   }
-  
+  .donation__title {
+    font-size: 1.56rem;
+    text-align: center;
+  }
+  .donation__text {
+    font-size: 0.94rem;
+    letter-spacing: 0;
+  }
+  .donation__card-number {
+    font-size: 0.94rem;
+  }
+  .donation__text-cursive {
+    font-size: 0.75rem;
+    letter-spacing: 0.1px;
+    text-align: justify;
+  }
+  .footer__title {
+    font-size: 1.56rem;
+    text-align: center;
+  }
+  .contact__link {
+    font-size: 1.25rem;
+  }
+  .location__link {
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+  }
+  .footer__location {
+    .footer__title {
+      letter-spacing: 0.16em;
+    }
+  }
 }

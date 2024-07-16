@@ -9,21 +9,40 @@
       width: 505px;
       height: 261px;
     }
-    .donation__content{
+    .donation__content {
       max-width: 380px;
       @include fl-clmn;
       gap: 20px;
     }
   }
 }
-@include tablet-width{
-  .section-donation{
-
-    .donation__wrapper{
+@include tablet-width {
+  .section-donation {
+    .donation__wrapper {
       @include fl-clmn;
       flex-direction: column-reverse;
-      max-width: calc($tablet-wrapper-size/16)+rem;
+      max-width: calc($tablet-wrapper-size/16) + rem;
       gap: 60px;
+    }
+  }
+}
+@include mobile-width {
+  .section-donation {
+    max-width: 20rem;
+    padding-top: convertRem(42);
+    padding-bottom: convertRem(42);
+    .donation__wrapper {
+      max-width: convertRem($mobile-wrapper-size);
+      gap: convertRem(42);
+      .donation__img {
+        width: 16.25rem;
+        height: 8.44rem;
+      }
+      .donation__content{
+        width: 100%;
+        gap: convertRem(20);
+
+      }
     }
   }
 }

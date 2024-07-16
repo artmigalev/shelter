@@ -59,4 +59,39 @@
 }
 
 @include mobile-width {
+  .footer {
+    max-width: 20rem;
+
+    padding: convertRem(30) 0 0 0;
+    .footer__wrapper {
+      max-width: convertRem(300);
+      gap: convertRem(40);
+      .footer-block {
+        align-items: center;
+        gap: convertRem(40);
+        top: 0;
+        .contact__list {
+          margin: 0;
+          gap: convertRem(40);
+        }
+        .location__list {
+          margin: 0;
+          gap: convertRem(40);
+          .footer__list {
+          }
+        }
+      }
+      .footer__contact {
+        max-width: convertRem(278);
+      }
+      .footer__location {
+        width: 100%;
+      }
+
+      .footer__img {
+        width: 16.25rem;
+        height: 16.81rem;
+      }
+    }
+  }
 }

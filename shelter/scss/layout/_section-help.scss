@@ -30,14 +30,40 @@
 @include tablet-width {
   .section-help {
     .help__wrapper {
-      max-width: calc($tablet-wrapper-size/16)+rem;
+      max-width: calc($tablet-wrapper-size/16) + rem;
       .help__list {
         row-gap: 60px;
         column-gap: 55px;
-        .help-list__container{
+        .help-list__container {
           width: 170px;
         }
-
+      }
+    }
+  }
+}
+@include mobile-width {
+  .section-help {
+    max-width: 20rem;
+    padding-top: convertRem(42);
+    padding-bottom: convertRem(42);
+    .help__wrapper {
+      max-width: convertRem($mobile-wrapper-size);
+      .help__list {
+        justify-content: start;
+        column-gap: convertRem(30);
+        row-gap: convertRem(30);
+        .help-list__container {
+          width: 8.12rem;
+          height: 5.44rem;
+          gap: convertRem(20);
+          .container__icon{
+            width: convertRem(50);
+            height: convertRem(50);
+          }
+          .container__text{
+            font-size: 0.94rem;
+          }
+        }
       }
     }
   }
