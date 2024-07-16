@@ -537,6 +537,7 @@ body.page-pets .logo__description {
 body {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 section {
@@ -547,12 +548,6 @@ section {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-}
-@media (min-width: 480px) and (max-width: 768px) {
-  .wrapper {
-    max-width: 708px;
-    width: 100%;
-  }
 }
 
 * {
@@ -573,6 +568,30 @@ li {
   list-style: none;
 }
 
+.burger__menu {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 22px;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-left: 0;
+}
+.burger__menu .burger__line {
+  width: 100%;
+  border: 2px solid #f1cdb3;
+  cursor: pointer;
+}
+
+.burger__menu-turn {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 320px) {
+  .burger__menu {
+    display: flex;
+  }
+}
 button {
   cursor: pointer;
   font-family: "Georgia", sans-serif;
@@ -726,6 +745,11 @@ body.page-pets .btn-number {
   color: #fafafa;
 }
 
+@media (max-width: 320px) {
+  .header__navigation {
+    display: none;
+  }
+}
 .not-only {
   background: radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
   width: 100%;
@@ -750,7 +774,7 @@ body.page-pets .btn-number {
   top: 163px;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .not-only .not-only__wrapper {
     max-width: 44.25rem;
     gap: 3.75rem;
@@ -799,7 +823,7 @@ body.page-pets .btn-number {
   letter-spacing: 2.6px;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .section-about .about__wrapper {
     gap: 80px;
     flex-direction: column-reverse;
@@ -836,7 +860,10 @@ body.page-pets .btn-number {
   gap: 90px;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  #our-friends .pets__wrapper {
+    max-width: 44.25rem;
+  }
   #our-friends .pets__wrapper .pets__container {
     width: 100%;
   }
@@ -880,11 +907,17 @@ body.page-pets .btn-number {
   height: 60px;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (max-width: 768px) {
+  .section-help .help__wrapper {
+    max-width: 44.25rem;
+  }
   .section-help .help__wrapper .help__list {
     row-gap: 60px;
     -moz-column-gap: 55px;
          column-gap: 55px;
+  }
+  .section-help .help__wrapper .help__list .help-list__container {
+    width: 170px;
   }
 }
 .section-donation {
@@ -908,11 +941,13 @@ body.page-pets .btn-number {
   gap: 20px;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .section-donation .donation__wrapper {
     display: flex;
     flex-direction: column;
     flex-direction: column-reverse;
+    max-width: 44.25rem;
+    gap: 60px;
   }
 }
 .footer {
@@ -956,7 +991,7 @@ body.page-pets .btn-number {
   right: 14px;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .footer {
     padding: 30px 30px 0 30px;
   }
@@ -976,34 +1011,6 @@ body.page-pets .btn-number {
     max-width: 18.75rem;
   }
 }
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-.header .header__logo {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.header .header__navigation .nav__list {
-  padding-left: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 35px;
-}
-.header .header__navigation .nav__list .list {
-  list-style: none;
-}
-.header .header__navigation .nav__list .list .nav-list__links {
-  text-decoration: none;
-}
-.header .header__navigation .nav__list .list .nav-list__links:hover {
-  color: #fafafa;
-}
-
 .page-pets .pets__wrapper {
   width: 100%;
   padding: 30px 0;
@@ -1036,4 +1043,25 @@ body.page-pets .btn-number {
   flex-direction: row;
   align-items: center;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .page-pets .pets__wrapper {
+    max-width: 44.25rem;
+  }
+  .page-pets .main .main-pets__wrapper {
+    max-width: 44.25rem;
+    gap: 1.875rem;
+  }
+  .page-pets .main .main-pets__wrapper .cards_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1.875rem;
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+    max-height: 85.3125rem;
+    height: 100%;
+    overflow: hidden;
+  }
 }/*# sourceMappingURL=style.css.map */

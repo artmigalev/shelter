@@ -1,39 +1,29 @@
-body{
-
+body {
   display: flex;
   flex-direction: column;
-
-
-
+  overflow-x: hidden;
 }
-section{
+section {
   padding-top: 80px;
   padding-bottom: 100px;
-
 }
-.wrapper{
+.wrapper {
   max-width: $wrapper-sz;
   margin: 0 auto;
-  @include tablet-width{
-    max-width: $tablet-wrapper-size;
-    width: 100%;
-  }
- 
+  
 }
 
-*{
+* {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 a {
   cursor: pointer;
   text-decoration: none;
-
 }
-ul{
+ul {
   padding-left: 0;
 }
-li{
+li {
   list-style: none;
-
 }

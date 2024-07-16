@@ -30,6 +30,7 @@
 @include tablet-width{
   #our-friends{
       .pets__wrapper{
+        max-width: calc($tablet-wrapper-size/16)+rem;
         .pets__container{
           width: 100%;
           .pets__block-card{

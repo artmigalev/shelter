@@ -1,0 +1,24 @@
+.burger__menu {
+  display: none;
+  flex-direction: column;
+  width: 30px;
+  height: 22px;
+
+  justify-content: space-between;
+  cursor: pointer;
+  padding-left: 0;
+  .burger__line {
+    width: 100%;
+    border: 2px solid $color-primary;
+    cursor: pointer;
+  }
+}
+.burger__menu-turn{
+  transform: rotate(90deg);
+}
+@include mobile-width{
+  .burger__menu{
+
+    display: flex;
+  }
+}

@@ -30,9 +30,13 @@
 @include tablet-width {
   .section-help {
     .help__wrapper {
+      max-width: calc($tablet-wrapper-size/16)+rem;
       .help__list {
         row-gap: 60px;
         column-gap: 55px;
+        .help-list__container{
+          width: 170px;
+        }
 
       }
     }

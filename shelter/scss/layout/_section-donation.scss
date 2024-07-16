@@ -22,6 +22,8 @@
     .donation__wrapper{
       @include fl-clmn;
       flex-direction: column-reverse;
+      max-width: calc($tablet-wrapper-size/16)+rem;
+      gap: 60px;
     }
   }
 }
