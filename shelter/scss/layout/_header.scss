@@ -18,15 +18,15 @@
         .nav-list__links {
           text-decoration: none;
         }
-        .nav-list__links:hover{
+        .nav-list__links:hover {
           color: #fafafa;
         }
       }
     }
   }
 }
-@include mobile-width{
-  .header__navigation{
+@include mobile-width {
+  .header__navigation {
     display: none;
   }
 }

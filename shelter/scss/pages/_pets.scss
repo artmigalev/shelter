@@ -61,3 +61,35 @@
     }
   }
 }
+@include mobile-width {
+  .page-pets {
+    .pets__wrapper {
+      max-width: convertRem($mobile-wrapper-size);
+      padding-top: convertRem(30);
+      padding-bottom: convertRem(30);
+      .header {
+        .burger__menu {
+          .burger__line {
+            border-color: #000;
+          }
+        }
+      }
+    }
+    .main {
+      padding-top: convertRem(42);
+      padding-bottom: convertRem(42);
+      .main-pets__wrapper {
+        max-width: convertRem(300);
+        gap: convertRem(42);
+        .cards_container {
+          grid-template-columns: 1fr;
+          padding: 0;
+          row-gap: convertRem(30);
+        }
+        .pets__btn-container {
+          gap: convertRem(10);
+        }
+      }
+    }
+  }
+}

@@ -644,8 +644,9 @@ li {
   cursor: pointer;
 }
 
-.burger__menu-turn {
+.burger__menu-turn:hover {
   transform: rotate(90deg);
+  transition: 0.3s;
 }
 
 @media (max-width: 320px) {
@@ -786,6 +787,9 @@ body.page-pets .btn-number {
   background-color: #fafafa;
   gap: 30px;
   height: 435px;
+}
+.pets__card .card__img {
+  width: -webkit-fill-available;
 }
 
 .pets__card:hover {
@@ -1280,5 +1284,31 @@ body.page-pets .btn-number {
     max-height: 85.3125rem;
     height: 100%;
     overflow: hidden;
+  }
+}
+@media (max-width: 320px) {
+  .page-pets .pets__wrapper {
+    max-width: 18.125rem;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+  .page-pets .pets__wrapper .header .burger__menu .burger__line {
+    border-color: #000;
+  }
+  .page-pets .main {
+    padding-top: 2.625rem;
+    padding-bottom: 2.625rem;
+  }
+  .page-pets .main .main-pets__wrapper {
+    max-width: 18.75rem;
+    gap: 2.625rem;
+  }
+  .page-pets .main .main-pets__wrapper .cards_container {
+    grid-template-columns: 1fr;
+    padding: 0;
+    row-gap: 1.875rem;
+  }
+  .page-pets .main .main-pets__wrapper .pets__btn-container {
+    gap: 0.625rem;
   }
 }/*# sourceMappingURL=style.css.map */

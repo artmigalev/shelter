@@ -13,8 +13,9 @@
     cursor: pointer;
   }
 }
-.burger__menu-turn{
+.burger__menu-turn:hover{
   transform: rotate(90deg);
+  transition: 0.3s;
 }
 @include mobile-width{
   .burger__menu{

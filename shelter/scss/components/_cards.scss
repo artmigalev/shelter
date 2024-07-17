@@ -7,6 +7,9 @@
   background-color: $color-light-s;
   gap: 30px;
   height: 435px;
+  .card__img{
+    width: -webkit-fill-available;
+  }
 }
 .pets__card:hover{
   cursor: pointer;
