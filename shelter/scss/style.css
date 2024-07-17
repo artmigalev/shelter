@@ -778,11 +778,11 @@ body.page-pets .btn-number {
   }
 }
 .pets__card {
+  border-radius: 0.56rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 9px;
-  padding: 0 35px;
   max-width: 270px;
   background-color: #fafafa;
   gap: 30px;
@@ -1284,6 +1284,7 @@ body.page-pets .btn-number {
     max-height: 85.3125rem;
     height: 100%;
     overflow: hidden;
+    padding: 0;
   }
 }
 @media (max-width: 320px) {
