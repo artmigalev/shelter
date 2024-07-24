@@ -15,3 +15,15 @@
   cursor: pointer;
   background: $color-light-xl;
 }
+//**---------BREAKPOINTS--------**//
+@include tablet-width {
+  .pets__card {
+    max-width: convertRem(270);
+    gap: convertRem(30);
+    height: convertRem(435);
+    .card__img{
+      width: convertRem(270);
+      height: convertRem(270);
+    }
+  }
+}

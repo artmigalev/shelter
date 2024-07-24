@@ -26,10 +26,23 @@
 }
 @include tablet-width {
   .section-about {
+    padding-top: convertRem(80);
+    padding-bottom: convertRem(100);
     .about__wrapper {
-      gap: 80px;
-
+      gap: convertRem(80);
       flex-direction: column-reverse;
+      .about__img {
+        width: convertRem(300);
+        height:convertRem(408);
+      }
+      .about__content{
+        gap: convertRem(25);
+        .about__title{
+          max-width: convertRem(370);
+          text-align: center;
+        }
+      }
+
     }
   }
 }

@@ -534,6 +534,60 @@ body.page-pets .logo__description {
   color: #292929;
 }
 
+@media (max-width: 768px) {
+  .logo__name {
+    font-size: 2rem;
+  }
+  .logo__description {
+    font-size: 0.8125rem;
+  }
+  .nav-list__links {
+    font-size: 0.9375rem;
+  }
+  .content__title {
+    font-size: 2.75rem;
+  }
+  .not-only__text {
+    font-size: 0.9375rem;
+  }
+  .not-only__text {
+    font-size: 0.9375rem;
+  }
+  .about__title {
+    font-size: 2.19rem;
+  }
+  .about-content__text {
+    font-size: 0.94rem;
+  }
+  .pets__title {
+    font-size: 2.1875rem;
+  }
+  .section-title {
+    font-size: 2.1875rem;
+  }
+  .container__text {
+    font-size: 1.25rem;
+  }
+  .donation__text {
+    font-size: 0.9375rem;
+  }
+  .donation__text-cursive {
+    font-size: 0.75rem;
+  }
+  .donation__card-number {
+    font-size: 1.25rem;
+    letter-spacing: 0.06875rem;
+  }
+  .footer__title {
+    font-size: 2.1875rem;
+  }
+  .contact__link {
+    font-size: 1.25rem;
+  }
+  .location__link {
+    font-size: 1.25rem;
+  }
+}
 @media (max-width: 320px) {
   .section-title {
     font-size: 1.56rem;
@@ -762,6 +816,26 @@ body.page-pets .btn-number {
   background: #f1cdb3;
 }
 
+@media (max-width: 768px) {
+  .button-slider {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+  .card__btn {
+    width: 11.6875rem;
+    height: 3.25rem;
+  }
+  .pets__button {
+    font-size: 1.0625rem;
+    width: 16.25rem;
+    height: 3.25rem;
+  }
+  .donation__btn {
+    width: 21.8125rem;
+    height: 2.6875rem;
+    gap: 0.9375rem;
+  }
+}
 @media (max-width: 320px) {
   .not-only__button {
     border-radius: 6.25rem;
@@ -797,6 +871,17 @@ body.page-pets .btn-number {
   background: #fff;
 }
 
+@media (max-width: 768px) {
+  .pets__card {
+    max-width: 16.875rem;
+    gap: 1.875rem;
+    height: 27.1875rem;
+  }
+  .pets__card .card__img {
+    width: 16.875rem;
+    height: 16.875rem;
+  }
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -825,6 +910,14 @@ body.page-pets .btn-number {
   color: #fafafa;
 }
 
+@media (max-width: 768px) {
+  .header .header__logo {
+    gap: 0.625rem;
+  }
+  .header .header__navigation .nav__list {
+    gap: 2.1875rem;
+  }
+}
 @media (max-width: 320px) {
   .header__navigation {
     display: none;
@@ -921,9 +1014,24 @@ body.page-pets .btn-number {
 }
 
 @media (max-width: 768px) {
+  .section-about {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+  }
   .section-about .about__wrapper {
-    gap: 80px;
+    gap: 5rem;
     flex-direction: column-reverse;
+  }
+  .section-about .about__wrapper .about__img {
+    width: 18.75rem;
+    height: 25.5rem;
+  }
+  .section-about .about__wrapper .about__content {
+    gap: 1.5625rem;
+  }
+  .section-about .about__wrapper .about__content .about__title {
+    max-width: 23.125rem;
+    text-align: center;
   }
 }
 @media (max-width: 320px) {
@@ -972,8 +1080,13 @@ body.page-pets .btn-number {
 }
 
 @media (max-width: 768px) {
+  .section-pets {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+  }
   .section-pets .pets__wrapper {
     max-width: 44.25rem;
+    gap: 3.75rem;
   }
   .section-pets .pets__wrapper .pets__container {
     width: 100%;
@@ -1049,6 +1162,10 @@ body.page-pets .btn-number {
 }
 
 @media (max-width: 768px) {
+  .section-help {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+  }
   .section-help .help__wrapper {
     max-width: 44.25rem;
   }
@@ -1058,7 +1175,8 @@ body.page-pets .btn-number {
          column-gap: 55px;
   }
   .section-help .help__wrapper .help__list .help-list__container {
-    width: 170px;
+    width: 10.625rem;
+    gap: 1.875rem;
   }
 }
 @media (max-width: 320px) {
@@ -1111,12 +1229,23 @@ body.page-pets .btn-number {
 }
 
 @media (max-width: 768px) {
+  .section-donation {
+    padding-top: 5rem;
+    padding-bottom: 6.25rem;
+  }
   .section-donation .donation__wrapper {
     display: flex;
     flex-direction: column;
     flex-direction: column-reverse;
     max-width: 44.25rem;
-    gap: 60px;
+    gap: 3.75rem;
+  }
+  .section-donation .donation__wrapper .donation__img {
+    width: 31.5625rem;
+    height: 16.3125rem;
+  }
+  .section-donation .donation__wrapper .donation__content {
+    max-width: 23.75rem;
   }
 }
 @media (max-width: 320px) {
@@ -1181,11 +1310,11 @@ body.page-pets .btn-number {
 
 @media (max-width: 768px) {
   .footer {
-    padding: 30px 30px 0 30px;
+    padding: 1.875rem 1.875rem 0 1.875rem;
   }
   .footer .footer__wrapper {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
   }

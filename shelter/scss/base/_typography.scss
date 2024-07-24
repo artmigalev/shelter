@@ -217,6 +217,62 @@ body.page-pets .logo__description {
 }
 
 ///***--------BREAKPOINTS------------***////
+@include tablet-width {
+  .logo__name {
+    font-size: convertRem(32);
+  }
+  .logo__description {
+    font-size: convertRem(13);
+  }
+  .nav-list__links {
+    font-size: convertRem(15);
+  }
+  .content__title {
+    font-size: convertRem(44);
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+  }
+  .about__title {
+    font-size: 2.19rem;
+  }
+  .about-content__text {
+    font-size: 0.94rem;
+  }
+  .pets__title {
+    font-size: convertRem(35);
+  }
+  .section-title {
+    font-size: convertRem(35);
+  }
+  .container__text{
+    font-size: convertRem(20);
+  }
+  .donation__text{
+    font-size: convertRem(15)
+  }
+  .donation__text-cursive{
+    font-size: convertRem(12)
+  }
+  .donation__card-number{
+     font-size: convertRem(20);
+     letter-spacing: convertRem(1.1);
+  }
+  .footer__title{
+    font-size: convertRem(35)
+  }
+  .contact__link{
+    font-size: convertRem(20);
+
+  }
+  .location__link{
+    font-size: convertRem(20);
+
+  }
+}
 @include mobile-width {
   .section-title {
     font-size: 1.56rem;

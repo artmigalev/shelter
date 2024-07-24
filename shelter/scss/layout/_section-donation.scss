@@ -18,11 +18,20 @@
 }
 @include tablet-width {
   .section-donation {
+    padding-top: convertRem(80);
+    padding-bottom: convertRem(100);
     .donation__wrapper {
       @include fl-clmn;
       flex-direction: column-reverse;
-      max-width: calc($tablet-wrapper-size/16) + rem;
-      gap: 60px;
+      max-width: convertRem($tablet-wrapper-size);
+      gap: convertRem(60);
+      .donation__img {
+        width: convertRem(505);
+        height: convertRem(261);
+      }
+      .donation__content {
+        max-width: convertRem(380);
+      }
     }
   }
 }
@@ -38,10 +47,9 @@
         width: 16.25rem;
         height: 8.44rem;
       }
-      .donation__content{
+      .donation__content {
         width: 100%;
         gap: convertRem(20);
-
       }
     }
   }

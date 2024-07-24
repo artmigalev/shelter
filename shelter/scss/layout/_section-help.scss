@@ -29,13 +29,16 @@
 
 @include tablet-width {
   .section-help {
+    padding-top: convertRem(80);
+    padding-bottom: convertRem(100);
     .help__wrapper {
       max-width: calc($tablet-wrapper-size/16) + rem;
       .help__list {
         row-gap: 60px;
         column-gap: 55px;
         .help-list__container {
-          width: 170px;
+          width: convertRem(170);
+          gap: convertRem(30);
         }
       }
     }
@@ -56,11 +59,11 @@
           width: 8.12rem;
           height: 5.44rem;
           gap: convertRem(20);
-          .container__icon{
+          .container__icon {
             width: convertRem(50);
             height: convertRem(50);
           }
-          .container__text{
+          .container__text {
             font-size: 0.94rem;
           }
         }

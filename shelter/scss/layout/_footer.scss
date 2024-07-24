@@ -39,10 +39,10 @@
 
 @include tablet-width {
   .footer {
-    padding: 30px 30px 0 30px;
+    padding: convertRem(30) convertRem(30) 0 convertRem(30);
     .footer__wrapper {
       flex-wrap: wrap;
-      gap: 16px;
+      gap: convertRem(16);
       justify-content: center;
       align-items: center;
       .footer-block {
@@ -77,7 +77,6 @@
         .location__list {
           margin: 0;
           gap: convertRem(40);
-          
         }
       }
       .footer__contact {
