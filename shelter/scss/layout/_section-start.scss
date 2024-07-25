@@ -10,13 +10,54 @@
     .not-only__container {
       @include fl-row;
       justify-content: space-between;
-      // align-items: center;
 
       .not-only__content {
         @include fl-clmn;
         max-width: 460px;
         position: relative;
         top: 163px;
+      }
+    }
+  }
+}
+
+@include tablet-width {
+  .not-only {
+    .not-only__wrapper {
+      max-width: 44.25rem;
+      gap: 3.75rem;
+      .header {
+        width: inherit;
+      }
+      .not-only__container {
+        @include fl-clmn;
+        align-items: center;
+        gap: 6.25rem;
+        .not-only__content {
+          top: 0;
+        }
+        .not-only__img {
+          width: 35.563rem;
+        }
+      }
+    }
+  }
+}
+@include mobile-width {
+  .not-only {
+    background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .not-only__wrapper {
+      max-width: convertRem($mobile-wrapper-size);
+      .not-only__container {
+        .not-only__content {
+          align-items: center;
+        }
+        .not-only__img {
+          width: 16.25rem;
+          height: 17rem;
+        }
       }
     }
   }

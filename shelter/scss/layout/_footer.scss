@@ -7,7 +7,6 @@
   .footer__wrapper {
     @include fl-row;
     justify-content: space-between;
-    flex-wrap: nowrap;
     gap: 160px;
 
     .footer-block {
@@ -34,6 +33,63 @@
     }
     .footer__location {
       right: 14px;
+    }
+  }
+}
+
+@include tablet-width {
+  .footer {
+    padding: convertRem(30) convertRem(30) 0 convertRem(30);
+    .footer__wrapper {
+      flex-wrap: wrap;
+      gap: convertRem(16);
+      justify-content: center;
+      align-items: center;
+      .footer-block {
+        max-width: 19rem;
+      }
+      .footer__location {
+        right: 0px;
+      }
+      .footer__img {
+        max-width: 18.75rem;
+      }
+    }
+  }
+}
+
+@include mobile-width {
+  .footer {
+    max-width: 20rem;
+
+    padding: convertRem(30) 0 0 0;
+    .footer__wrapper {
+      max-width: convertRem(300);
+      gap: convertRem(40);
+      .footer-block {
+        align-items: center;
+        gap: convertRem(40);
+        top: 0;
+        .contact__list {
+          margin: 0;
+          gap: convertRem(40);
+        }
+        .location__list {
+          margin: 0;
+          gap: convertRem(40);
+        }
+      }
+      .footer__contact {
+        max-width: convertRem(278);
+      }
+      .footer__location {
+        width: 100%;
+      }
+
+      .footer__img {
+        width: 16.25rem;
+        height: 16.81rem;
+      }
     }
   }
 }

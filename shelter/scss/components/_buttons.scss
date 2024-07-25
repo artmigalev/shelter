@@ -97,3 +97,42 @@ body.page-pets .btn-single-arrow__right,
 body.page-pets .btn-number {
   background: $color-primary;
 }
+
+//**---------BREAKPOINTS--------**//
+@include tablet-width {
+  .button-slider {
+    width: convertRem(52);
+    height: convertRem(52);
+  }
+  .card__btn {
+    width: convertRem(187);
+    height: convertRem(52);
+  }
+  .pets__button {
+    font-size: convertRem(17);
+    width: convertRem(260);
+    height: convertRem(52);
+  }
+  .donation__btn {
+    width: convertRem(349);
+    height: convertRem(43);
+    gap: convertRem(15);
+  }
+}
+@include mobile-width {
+  .not-only__button {
+    border-radius: 6.25rem;
+    padding: 0.94rem 2.81rem;
+    width: 12.94rem;
+    height: 3.25rem;
+  }
+
+  .pets__button {
+    font-size: 1.06rem;
+  }
+  .donation__btn {
+    width: 17.56rem;
+    height: 2.69rem;
+    justify-content: space-between;
+  }
+}

@@ -1,14 +1,29 @@
 .pets__card {
+  border-radius: 0.56rem;
   @include fl-clmn;
   align-items: center;
   border-radius: 9px;
-  padding: 0 35px;
   max-width: 270px;
   background-color: $color-light-s;
   gap: 30px;
   height: 435px;
+  .card__img {
+    width: -webkit-fill-available;
+  }
 }
-.pets__card:hover{
+.pets__card:hover {
   cursor: pointer;
   background: $color-light-xl;
+}
+//**---------BREAKPOINTS--------**//
+@include tablet-width {
+  .pets__card {
+    max-width: convertRem(270);
+    gap: convertRem(30);
+    height: convertRem(435);
+    .card__img{
+      width: convertRem(270);
+      height: convertRem(270);
+    }
+  }
 }

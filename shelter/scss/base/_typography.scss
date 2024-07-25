@@ -192,7 +192,6 @@ body.page-pets .nav-list__links {
 }
 body.page-pets .list:first-child {
   border: none;
-
 }
 body.page-pets .list:first-child {
   .nav-list__links {
@@ -215,4 +214,126 @@ body.page-pets .logo__name {
 }
 body.page-pets .logo__description {
   color: $color-dark-3xl;
+}
+
+///***--------BREAKPOINTS------------***////
+@include tablet-width {
+  .logo__name {
+    font-size: convertRem(32);
+  }
+  .logo__description {
+    font-size: convertRem(13);
+  }
+  .nav-list__links {
+    font-size: convertRem(15);
+  }
+  .content__title {
+    font-size: convertRem(44);
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+  }
+  .about__title {
+    font-size: 2.19rem;
+  }
+  .about-content__text {
+    font-size: 0.94rem;
+  }
+  .pets__title {
+    font-size: convertRem(35);
+  }
+  .section-title {
+    font-size: convertRem(35);
+  }
+  .container__text{
+    font-size: convertRem(20);
+  }
+  .donation__text{
+    font-size: convertRem(15)
+  }
+  .donation__text-cursive{
+    font-size: convertRem(12)
+  }
+  .donation__card-number{
+     font-size: convertRem(20);
+     letter-spacing: convertRem(1.1);
+  }
+  .footer__title{
+    font-size: convertRem(35)
+  }
+  .contact__link{
+    font-size: convertRem(20);
+
+  }
+  .location__link{
+    font-size: convertRem(20);
+
+  }
+}
+@include mobile-width {
+  .section-title {
+    font-size: 1.56rem;
+  }
+  .content__title {
+    font-size: convertRem(25);
+    text-align: center;
+    word-spacing: 1.6px;
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+    text-align: center;
+    letter-spacing: -0.1px;
+  }
+  .about__title {
+    text-align: center;
+    font-size: 1.56rem;
+  }
+  .about-content__text {
+    font-size: 0.94rem;
+    letter-spacing: 0;
+    text-align: justify;
+    letter-spacing: 0.4px;
+  }
+  .card__name {
+    font-size: 1.25rem;
+  }
+
+  .card__btn {
+    font-size: 1.06rem;
+  }
+  .donation__title {
+    font-size: 1.56rem;
+    text-align: center;
+  }
+  .donation__text {
+    font-size: 0.94rem;
+    letter-spacing: 0;
+  }
+  .donation__card-number {
+    font-size: 0.84rem;
+  }
+  .donation__text-cursive {
+    font-size: 0.75rem;
+    letter-spacing: 0.1px;
+    text-align: justify;
+  }
+  .footer__title {
+    font-size: 1.56rem;
+    text-align: center;
+  }
+  .contact__link {
+    font-size: 1.25rem;
+  }
+  .location__link {
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+  }
+  .footer__location {
+    .footer__title {
+      letter-spacing: 0.16em;
+    }
+  }
 }

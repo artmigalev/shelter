@@ -18,10 +18,31 @@
         .nav-list__links {
           text-decoration: none;
         }
-        .nav-list__links:hover{
+        .nav-list__links:hover {
           color: #fafafa;
         }
       }
     }
   }
 }
+
+@include tablet-width{
+  .header{
+
+    .header__logo{
+      gap: convertRem(10);
+    }
+    .header__navigation{
+      .nav__list{
+        gap: convertRem(35);
+      }
+    }
+  }
+}
+
+@include mobile-width {
+  .header__navigation {
+    display: none;
+  }
+}
+
