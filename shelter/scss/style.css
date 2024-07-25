@@ -627,7 +627,7 @@ body.page-pets .logo__description {
     letter-spacing: 0;
   }
   .donation__card-number {
-    font-size: 0.94rem;
+    font-size: 0.84rem;
   }
   .donation__text-cursive {
     font-size: 0.75rem;
@@ -849,6 +849,7 @@ body.page-pets .btn-number {
   .donation__btn {
     width: 17.56rem;
     height: 2.69rem;
+    justify-content: space-between;
   }
 }
 .pets__card {
