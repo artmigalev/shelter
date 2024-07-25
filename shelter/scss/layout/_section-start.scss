@@ -10,7 +10,6 @@
     .not-only__container {
       @include fl-row;
       justify-content: space-between;
-      // align-items: center;
 
       .not-only__content {
         @include fl-clmn;
@@ -46,7 +45,7 @@
 }
 @include mobile-width {
   .not-only {
-    background-image: url("../../assets/png/start-screen-gradient-background-mobile.png");
+    background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
     .not-only__wrapper {

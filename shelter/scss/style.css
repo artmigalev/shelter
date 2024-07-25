@@ -970,7 +970,7 @@ body.page-pets .btn-number {
 }
 @media (max-width: 320px) {
   .not-only {
-    background-image: url("../../assets/png/start-screen-gradient-background-mobile.png");
+    background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
