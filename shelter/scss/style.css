@@ -688,6 +688,9 @@ li {
   flex-direction: column;
   width: 30px;
   height: 22px;
+  position: relative;
+  z-index: 4;
+  transition: 0.3s;
   justify-content: space-between;
   cursor: pointer;
   padding-left: 0;
@@ -698,16 +701,16 @@ li {
   cursor: pointer;
 }
 
-.burger__menu-turn:hover {
-  transform: rotate(90deg);
-  transition: 0.3s;
-}
-
 @media (max-width: 320px) {
   .burger__menu {
     display: flex;
   }
 }
+.burger__menu-turn {
+  transform: rotate(90deg);
+  transition: 0.3s;
+}
+
 button {
   cursor: pointer;
   font-family: "Georgia", sans-serif;
@@ -924,6 +927,35 @@ body.page-pets .btn-number {
     display: none;
   }
 }
+.header__navigation-hidden {
+  position: absolute;
+  transition: 1.3s;
+  width: 100vw;
+  height: 100vh;
+  background: #292929;
+  visibility: hidden;
+  transform: translateX(100%);
+}
+
+.header .header__navigation-active {
+  z-index: 3;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 1.3s;
+  width: 100vw;
+  height: 100vh;
+  background: #292929;
+  transform: translateX(0);
+}
+.header .header__navigation-active .nav__list-active {
+  flex-direction: column;
+  z-index: 3;
+  position: relative;
+  align-items: center;
+  top: 24.8vh;
+}
+
 .not-only {
   background: radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
   width: 100%;

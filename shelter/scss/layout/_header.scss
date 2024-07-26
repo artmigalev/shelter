@@ -26,14 +26,13 @@
   }
 }
 
-@include tablet-width{
-  .header{
-
-    .header__logo{
+@include tablet-width {
+  .header {
+    .header__logo {
       gap: convertRem(10);
     }
-    .header__navigation{
-      .nav__list{
+    .header__navigation {
+      .nav__list {
         gap: convertRem(35);
       }
     }
@@ -46,3 +45,38 @@
   }
 }
 
+//**----------display width < 768px--------**//
+.header__navigation-hidden  {
+  position: absolute;
+
+  transition:  1.3s;
+  width: 100vw;
+  height: 100vh;
+  background: #292929;
+  visibility: hidden;
+  transform: translateX(100%);
+}
+
+//**----------if burger menu active--------**//
+
+.header {
+  .header__navigation-active {
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition:  1.3s;
+    width: 100vw;
+    height: 100vh;
+    background: #292929;
+    transform: translateX(0);
+
+    .nav__list-active {
+      flex-direction: column;
+      z-index: 3;
+      position: relative;
+      align-items: center;
+      top: 24.8vh;
+    }
+  }
+}
