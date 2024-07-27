@@ -1,4 +1,4 @@
-@include screen-width {
+
   .header {
     @include fl-row;
     align-items: center;
@@ -31,7 +31,7 @@
       }
     }
   }
-}
+
 @include tablet-width {
   .header {
     .header__logo {

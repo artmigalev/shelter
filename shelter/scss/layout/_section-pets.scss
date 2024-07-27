@@ -21,6 +21,9 @@
         align-items: center;
         justify-content: space-between;
         gap: 90px;
+        @include screen-width {
+          gap: convertRem(90);
+        }
       }
     }
   }

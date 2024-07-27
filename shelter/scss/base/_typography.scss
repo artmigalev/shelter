@@ -3,6 +3,9 @@ h1 {
   font-family: $primary-family;
   font-weight: 400;
   font-size: 44px;
+  @include screen-width {
+    font-size: convertRem(44);
+  }
 
   color: $color-dark-l;
 }
@@ -11,6 +14,9 @@ h2 {
   font-family: $primary-family;
   font-weight: 400;
   font-size: 35px;
+  @include screen-width {
+    font-size: convertRem(35);
+  }
   color: $color-dark-l;
 }
 p {
@@ -19,12 +25,18 @@ p {
   font-size: 15px;
   line-height: 160%;
   color: $color-dark-xl;
+  @include screen-width {
+    font-size: convertRem(15);
+  }
 }
 .section-title {
   font-family: $primary-family;
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  @include screen-width {
+    font-size: convertRem(35);
+  }
 
   color: $color-dark-l;
 }
@@ -36,6 +48,9 @@ p {
   line-height: 110%;
   letter-spacing: 0.06em;
   color: $color-primary;
+  @include screen-width {
+    font-size: convertRem(32);
+  }
 }
 .logo__description {
   font-family: $second-family;
@@ -44,6 +59,9 @@ p {
   font-size: 13px;
   letter-spacing: 0.1em;
   color: $color-light-xl;
+  @include screen-width {
+    font-size: convertRem(13);
+  }
 }
 
 //**-------- NAV HEADER --------**//
@@ -53,6 +71,9 @@ p {
   font-size: 15px;
   line-height: 160%;
   color: $color-dark-s;
+  @include screen-width {
+    font-size: convertRem(15);
+  }
 }
 
 .list:first-child {
@@ -68,12 +89,18 @@ p {
   color: $color-light-xl;
   margin: 0 0 42px 0;
   letter-spacing: 2.6px;
+  @include screen-width {
+    letter-spacing: convertRem(2.6);
+  }
 }
 .not-only__text {
   color: $color-dark-s;
   line-height: 160%;
   font-weight: 400;
   margin: 0 0 42px 0;
+  @include screen-width {
+    margin-bottom: convertRem(42);
+  }
 }
 
 //**----------BUTTONS---------**//
@@ -83,6 +110,9 @@ p {
   font-size: 17px;
   line-height: 130%;
   color: $color-dark-3xl;
+  @include screen-width {
+    font-size: convertRem(17);
+  }
 }
 //**--------ABOUT---------**//
 .about__title {
@@ -92,6 +122,9 @@ p {
 .about-content__text {
   margin: 0;
   max-width: 430px;
+  @include screen-width {
+    max-width: convertRem(430);
+  }
 }
 .card__name {
   font-family: $primary-family;
@@ -99,12 +132,18 @@ p {
   font-size: 20px;
   letter-spacing: 0.06em;
   color: $color-dark-l;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 //*----------PETS--------*//
 .pets__title {
   margin-bottom: 0;
   text-align: center;
   letter-spacing: 1.24px;
+  @include screen-width {
+    letter-spacing: convertRem(1.24);
+  }
 }
 .card__btn {
   font-family: $primary-family;
@@ -113,6 +152,10 @@ p {
   line-height: 130%;
   letter-spacing: 0.16px;
   color: $color-dark-3xl;
+  @include screen-width {
+    font-size: convertRem(17);
+    letter-spacing: convertRem(0.16);
+  }
 }
 //*----------HELP--------*//
 .help__title {
@@ -124,10 +167,12 @@ p {
   font-family: $primary-family;
   font-weight: 400;
   font-size: 20px;
-
   letter-spacing: 0.06em;
   text-align: center;
   color: $color-dark-l;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 //*----------DONATION--------*//
 .donation__title {
@@ -135,6 +180,10 @@ p {
   margin: 0;
   letter-spacing: 3.61px;
   word-spacing: 12.1px;
+  @include screen-width {
+    letter-spacing: convertRem(3.61);
+    word-spacing: convertRem(12.1);
+  }
 }
 .donation__text {
   font-family: $primary-family;
@@ -143,6 +192,9 @@ p {
   line-height: 110%;
   letter-spacing: 0.06em;
   color: $color-dark-l;
+  @include screen-width {
+    font-size: convertRem(15);
+  }
 }
 .donation__card-number {
   font-family: $primary-family;
@@ -150,6 +202,9 @@ p {
   font-size: 20px;
   letter-spacing: 0.06em;
   color: $color-dark-l;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 .donation__text-cursive {
   font-family: $second-family;
@@ -159,6 +214,9 @@ p {
   line-height: 150%;
   color: $color-dark-m;
   margin: 0;
+  @include screen-width {
+    font-size: convertRem(12);
+  }
 }
 //*----------FOOTER--------*//
 .footer__title {
@@ -169,6 +227,9 @@ p {
   letter-spacing: 0.06em;
   color: $color-light-xl;
   margin: 0;
+  @include screen-width {
+    font-size: convertRem(35);
+  }
 }
 .contact__link {
   font-family: $primary-family;
@@ -177,6 +238,9 @@ p {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: $color-primary;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 .location__link {
   font-family: $primary-family;
@@ -184,6 +248,9 @@ p {
   font-size: 20px;
   line-height: 115%;
   color: $color-primary;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 
 //*-------PAGE-PETS----*//
@@ -248,29 +315,27 @@ body.page-pets .logo__description {
   .section-title {
     font-size: convertRem(35);
   }
-  .container__text{
+  .container__text {
     font-size: convertRem(20);
   }
-  .donation__text{
-    font-size: convertRem(15)
+  .donation__text {
+    font-size: convertRem(15);
   }
-  .donation__text-cursive{
-    font-size: convertRem(12)
+  .donation__text-cursive {
+    font-size: convertRem(12);
   }
-  .donation__card-number{
-     font-size: convertRem(20);
-     letter-spacing: convertRem(1.1);
-  }
-  .footer__title{
-    font-size: convertRem(35)
-  }
-  .contact__link{
+  .donation__card-number {
     font-size: convertRem(20);
-
+    letter-spacing: convertRem(1.1);
   }
-  .location__link{
+  .footer__title {
+    font-size: convertRem(35);
+  }
+  .contact__link {
     font-size: convertRem(20);
-
+  }
+  .location__link {
+    font-size: convertRem(20);
   }
 }
 @include mobile-width {
@@ -285,7 +350,7 @@ body.page-pets .logo__description {
   .not-only__text {
     font-size: convertRem(15);
     text-align: center;
-    letter-spacing: -0.1px;
+    letter-spacing: convertRem(-0.1);
   }
   .about__title {
     text-align: center;
@@ -295,7 +360,7 @@ body.page-pets .logo__description {
     font-size: 0.94rem;
     letter-spacing: 0;
     text-align: justify;
-    letter-spacing: 0.4px;
+    letter-spacing: convertRem(0.4);
   }
   .card__name {
     font-size: 1.25rem;
@@ -317,7 +382,7 @@ body.page-pets .logo__description {
   }
   .donation__text-cursive {
     font-size: 0.75rem;
-    letter-spacing: 0.1px;
+    letter-spacing: convertRem(0.1);
     text-align: justify;
   }
   .footer__title {

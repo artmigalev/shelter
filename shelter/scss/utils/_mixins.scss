@@ -8,12 +8,10 @@
   flex-direction: column;
 }
 
-@mixin bord {
-  border: 1px solid;
-}
+
 //**---------BREAKPOINTS--------**//
 @mixin screen-width {
-  @media (min-width: 1280px) {
+  @media (max-width: 1280px) and (min-width: 769px) {
     @content;
   }
 }
