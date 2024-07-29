@@ -1079,85 +1079,64 @@ body.page-pets .btn-number {
     display: none;
   }
 }
-@media (max-width: 1280px) and (min-width: 769px) {
-  .not-only {
-    background: radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 0;
-  }
-  .not-only .not-only__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 90px;
-  }
-  .not-only .not-only__wrapper .not-only__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .not-only .not-only__wrapper .not-only__container .not-only__content {
-    display: flex;
-    flex-direction: column;
-    max-width: 38.3333333333%;
-    position: relative;
-    top: 163px;
-    height: 44.2307692308%;
-  }
-  .not-only .not-only__wrapper .not-only__container .not-only__img {
-    width: 58.1666666667%;
-    height: 100%;
-  }
+.not-only {
+  background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+.not-only .not-only__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
 }
 @media (max-width: 768px) {
-  .not-only {
-    padding-top: 30px;
-    padding-bottom: 0;
-    width: 100%;
-    background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
   .not-only .not-only__wrapper {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 3.75rem;
   }
+}
+.not-only .not-only__wrapper .not-only__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 768px) {
   .not-only .not-only__wrapper .not-only__container {
     width: 80.3672316384%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 6.25rem;
-  }
-  .not-only .not-only__wrapper .not-only__container .not-only__content {
-    width: 64.9717514124%;
-    height: 45.4802259887%;
-  }
-  .not-only .not-only__wrapper .not-only__container .not-only__img {
-    width: 35.563rem;
+    padding-left: 70px;
   }
 }
-@media (max-width: 320px) {
-  .not-only {
-    background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .not-only .not-only__wrapper {
-    max-width: 18.125rem;
-  }
+.not-only .not-only__wrapper .not-only__container .not-only__content {
+  display: flex;
+  flex-direction: column;
+  width: 38.3333333333%;
+  position: relative;
+  top: 163px;
+  height: 44.2307692308%;
+}
+@media (max-width: 768px) {
   .not-only .not-only__wrapper .not-only__container .not-only__content {
-    align-items: center;
-  }
-  .not-only .not-only__wrapper .not-only__container .not-only__img {
-    width: 16.25rem;
-    height: 17rem;
+    top: 0;
+    width: 80.8435852373%;
   }
 }
+.not-only .not-only__wrapper .not-only__container .not-only__img {
+  width: 58.1666666667%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .not-only .not-only__wrapper .not-only__container .not-only__img {
+    width: 100%;
+  }
+}
+
 .section-about {
   padding-top: 5rem;
   padding-bottom: 6.25rem;
