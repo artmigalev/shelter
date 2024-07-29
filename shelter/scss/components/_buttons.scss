@@ -4,9 +4,10 @@ button {
 }
 
 .not-only__button {
+  display: block;
   border-radius: 100px;
   padding: 15px 45px;
-  width: 207px;
+  width: toProcent(260,460);
   height: 52px;
   background: $color-primary;
   border: none;

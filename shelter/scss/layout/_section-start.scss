@@ -1,21 +1,29 @@
-.not-only {
-  background: radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 0;
-  .not-only__wrapper {
-    @include fl-clmn;
-    gap: 90px;
+@include screen-width {
+  .not-only {
+    background: radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 0;
+    .not-only__wrapper {
+      @include fl-clmn;
+      gap: 90px;
 
-    .not-only__container {
-      @include fl-row;
-      justify-content: space-between;
+      .not-only__container {
+        @include fl-row;
+        justify-content: space-between;
+        width: 100%;
 
-      .not-only__content {
-        @include fl-clmn;
-        max-width: 460px;
-        position: relative;
-        top: 163px;
+        .not-only__content {
+          @include fl-clmn;
+          max-width: toProcent(460, 1200);
+          position: relative;
+          top: 163px;
+          height: toProcent(322, 728);
+        }
+        .not-only__img {
+          width: toProcent(698, 1200);
+          height: 100%;
+        }
       }
     }
   }
@@ -23,18 +31,27 @@
 
 @include tablet-width {
   .not-only {
+    padding-top: 30px;
+    padding-bottom: 0;
+    width: 100%;
+    background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     .not-only__wrapper {
-      max-width: 44.25rem;
+      @include fl-clmn;
+      align-items: center;
       gap: 3.75rem;
-      .header {
-        width: inherit;
-      }
+
       .not-only__container {
+        width: toProcent(569,708);
+        height: 100%;
         @include fl-clmn;
         align-items: center;
         gap: 6.25rem;
         .not-only__content {
-          top: 0;
+          width: toProcent(460, 708);
+          height: toProcent(322, 708);
+          
         }
         .not-only__img {
           width: 35.563rem;

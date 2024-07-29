@@ -1,4 +1,4 @@
-
+@include screen-width {
   .header {
     @include fl-row;
     align-items: center;
@@ -10,14 +10,15 @@
       gap: convertRem(10);
     }
     .header__navigation {
+      width: toProcent(443, 1200);
       .nav__list {
+        width: 100%;
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
         padding: 0;
-        gap: 2.25rem;
         padding-left: 0;
         @include fl-row;
-        gap: convertRem(35);
 
         .list {
           list-style: none;
@@ -31,15 +32,25 @@
       }
     }
   }
+}
 
 @include tablet-width {
   .header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     .header__logo {
       gap: convertRem(10);
+      @include fl-clmn;
     }
     .header__navigation {
+      width: toProcent(443, 708);
+
       .nav__list {
-        gap: convertRem(35);
+        @include fl-row;
+        justify-content: space-between;
+        width: 100%;
       }
     }
   }

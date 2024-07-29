@@ -8,7 +8,7 @@ section {
   padding-bottom: 100px;
 }
 .wrapper {
-  max-width: $wrapper-sz+px;
+  max-width: $wrapper-sz + px;
   margin: 0 auto;
 }
 
@@ -30,19 +30,19 @@ li {
 //**-------break points ----**//
 
 @include screen-width {
-  .wrapper{
-    max-width: convertRem($wrapper-sz);
+  
+  .wrapper {
+    max-width: toProcent(1200, 1280);
   }
 }
 @include tablet-width {
-  .wrapper{
-    max-width: convertRem($tablet-wrapper-size);
-
+  .wrapper {
+    max-width: toProcent(708, 768);
   }
 }
 @include mobile-width {
-  .wrapper{
-    max-width: convertRem($mobile-wrapper-size);
+  .wrapper {
+    max-width: toProcent(300,320);
   }
   section {
     padding-top: convertRem(42);
