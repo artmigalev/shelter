@@ -92,6 +92,10 @@ p {
   @include screen-width {
     letter-spacing: convertRem(2.6);
   }
+  @media (max-width:697px){
+    text-align: center;
+    word-spacing: 1.6px;
+  }
 }
 .not-only__text {
   color: $color-dark-s;
@@ -224,7 +228,7 @@ p {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: $color-light-xl;
   margin: 0;
   @include screen-width {

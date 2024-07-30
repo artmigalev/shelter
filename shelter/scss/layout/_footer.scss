@@ -1,18 +1,30 @@
-
-  .footer {
+.footer {
   background-image: url("../assets/png/footer-gradient-background.png");
-  padding: convertRem(40) convertRem(40) 0 convertRem(40);
+
   background-repeat: no-repeat;
   background-size: cover;
   .footer__wrapper {
     @include fl-row;
     justify-content: space-between;
-    gap: convertRem(160);
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: convertRem(40);
+    
+    @media (max-width:940px)  {
 
+        justify-content: center;
+        gap: convertRem(60);
+    }
+
+    .footer__contact {
+      width: 278px;
+    }
+    .footer__location {
+      width: 302px;
+    }
     .footer-block {
       @include fl-clmn;
-      position: relative;
-      top: convertRem(16);
+
       .contact__list {
         @include fl-clmn;
         gap: convertRem(40);
@@ -20,7 +32,7 @@
       }
       .location__list {
         @include fl-clmn;
-        gap:convertRem(32);
+        gap: convertRem(32);
         margin: convertRem(31.4) 0;
       }
       ul {
@@ -39,10 +51,9 @@
 
 @include tablet-width {
   .footer {
-    padding: convertRem(30) convertRem(30) 0 convertRem(30);
     .footer__wrapper {
       flex-wrap: wrap;
-      gap: convertRem(16);
+      gap: convertRem(60);
       justify-content: center;
       align-items: center;
       .footer-block {
@@ -64,7 +75,6 @@
 
     padding: convertRem(30) 0 0 0;
     .footer__wrapper {
-      max-width: convertRem(300);
       gap: convertRem(40);
       .footer-block {
         align-items: center;

@@ -31,56 +31,41 @@
 //     }
 //   }
 // }
-// @include mobile-width {
-//   .not-only {
-//     background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     .not-only__wrapper {
-//       max-width: convertRem($mobile-wrapper-size);
-//       .not-only__container {
-//         .not-only__content {
-//           align-items: center;
-//         }
-//         .not-only__img {
-//           width: 16.25rem;
-//           height: 17rem;
-//         }
-//       }
-//     }
-//   }
-// }
+//
 .not-only {
-  background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
+
   width: 100%;
   padding-top: 30px;
   padding-bottom: 0;
   .not-only__wrapper {
     @include fl-clmn;
     gap: 90px;
-    @include tablet-width{
-      align-items: center
+    @include tablet-width {
+      align-items: center;
     }
     .not-only__container {
       @include fl-row;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
+      @media (max-width: 697px) {
+        padding-left: 0;
+      }
 
       @include tablet-width {
         width: toProcent(569, 708);
         height: 100%;
         @include fl-clmn;
         gap: 6.25rem;
-        padding-left: 70px
+        padding-left: 70px;
+        align-items: flex-start;
       }
 
       .not-only__content {
         @include fl-clmn;
         width: toProcent(460, 1200);
-        position: relative;
-        top: 163px;
+
         height: toProcent(322, 728);
         @include tablet-width {
           top: 0;
@@ -92,6 +77,29 @@
         height: 100%;
         @include tablet-width {
           width: 100%;
+        }
+      }
+    }
+  }
+}
+@include mobile-width {
+  .not-only {
+    background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .not-only__wrapper {
+      width: toProcent(300, 320);
+      .not-only__container{
+        width: 100%;
+        flex-direction: column;
+        gap: convertRem(105);
+        .not-only__content {
+          align-items: center;
+          width: 100%;
+        }
+        .not-only__img {
+          width: 16.25rem;
+          height: 17rem;
         }
       }
     }

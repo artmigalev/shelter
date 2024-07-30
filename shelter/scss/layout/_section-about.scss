@@ -52,8 +52,10 @@
     padding-top: convertRem(42);
     padding-bottom: convertRem(42);
     .about__wrapper {
-      max-width: convertRem($mobile-wrapper-size);
+      width: toProcent(300,320);
+      flex-direction: column-reverse;
       gap: convertRem(42);
+
       .about__img {
         width: 16.25rem;
         height: 22.12rem;

@@ -1,4 +1,4 @@
-@include screen-width {
+
   .header {
     @include fl-row;
     align-items: center;
@@ -10,9 +10,8 @@
       gap: convertRem(10);
     }
     .header__navigation {
-      width: toProcent(443, 1200);
       .nav__list {
-        width: 100%;
+        gap: convertRem(35);
         display: flex;
         justify-content: space-between;
         flex-wrap: nowrap;
@@ -32,7 +31,7 @@
       }
     }
   }
-}
+
 
 @include tablet-width {
   .header {
@@ -45,7 +44,6 @@
       @include fl-clmn;
     }
     .header__navigation {
-      width: toProcent(443, 708);
 
       .nav__list {
         @include fl-row;
@@ -53,11 +51,24 @@
         width: 100%;
       }
     }
+    @media (max-width:697px){
+      .header__navigation{
+        display: none;
+      }
+      .burger__menu{
+        display: flex;
+      }
+    }
   }
 }
 
 @include mobile-width {
-  .header__navigation {
-    display: none;
+  .header{
+    width: toProcent(280,300);
+    margin: 0 auto;
+    .header__navigation {
+      display: none;
+    }
   }
+
 }

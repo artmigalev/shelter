@@ -7,11 +7,12 @@ button {
   display: block;
   border-radius: 100px;
   padding: 15px 45px;
-  width: toProcent(260,460);
+  width: 207px;
   height: 52px;
   background: $color-primary;
   border: none;
 }
+
 .not-only__button:hover {
   background: $color-primary-light;
 }
@@ -62,6 +63,9 @@ button {
   @include fl-row;
   align-items: center;
   gap: 10px;
+  @include mobile-width {
+    width: toProcent(281, 300);
+  }
 }
 //**----------page-PETS--------**//
 body.page-pets .btn-double-arrow__left,
@@ -100,40 +104,3 @@ body.page-pets .btn-number {
 }
 
 //**---------BREAKPOINTS--------**//
-@include tablet-width {
-  .button-slider {
-    width: convertRem(52);
-    height: convertRem(52);
-  }
-  .card__btn {
-    width: convertRem(187);
-    height: convertRem(52);
-  }
-  .pets__button {
-    font-size: convertRem(17);
-    width: convertRem(260);
-    height: convertRem(52);
-  }
-  .donation__btn {
-    width: convertRem(349);
-    height: convertRem(43);
-    gap: convertRem(15);
-  }
-}
-@include mobile-width {
-  .not-only__button {
-    border-radius: 6.25rem;
-    padding: 0.94rem 2.81rem;
-    width: 12.94rem;
-    height: 3.25rem;
-  }
-
-  .pets__button {
-    font-size: 1.06rem;
-  }
-  .donation__btn {
-    width: 17.56rem;
-    height: 2.69rem;
-    justify-content: space-between;
-  }
-}
