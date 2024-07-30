@@ -1,9 +1,10 @@
 .pets__card {
+  border: 1px solid red;
   border-radius: 0.56rem;
   @include fl-clmn;
   align-items: center;
   border-radius: 9px;
-  max-width: 270px;
+  width: 270px;
   background-color: $color-light-s;
   gap: 30px;
   height: 435px;
