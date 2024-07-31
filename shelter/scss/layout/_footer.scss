@@ -9,11 +9,10 @@
     flex-wrap: wrap;
     width: 100%;
     padding-top: convertRem(40);
-    
-    @media (max-width:940px)  {
 
-        justify-content: center;
-        gap: convertRem(60);
+    @media (max-width: 940px) {
+      justify-content: center;
+      gap: convertRem(60);
     }
 
     .footer__contact {
@@ -76,6 +75,7 @@
     padding: convertRem(30) 0 0 0;
     .footer__wrapper {
       gap: convertRem(40);
+      padding-top: 0;
       .footer-block {
         align-items: center;
         gap: convertRem(40);

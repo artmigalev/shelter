@@ -2,6 +2,9 @@ button {
   cursor: pointer;
   font-family: $primary-family;
 }
+button:hover{
+  transition: background 0.5s;
+}
 
 .not-only__button {
   display: block;
@@ -37,6 +40,7 @@ button {
   background-color: transparent;
 }
 .card__btn:hover {
+
   background: $color-primary-light;
   border: none;
 }

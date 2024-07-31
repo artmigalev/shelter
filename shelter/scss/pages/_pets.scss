@@ -79,13 +79,18 @@
     .main {
       padding-top: convertRem(42);
       padding-bottom: convertRem(42);
+      max-height: 1649px;
       .main-pets__wrapper {
         max-width: convertRem(300);
         gap: convertRem(42);
         .cards_container {
+          display: grid;
           grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 1fr);
+          height: 1365px;
           padding: 0;
           row-gap: convertRem(30);
+          overflow: hidden;
         }
         .pets__btn-container {
           gap: convertRem(10);

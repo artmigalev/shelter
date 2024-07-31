@@ -753,7 +753,7 @@ body.page-pets .logo__description {
     text-align: justify;
   }
   .footer__title {
-    font-size: 1.56rem;
+    font-size: 1.66rem;
     text-align: center;
   }
   .contact__link {
@@ -764,7 +764,7 @@ body.page-pets .logo__description {
     letter-spacing: 0.06em;
   }
   .footer__location .footer__title {
-    letter-spacing: 0.16em;
+    letter-spacing: 0.06em;
   }
 }
 body {
@@ -849,6 +849,10 @@ li {
 button {
   cursor: pointer;
   font-family: "Georgia", sans-serif;
+}
+
+button:hover {
+  transition: background 0.5s;
 }
 
 .not-only__button {
@@ -961,7 +965,8 @@ body.page-pets .btn-number {
 }
 
 .pets__card {
-  border: 1px solid red;
+  transition: box-shadow 0.5s, transform 0.5s;
+  transform: scale(1);
   border-radius: 0.56rem;
   display: flex;
   flex-direction: column;
@@ -979,6 +984,9 @@ body.page-pets .btn-number {
 .pets__card:hover {
   cursor: pointer;
   background: #fff;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  transform: scale(1.05);
+  transition: box-shadow 0.5s, transform 0.5s;
 }
 
 @media (max-width: 768px) and (min-width: 321px) {
@@ -1521,6 +1529,7 @@ body.page-pets .btn-number {
   }
   .footer .footer__wrapper {
     gap: 2.5rem;
+    padding-top: 0;
   }
   .footer .footer__wrapper .footer-block {
     align-items: center;
@@ -1613,15 +1622,20 @@ body.page-pets .btn-number {
   .page-pets .main {
     padding-top: 2.625rem;
     padding-bottom: 2.625rem;
+    max-height: 1649px;
   }
   .page-pets .main .main-pets__wrapper {
     max-width: 18.75rem;
     gap: 2.625rem;
   }
   .page-pets .main .main-pets__wrapper .cards_container {
+    display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: 1365px;
     padding: 0;
     row-gap: 1.875rem;
+    overflow: hidden;
   }
   .page-pets .main .main-pets__wrapper .pets__btn-container {
     gap: 0.625rem;
