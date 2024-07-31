@@ -36,7 +36,7 @@ window.addEventListener("resize", check);
 BTN_BURGER.addEventListener("click", clickedBurger);
 const petsObj = pets[0];
 
-// function createdCard(petsObj){
+
 
 //   console.log(petsObj);
 //   let popup = document.createElement('dialog')
@@ -83,8 +83,9 @@ function createdElements(tag, className, parent, text) {
 function createdPopup(petsObj) {
   let popup = new DocumentFragment();
   let dialog = createdElements("dialog", "pets-dialog", popup);
-  let btn = createdElements("button", "button-slider", dialog);
-  let container = createdElements("div", "popup-content", dialog);
+  let dialogContainer = createdElements('div', 'container__dialog',dialog)
+  let btn = createdElements("button", "button-slider", dialogContainer);
+  let container = createdElements("div", "popup-content", dialogContainer);
   let imgPopup = createdElements("img", "img-popup", container);
   imgPopup.src = petsObj.img;
   imgPopup.alt = petsObj.name;
@@ -125,4 +126,6 @@ function createdPopup(petsObj) {
 }
 createdPopup(pets[pets.length-1]);
 
-console.log();
+
+
+
