@@ -5,60 +5,73 @@
   position: fixed;
   z-index: 4;
   background: rgba(41, 41, 41, 0.6);
+  align-items: center;
   @include fl-clmn;
-  .popup-content {
-    max-width: convertRem(900);
-    max-height: 31.25rem;
-    border-radius: 0.56rem;
-    background: $color-light-s;
+  .container__dialog {
+    width: toProcent(682, 1280);
     @include fl-row;
-    justify-content: space-around;
-    align-items: center;
-    .img-popup {
-      max-width: convertRem(500);
-      max-height: 100%;
-      border-radius: 0.56rem;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    position: fixed;
+    top: 24vh;
+    .button-slider {
+      position: relative;
+      top: -84%;
     }
-    .content-popup {
-      max-width: convertRem(351);
-      max-height: convertRem(362);
-      text-align: left;
-      @include fl-clmn;
-      .name-pert {
-        font-family: $primary-family;
-        font-weight: 400;
-        font-size: 2.19rem;
-        line-height: 130%;
-        letter-spacing: 0.06em;
-        color: #000;
-        margin-top: 0;
-        margin-bottom: convertRem(10);
+    .popup-content {
+      width: 100%;
+      max-height: 31.25rem;
+      border-radius: 0.56rem;
+      background: $color-light-s;
+      @include fl-row;
+      justify-content: space-around;
+      align-items: center;
+      .img-popup {
+        max-width: convertRem(500);
+        max-height: 100%;
+        border-radius: 0.56rem;
       }
-      .typeBreed-pert {
-        font-family: $primary-family;
-        font-weight: 400;
-        font-size: 1.25rem;
-        line-height: 115%;
-        letter-spacing: 0.06em;
-        color: #000;
-      }
-      .description-pert {
-        font-family: $primary-family;
-        font-weight: 400;
-        font-size: 0.94rem;
-        line-height: 110%;
-        letter-spacing: 0.06em;
-        color: #000;
-        margin: convertRem(40) 0;
-      }
-      .list-pets {
+      .content-popup {
+        max-width: convertRem(351);
+        max-height: convertRem(362);
+        text-align: left;
         @include fl-clmn;
-        margin: 0;
-        .li {
-          list-style: disc;
-          color: $color-primary;
-          .text-list {
-            color: #000;
+        .name-pert {
+          font-family: $primary-family;
+          font-weight: 400;
+          font-size: 2.19rem;
+          line-height: 130%;
+          letter-spacing: 0.06em;
+          color: #000;
+          margin-top: 0;
+          margin-bottom: convertRem(10);
+        }
+        .typeBreed-pert {
+          font-family: $primary-family;
+          font-weight: 400;
+          font-size: 1.25rem;
+          line-height: 115%;
+          letter-spacing: 0.06em;
+          color: #000;
+        }
+        .description-pert {
+          font-family: $primary-family;
+          font-weight: 400;
+          font-size: 0.94rem;
+          line-height: 110%;
+          letter-spacing: 0.06em;
+          color: #000;
+          margin: convertRem(40) 0;
+        }
+        .list-pets {
+          @include fl-clmn;
+          margin: 0;
+          .li {
+            list-style: disc;
+            color: $color-primary;
+            .text-list {
+              color: #000;
+            }
           }
         }
       }
