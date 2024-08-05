@@ -767,6 +767,10 @@ body.page-pets .logo__description {
     letter-spacing: 0.16em;
   }
 }
+html {
+  font-size: 16px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -1497,7 +1501,7 @@ body.page-pets .btn-number {
   }
 }
 .footer {
-  background-image: url("../assets/png/footer-gradient-background.png");
+  background-image: url("../assets/images/footer-gradient-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1596,92 +1600,6 @@ body.page-pets .btn-number {
     height: 16.81rem;
   }
 }
-.pets-dialog {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 4;
-  background: rgba(41, 41, 41, 0.6);
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-.pets-dialog .container__dialog {
-  width: 53.28125%;
-  display: flex;
-  flex-direction: row;
-  flex-direction: row-reverse;
-  align-items: flex-end;
-  position: fixed;
-  top: 24vh;
-}
-.pets-dialog .container__dialog .button-slider {
-  position: relative;
-  top: -84%;
-}
-.pets-dialog .container__dialog .popup-content {
-  width: 100%;
-  max-height: 31.25rem;
-  border-radius: 0.56rem;
-  background: #fafafa;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.pets-dialog .container__dialog .popup-content .img-popup {
-  max-width: 31.25rem;
-  max-height: 100%;
-  border-radius: 0.56rem;
-}
-.pets-dialog .container__dialog .popup-content .content-popup {
-  max-width: 21.9375rem;
-  max-height: 22.625rem;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-}
-.pets-dialog .container__dialog .popup-content .content-popup .name-pert {
-  font-family: "Georgia", sans-serif;
-  font-weight: 400;
-  font-size: 2.19rem;
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #000;
-  margin-top: 0;
-  margin-bottom: 0.625rem;
-}
-.pets-dialog .container__dialog .popup-content .content-popup .typeBreed-pert {
-  font-family: "Georgia", sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem;
-  line-height: 115%;
-  letter-spacing: 0.06em;
-  color: #000;
-}
-.pets-dialog .container__dialog .popup-content .content-popup .description-pert {
-  font-family: "Georgia", sans-serif;
-  font-weight: 400;
-  font-size: 0.94rem;
-  line-height: 110%;
-  letter-spacing: 0.06em;
-  color: #000;
-  margin: 2.5rem 0;
-}
-.pets-dialog .container__dialog .popup-content .content-popup .list-pets {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-.pets-dialog .container__dialog .popup-content .content-popup .list-pets .li {
-  list-style: disc;
-  color: #f1cdb3;
-}
-.pets-dialog .container__dialog .popup-content .content-popup .list-pets .li .text-list {
-  color: #000;
-}
-
 .page-pets .pets__wrapper {
   width: 100%;
   padding: 30px 0;

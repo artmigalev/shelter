@@ -1,3 +1,6 @@
+html{
+  font-size: 16px;
+}
 body{
   display: flex;
   flex-direction: column;
@@ -30,7 +33,7 @@ li {
 //**-------break points ----**//
 
 @include screen-width {
-  
+
   .wrapper {
     max-width: toProcent(1200, 1280);
   }
