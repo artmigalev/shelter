@@ -1,27 +1,74 @@
-.header {
-  @include fl-row;
-  align-items: center;
-  justify-content: space-between;
 
-  .header__logo {
-    text-align: left;
-    @include fl-clmn;
-    gap: 10px;
-  }
-  .header__navigation {
-    .nav__list {
-      padding-left: 0;
-      @include fl-row;
-      gap: 35px;
-      .list {
-        list-style: none;
-        .nav-list__links {
-          text-decoration: none;
-        }
-        .nav-list__links:hover{
-          color: #fafafa;
+  .header {
+    @include fl-row;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__logo {
+      text-align: left;
+      @include fl-clmn;
+      gap: convertRem(10);
+    }
+    .header__navigation {
+      .nav__list {
+        gap: convertRem(35);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 0;
+        padding-left: 0;
+        @include fl-row;
+
+        .list {
+          list-style: none;
+          .nav-list__links {
+            text-decoration: none;
+          }
+          .nav-list__links:hover {
+            color: #fafafa;
+          }
         }
       }
     }
   }
+
+
+@include tablet-width {
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .header__logo {
+      gap: convertRem(10);
+      @include fl-clmn;
+    }
+    .header__navigation {
+
+      .nav__list {
+        @include fl-row;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    @media (max-width:697px){
+      .header__navigation{
+        display: none;
+      }
+      .burger__menu{
+        display: flex;
+      }
+    }
+  }
+}
+
+@include mobile-width {
+  .header{
+    width: toProcent(280,300);
+    margin: 0 auto;
+    .header__navigation {
+      display: none;
+    }
+  }
+
 }

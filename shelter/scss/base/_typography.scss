@@ -1,8 +1,21 @@
+/* noto-serif-georgian-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Serif Georgian';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../assets/fonts/noto-serif-georgian-v26-latin-regular.woff2' ) format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
 h1 {
   margin-top: 0;
   font-family: $primary-family;
   font-weight: 400;
   font-size: 44px;
+  @include screen-width {
+    font-size: convertRem(44);
+  }
 
   color: $color-dark-l;
 }
@@ -11,6 +24,9 @@ h2 {
   font-family: $primary-family;
   font-weight: 400;
   font-size: 35px;
+  @include screen-width {
+    font-size: convertRem(35);
+  }
   color: $color-dark-l;
 }
 p {
@@ -19,12 +35,18 @@ p {
   font-size: 15px;
   line-height: 160%;
   color: $color-dark-xl;
+  @include screen-width {
+    font-size: convertRem(15);
+  }
 }
 .section-title {
   font-family: $primary-family;
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
+  @include screen-width {
+    font-size: convertRem(35);
+  }
 
   color: $color-dark-l;
 }
@@ -36,6 +58,9 @@ p {
   line-height: 110%;
   letter-spacing: 0.06em;
   color: $color-primary;
+  @include screen-width {
+    font-size: convertRem(32);
+  }
 }
 .logo__description {
   font-family: $second-family;
@@ -44,6 +69,9 @@ p {
   font-size: 13px;
   letter-spacing: 0.1em;
   color: $color-light-xl;
+  @include screen-width {
+    font-size: convertRem(13);
+  }
 }
 
 //**-------- NAV HEADER --------**//
@@ -53,6 +81,9 @@ p {
   font-size: 15px;
   line-height: 160%;
   color: $color-dark-s;
+  @include screen-width {
+    font-size: convertRem(15);
+  }
 }
 
 .list:first-child {
@@ -68,12 +99,22 @@ p {
   color: $color-light-xl;
   margin: 0 0 42px 0;
   letter-spacing: 2.6px;
+  @include screen-width {
+    letter-spacing: convertRem(2.6);
+  }
+  @media (max-width:697px){
+    text-align: center;
+    word-spacing: 1.6px;
+  }
 }
 .not-only__text {
   color: $color-dark-s;
   line-height: 160%;
   font-weight: 400;
   margin: 0 0 42px 0;
+  @include screen-width {
+    margin-bottom: convertRem(42);
+  }
 }
 
 //**----------BUTTONS---------**//
@@ -83,6 +124,9 @@ p {
   font-size: 17px;
   line-height: 130%;
   color: $color-dark-3xl;
+  @include screen-width {
+    font-size: convertRem(17);
+  }
 }
 //**--------ABOUT---------**//
 .about__title {
@@ -92,6 +136,9 @@ p {
 .about-content__text {
   margin: 0;
   max-width: 430px;
+  @include screen-width {
+    max-width: convertRem(430);
+  }
 }
 .card__name {
   font-family: $primary-family;
@@ -99,12 +146,18 @@ p {
   font-size: 20px;
   letter-spacing: 0.06em;
   color: $color-dark-l;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 //*----------PETS--------*//
 .pets__title {
   margin-bottom: 0;
   text-align: center;
   letter-spacing: 1.24px;
+  @include screen-width {
+    letter-spacing: convertRem(1.24);
+  }
 }
 .card__btn {
   font-family: $primary-family;
@@ -113,6 +166,10 @@ p {
   line-height: 130%;
   letter-spacing: 0.16px;
   color: $color-dark-3xl;
+  @include screen-width {
+    font-size: convertRem(17);
+    letter-spacing: convertRem(0.16);
+  }
 }
 //*----------HELP--------*//
 .help__title {
@@ -124,10 +181,12 @@ p {
   font-family: $primary-family;
   font-weight: 400;
   font-size: 20px;
-
   letter-spacing: 0.06em;
   text-align: center;
   color: $color-dark-l;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 //*----------DONATION--------*//
 .donation__title {
@@ -135,6 +194,10 @@ p {
   margin: 0;
   letter-spacing: 3.61px;
   word-spacing: 12.1px;
+  @include screen-width {
+    letter-spacing: convertRem(3.61);
+    word-spacing: convertRem(12.1);
+  }
 }
 .donation__text {
   font-family: $primary-family;
@@ -143,6 +206,9 @@ p {
   line-height: 110%;
   letter-spacing: 0.06em;
   color: $color-dark-l;
+  @include screen-width {
+    font-size: convertRem(15);
+  }
 }
 .donation__card-number {
   font-family: $primary-family;
@@ -150,6 +216,9 @@ p {
   font-size: 20px;
   letter-spacing: 0.06em;
   color: $color-dark-l;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 .donation__text-cursive {
   font-family: $second-family;
@@ -159,6 +228,9 @@ p {
   line-height: 150%;
   color: $color-dark-m;
   margin: 0;
+  @include screen-width {
+    font-size: convertRem(12);
+  }
 }
 //*----------FOOTER--------*//
 .footer__title {
@@ -166,9 +238,12 @@ p {
   font-weight: 400;
   font-size: 35px;
   line-height: 130%;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: $color-light-xl;
   margin: 0;
+  @include screen-width {
+    font-size: convertRem(35);
+  }
 }
 .contact__link {
   font-family: $primary-family;
@@ -177,6 +252,9 @@ p {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: $color-primary;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 .location__link {
   font-family: $primary-family;
@@ -184,6 +262,9 @@ p {
   font-size: 20px;
   line-height: 115%;
   color: $color-primary;
+  @include screen-width {
+    font-size: convertRem(20);
+  }
 }
 
 //*-------PAGE-PETS----*//
@@ -192,7 +273,6 @@ body.page-pets .nav-list__links {
 }
 body.page-pets .list:first-child {
   border: none;
-
 }
 body.page-pets .list:first-child {
   .nav-list__links {
@@ -215,4 +295,124 @@ body.page-pets .logo__name {
 }
 body.page-pets .logo__description {
   color: $color-dark-3xl;
+}
+
+///***--------BREAKPOINTS------------***////
+@include tablet-width {
+  .logo__name {
+    font-size: convertRem(32);
+  }
+  .logo__description {
+    font-size: convertRem(13);
+  }
+  .nav-list__links {
+    font-size: convertRem(15);
+  }
+  .content__title {
+    font-size: convertRem(44);
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+  }
+  .about__title {
+    font-size: 2.19rem;
+  }
+  .about-content__text {
+    font-size: 0.94rem;
+  }
+  .pets__title {
+    font-size: convertRem(35);
+  }
+  .section-title {
+    font-size: convertRem(35);
+  }
+  .container__text {
+    font-size: convertRem(20);
+  }
+  .donation__text {
+    font-size: convertRem(15);
+  }
+  .donation__text-cursive {
+    font-size: convertRem(12);
+  }
+  .donation__card-number {
+    font-size: convertRem(20);
+    letter-spacing: convertRem(1.1);
+  }
+  .footer__title {
+    font-size: convertRem(35);
+  }
+  .contact__link {
+    font-size: convertRem(20);
+  }
+  .location__link {
+    font-size: convertRem(20);
+  }
+}
+@include mobile-width {
+  .section-title {
+    font-size: 1.56rem;
+  }
+  .content__title {
+    font-size: convertRem(25);
+    text-align: center;
+    word-spacing: 1.6px;
+  }
+  .not-only__text {
+    font-size: convertRem(15);
+    text-align: center;
+    letter-spacing: convertRem(-0.1);
+  }
+  .about__title {
+    text-align: center;
+    font-size: 1.56rem;
+  }
+  .about-content__text {
+    font-size: 0.94rem;
+    letter-spacing: 0;
+    text-align: justify;
+    letter-spacing: convertRem(0.4);
+  }
+  .card__name {
+    font-size: 1.25rem;
+  }
+
+  .card__btn {
+    font-size: 1.06rem;
+  }
+  .donation__title {
+    font-size: 1.56rem;
+    text-align: center;
+  }
+  .donation__text {
+    font-size: 0.94rem;
+    letter-spacing: 0;
+  }
+  .donation__card-number {
+    font-size: 0.84rem;
+  }
+  .donation__text-cursive {
+    font-size: 0.75rem;
+    letter-spacing: convertRem(0.1);
+    text-align: justify;
+  }
+  .footer__title {
+    font-size: 1.66rem;
+    text-align: center;
+  }
+  .contact__link {
+    font-size: 1.25rem;
+  }
+  .location__link {
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
+  }
+  .footer__location {
+    .footer__title {
+      letter-spacing: 0.06em;
+    }
+  }
 }

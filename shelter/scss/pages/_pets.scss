@@ -1,14 +1,12 @@
-@import "../layout/header";
-
 .page-pets {
   .pets__wrapper {
     width: 100%;
     padding: 30px 0;
-    .header{
-      .header__navigation{
-        .nav__list{
-          .list{
-            .nav-list__links:hover{
+    .header {
+      .header__navigation {
+        .nav__list {
+          .list {
+            .nav-list__links:hover {
               color: #292929;
             }
           }
@@ -31,10 +29,72 @@
         row-gap: 30px;
         padding: 15px 0;
       }
-      .pets__btn-container{
+      .pets__btn-container {
         @include fl-row;
         align-items: center;
         gap: 20px;
+      }
+    }
+  }
+}
+@include tablet-width {
+  .page-pets {
+    .pets__wrapper {
+      max-width: calc($tablet-wrapper-size/16) + rem;
+    }
+    .main {
+      .main-pets__wrapper {
+        max-width: calc($tablet-wrapper-size/16) + rem;
+        gap: calc(30 / 16) + rem;
+
+        .cards_container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+          row-gap: calc(30 / 16) + rem;
+          column-gap: calc(40 / 16) + rem;
+          max-height: convertRem(1365);
+          height: 100%;
+          overflow: hidden;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+@include mobile-width {
+  .page-pets {
+    .pets__wrapper {
+      max-width: convertRem($mobile-wrapper-size);
+      padding-top: convertRem(30);
+      padding-bottom: convertRem(30);
+      .header {
+        .burger__menu {
+          .burger__line {
+            border-color: #000;
+          }
+        }
+      }
+    }
+    .main {
+      padding-top: convertRem(42);
+      padding-bottom: convertRem(42);
+      max-height: 1649px;
+      .main-pets__wrapper {
+        max-width: convertRem(300);
+        gap: convertRem(42);
+        .cards_container {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 1fr);
+          height: 1365px;
+          padding: 0;
+          row-gap: convertRem(30);
+          overflow: hidden;
+        }
+        .pets__btn-container {
+          gap: convertRem(10);
+        }
       }
     }
   }

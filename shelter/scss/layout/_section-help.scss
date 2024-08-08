@@ -1,10 +1,10 @@
-.section-help{
+.section-help {
   background-color: $color-light-xl;
-  .help__wrapper{
+  .help__wrapper {
     @include fl-clmn;
     align-items: center;
     gap: 60px;
-    .help__list{
+    .help__list {
       padding-left: 0;
       flex-wrap: wrap;
       @include fl-row;
@@ -13,21 +13,61 @@
       column-gap: 120px;
       row-gap: 55px;
       height: max-content;
-      .help-list__container{
-
+      .help-list__container {
         list-style: none;
         @include fl-clmn;
         align-items: center;
         gap: 30px;
-        .container__icon{
+        .container__icon {
           width: 60px;
           height: 60px;
         }
-
-
       }
-
     }
+  }
+}
 
+@include tablet-width {
+  .section-help {
+    padding-top: convertRem(80);
+    padding-bottom: convertRem(100);
+    .help__wrapper {
+      max-width: calc($tablet-wrapper-size/16) + rem;
+      .help__list {
+        row-gap: 60px;
+        column-gap: 55px;
+        .help-list__container {
+          width: convertRem(170);
+          gap: convertRem(30);
+        }
+      }
+    }
+  }
+}
+@include mobile-width {
+  .section-help {
+    max-width: 20rem;
+    padding-top: convertRem(42);
+    padding-bottom: convertRem(42);
+    .help__wrapper {
+      max-width: convertRem($mobile-wrapper-size);
+      .help__list {
+        justify-content: start;
+        column-gap: convertRem(30);
+        row-gap: convertRem(30);
+        .help-list__container {
+          width: 8.12rem;
+          height: 5.44rem;
+          gap: convertRem(20);
+          .container__icon {
+            width: convertRem(50);
+            height: convertRem(50);
+          }
+          .container__text {
+            font-size: 0.94rem;
+          }
+        }
+      }
+    }
   }
 }

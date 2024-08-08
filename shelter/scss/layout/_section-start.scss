@@ -1,22 +1,106 @@
+// @include screen-width {
+
+// }
+
+// @include tablet-width {
+//   .not-only {
+//     padding-top: 30px;
+//     padding-bottom: 0;
+//     width: 100%;
+
+//     .not-only__wrapper {
+//       @include fl-clmn;
+//       align-items: center;
+//       gap: 3.75rem;
+
+//       .not-only__container {
+//         width: toProcent(569,708);
+//         height: 100%;
+//         @include fl-clmn;
+//         align-items: center;
+//         gap: 6.25rem;
+//         .not-only__content {
+//           width: toProcent(460, 708);
+//           height: toProcent(322, 708);
+
+//         }
+//         .not-only__img {
+//           width: 35.563rem;
+//         }
+//       }
+//     }
+//   }
+// }
+//
 .not-only {
   background: radial-gradient(237.5% 111.8% at 0% 0%, rgb(91, 72, 58) 0%, rgb(38, 36, 37) 100%);
+
   width: 100%;
   padding-top: 30px;
   padding-bottom: 0;
   .not-only__wrapper {
     @include fl-clmn;
     gap: 90px;
-
+    @include tablet-width {
+      align-items: center;
+    }
     .not-only__container {
       @include fl-row;
       justify-content: space-between;
-      // align-items: center;
+      align-items: center;
+      width: 100%;
+      @media (max-width: 697px) {
+        padding-left: 0;
+      }
+
+      @include tablet-width {
+        width: toProcent(569, 708);
+        height: 100%;
+        @include fl-clmn;
+        gap: 6.25rem;
+        padding-left: 70px;
+        align-items: flex-start;
+      }
 
       .not-only__content {
         @include fl-clmn;
-        max-width: 460px;
-        position: relative;
-        top: 163px;
+        width: toProcent(460, 1200);
+
+        height: toProcent(322, 728);
+        @include tablet-width {
+          top: 0;
+          width: toProcent(460, 569);
+        }
+      }
+      .not-only__img {
+        width: toProcent(698, 1200);
+        height: 100%;
+        @include tablet-width {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@include mobile-width {
+  .not-only {
+    background-image: url("../assets/png/start-screen-gradient-background-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .not-only__wrapper {
+      width: toProcent(300, 320);
+      .not-only__container{
+        width: 100%;
+        flex-direction: column;
+        gap: convertRem(105);
+        .not-only__content {
+          align-items: center;
+          width: 100%;
+        }
+        .not-only__img {
+          width: 16.25rem;
+          height: 17rem;
+        }
       }
     }
   }

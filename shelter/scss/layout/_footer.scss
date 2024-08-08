@@ -1,39 +1,105 @@
 .footer {
   background-image: url("../assets/png/footer-gradient-background.png");
-  padding: 40px 40px 0 40px;
+
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 40px 40px 0 40px;
   .footer__wrapper {
     @include fl-row;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 160px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: convertRem(40);
 
+    @media (max-width: 940px) {
+      justify-content: center;
+      gap: convertRem(60);
+    }
+
+    .footer__contact {
+      width: 278px;
+    }
+    .footer__location {
+      width: 302px;
+    }
     .footer-block {
       @include fl-clmn;
-      position: relative;
-      top: 16px;
+
       .contact__list {
         @include fl-clmn;
-        gap: 40px;
-        margin: 36.4px 0;
+        gap: convertRem(40);
+        margin: convertRem(36.4) 0;
       }
       .location__list {
         @include fl-clmn;
-        gap: 32px;
-        margin: 31.4px 0;
+        gap: convertRem(32);
+        margin: convertRem(31.4) 0;
       }
       ul {
         .footer__list {
           @include fl-row;
-          gap: 20px;
+          gap: convertRem(20);
           align-items: center;
         }
       }
     }
     .footer__location {
-      right: 14px;
+      right: convertRem(14);
+    }
+  }
+}
+
+@include tablet-width {
+  .footer {
+    .footer__wrapper {
+      flex-wrap: wrap;
+      gap: convertRem(60);
+      justify-content: center;
+      align-items: center;
+      .footer-block {
+        max-width: 19rem;
+      }
+      .footer__location {
+        right: 0px;
+      }
+      .footer__img {
+        max-width: 18.75rem;
+      }
+    }
+  }
+}
+
+@include mobile-width {
+  .footer {
+    max-width: 20rem;
+
+    padding: convertRem(30) 0 0 0;
+    .footer__wrapper {
+      gap: convertRem(40);
+      padding-top: 0;
+      .footer-block {
+        align-items: center;
+        gap: convertRem(40);
+        top: 0;
+        .contact__list {
+          margin: 0;
+          gap: convertRem(40);
+        }
+        .location__list {
+          margin: 0;
+          gap: convertRem(40);
+        }
+      }
+      .footer__contact {
+        max-width: convertRem(278);
+      }
+      .footer__location {
+        width: 100%;
+      }
+
+      .footer__img {
+        width: 16.25rem;
+        height: 16.81rem;
+      }
     }
   }
 }
