@@ -9,7 +9,7 @@
     @media (max-width: 1100px) {
       width: 100%;
     }
-    @media (max-width :860px) {
+    @media (max-width: 860px) {
       flex-direction: column-reverse;
     }
 
@@ -19,11 +19,11 @@
     .donation__content {
       width: toProcent(380, 915);
       @include fl-clmn;
-      gap: 20px;
-      @media (max-width :480px) {
+      gap: emmy(20);
+      @media (max-width: 480px) {
         width: 100%;
-      align-items: center;
-    }
+        align-items: center;
+      }
     }
   }
 }
@@ -34,13 +34,13 @@
     .donation__wrapper {
       @include fl-clmn;
       flex-direction: column-reverse;
-      width: toProcent(505,768);
+      width: toProcent(505, 768);
       gap: convertRem(60);
       .donation__img {
         width: toProcent(505, 708);
       }
       .donation__content {
-        width: toProcent(380,505);
+        width: toProcent(380, 505);
       }
     }
   }
@@ -51,7 +51,8 @@
     padding-top: convertRem(42);
     padding-bottom: convertRem(42);
     .donation__wrapper {
-      max-width: convertRem($mobile-wrapper-size);
+      max-width: toProcent(300, 320);
+      width: 100%;
       gap: convertRem(42);
       .donation__img {
         width: 16.25rem;

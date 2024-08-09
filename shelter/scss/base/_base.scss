@@ -1,21 +1,24 @@
+html, body{
+  font-size: 16px;
+}
 body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
 section {
-  padding-top: 80px;
-  padding-bottom: 100px;
+  padding-top: convertRem(80);
+  padding-bottom: convertRem(100);
 }
 .wrapper {
-  max-width: $wrapper-sz + px;
+  max-width: convertRem(1200);
   margin: 0 auto;
 }
 
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-size: 16px;
+
 }
 a {
   cursor: pointer;
@@ -30,7 +33,7 @@ li {
 //**-------break points ----**//
 
 @include screen-width {
-  
+
   .wrapper {
     max-width: toProcent(1200, 1280);
   }
