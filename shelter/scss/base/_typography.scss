@@ -12,7 +12,6 @@ h1 {
   margin-top: 0;
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 44px;
   @include screen-width {
     font-size: convertRem(44);
   }
@@ -23,7 +22,7 @@ h2 {
   margin-top: 0;
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 35px;
+  font-size: convertRem(35);
   @include screen-width {
     font-size: convertRem(35);
   }
@@ -32,7 +31,7 @@ h2 {
 p {
   font-family: $second-family;
   font-weight: 400;
-  font-size: 15px;
+  font-size: convertRem(15);
   line-height: 160%;
   color: $color-dark-xl;
   @include screen-width {
@@ -42,7 +41,7 @@ p {
 .section-title {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 35px;
+  font-size: convertRem(35);
   line-height: 130%;
   @include screen-width {
     font-size: convertRem(35);
@@ -52,9 +51,10 @@ p {
 }
 //**---------LOGO HEADER ----**//
 .logo__name {
+  margin-bottom: 0;
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 32px;
+  font-size: convertRem(32);
   line-height: 110%;
   letter-spacing: 0.06em;
   color: $color-primary;
@@ -66,7 +66,7 @@ p {
   font-family: $second-family;
 
   font-weight: 400;
-  font-size: 13px;
+  font-size: convertRem(13);
   letter-spacing: 0.1em;
   color: $color-light-xl;
   @include screen-width {
@@ -78,7 +78,7 @@ p {
 .nav-list__links {
   font-family: $second-family;
   font-weight: 400;
-  font-size: 15px;
+  font-size: convertRem(15);
   line-height: 160%;
   color: $color-dark-s;
   @include screen-width {
@@ -92,26 +92,27 @@ p {
     pointer-events: none;
     cursor: default;
   }
-  border-bottom: 3px solid $color-primary;
+  border-bottom: 0.1875em solid $color-primary;
 }
 
 .content__title {
   color: $color-light-xl;
-  margin: 0 0 42px 0;
-  letter-spacing: 2.6px;
+  margin: 0 0 emmy(42) 0;
+  letter-spacing: emmy(2.6);
+  font-size: convertRem(44);
   @include screen-width {
     letter-spacing: convertRem(2.6);
   }
   @media (max-width:697px){
     text-align: center;
-    word-spacing: 1.6px;
+    word-spacing: emmy(1.6);
   }
 }
 .not-only__text {
   color: $color-dark-s;
   line-height: 160%;
   font-weight: 400;
-  margin: 0 0 42px 0;
+  margin: 0 0 emmy(42) 0;
   @include screen-width {
     margin-bottom: convertRem(42);
   }
@@ -121,7 +122,7 @@ p {
 .not-only__button {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 17px;
+  font-size: convertRem(17);
   line-height: 130%;
   color: $color-dark-3xl;
   @include screen-width {
@@ -135,7 +136,7 @@ p {
 
 .about-content__text {
   margin: 0;
-  max-width: 430px;
+  max-width: convertRem(430);
   @include screen-width {
     max-width: convertRem(430);
   }
@@ -143,7 +144,7 @@ p {
 .card__name {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: convertRem(20);
   letter-spacing: 0.06em;
   color: $color-dark-l;
   @include screen-width {
@@ -154,7 +155,7 @@ p {
 .pets__title {
   margin-bottom: 0;
   text-align: center;
-  letter-spacing: 1.24px;
+  letter-spacing: emmy(1.24);
   @include screen-width {
     letter-spacing: convertRem(1.24);
   }
@@ -162,9 +163,9 @@ p {
 .card__btn {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 17px;
+  font-size: convertRem(17);
   line-height: 130%;
-  letter-spacing: 0.16px;
+  letter-spacing: emmy(0.16);
   color: $color-dark-3xl;
   @include screen-width {
     font-size: convertRem(17);
@@ -180,7 +181,7 @@ p {
 .container__text {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: convertRem(20);
   letter-spacing: 0.06em;
   text-align: center;
   color: $color-dark-l;
@@ -192,8 +193,8 @@ p {
 .donation__title {
   text-align: left;
   margin: 0;
-  letter-spacing: 3.61px;
-  word-spacing: 12.1px;
+  letter-spacing: emmy(3.61);
+  word-spacing: emmy(12.1);
   @include screen-width {
     letter-spacing: convertRem(3.61);
     word-spacing: convertRem(12.1);
@@ -202,7 +203,7 @@ p {
 .donation__text {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 15px;
+  font-size: convertRem(15);
   line-height: 110%;
   letter-spacing: 0.06em;
   color: $color-dark-l;
@@ -213,7 +214,7 @@ p {
 .donation__card-number {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: convertRem(20);
   letter-spacing: 0.06em;
   color: $color-dark-l;
   @include screen-width {
@@ -224,7 +225,7 @@ p {
   font-family: $second-family;
   font-style: italic;
   font-weight: 400;
-  font-size: 12px;
+  font-size: convertRem(12);
   line-height: 150%;
   color: $color-dark-m;
   margin: 0;
@@ -236,7 +237,7 @@ p {
 .footer__title {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 35px;
+  font-size: convertRem(35);
   line-height: 130%;
   letter-spacing: 0.05em;
   color: $color-light-xl;
@@ -248,7 +249,7 @@ p {
 .contact__link {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: convertRem(20);
   line-height: 115%;
   letter-spacing: 0.06em;
   color: $color-primary;
@@ -259,7 +260,7 @@ p {
 .location__link {
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: convertRem(20);
   line-height: 115%;
   color: $color-primary;
   @include screen-width {
@@ -288,10 +289,11 @@ body.page-pets .list:nth-child(2) {
     pointer-events: none;
     cursor: default;
   }
-  border-bottom: 3px solid $color-primary;
+  border-bottom: emmy(3) solid $color-primary;
 }
 body.page-pets .logo__name {
   color: $color-dark-3xl;
+  margin-bottom: 0;
 }
 body.page-pets .logo__description {
   color: $color-dark-3xl;
@@ -359,7 +361,7 @@ body.page-pets .logo__description {
   .content__title {
     font-size: convertRem(25);
     text-align: center;
-    word-spacing: 1.6px;
+    word-spacing: emmy(1.6);
   }
   .not-only__text {
     font-size: convertRem(15);

@@ -99,7 +99,8 @@
           }
         }
         .pets__btn-container {
-          gap: 20px;
+          max-width: 340px;
+          width: 100%;
         }
       }
     }
@@ -124,7 +125,7 @@
       padding-bottom: convertRem(42);
       max-height: 1649px;
       .main-pets__wrapper {
-        width: toProcent(300, 380);
+        width: toProcent(300, 320);
         gap: convertRem(42);
         .cards_container {
           height: 1365px;
@@ -132,9 +133,10 @@
           row-gap: convertRem(30);
           overflow: hidden;
         }
-        // .pets__btn-container {
-        //   gap: convertRem(10);
-        // }
+        .pets__btn-container {
+          width: 100%;
+
+        }
       }
     }
   }

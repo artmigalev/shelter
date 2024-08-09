@@ -2,14 +2,14 @@ button {
   cursor: pointer;
   font-family: $primary-family;
 }
-button:hover{
+button:hover {
   transition: background 0.5s;
 }
 
 .not-only__button {
   display: block;
-  border-radius: 100px;
-  padding: 15px 45px;
+  border-radius: emmy(100);
+  padding: emmy(15) emmy(45);
   width: 207px;
   height: 52px;
   background: $color-primary;
@@ -22,8 +22,8 @@ button:hover{
 .button-slider {
   width: 52px;
   height: 52px;
-  border-radius: 100px;
-  border: 2px solid $color-primary;
+  border-radius: emmy(100);
+  border: emmy(2) solid $color-primary;
   background: transparent;
 
   font-size: 0%;
@@ -35,18 +35,17 @@ button:hover{
 .card__btn {
   width: 187px;
   height: 52px;
-  border: 2px solid $color-primary;
-  border-radius: 100px;
+  border: emmy(2) solid $color-primary;
+  border-radius: emmy(100);
   background-color: transparent;
 }
 .card__btn:hover {
-
   background: $color-primary-light;
   border: none;
 }
 .pets__button {
-  border-radius: 100px;
-  padding: 15px 45px;
+  border-radius: emmy(100);
+  padding:emmy(15)emmy(45);
   width: 261px;
   height: 52px;
   background: $color-primary;
@@ -54,19 +53,20 @@ button:hover{
   text-align: center;
 
   font-weight: 400;
-  font-size: 17px;
+  font-size: emmy(17);
   color: $color-dark-3xl;
 }
 .donation__btn {
-  border-radius: 9px;
-  padding: 10px 15px;
-  width: 349px;
-  height: 43px;
+  border-radius: emmy(9);
+  padding: convertRem(10) convertRem(15);
+  width: toProcent(349, 380);
+  max-width: convertRem(349);
+  height: convertRem(43);
   background: $color-primary;
   border: none;
   @include fl-row;
   align-items: center;
-  gap: 10px;
+  gap: emmy(10);
   @include mobile-width {
     width: toProcent(281, 300);
   }
@@ -74,8 +74,8 @@ button:hover{
 //**----------page-PETS--------**//
 body.page-pets .btn-double-arrow__left,
 .btn-single-arrow__left {
-  border: 2px solid $color-dark-s;
-  border-radius: 100px;
+  border: emmy(2) solid $color-dark-s;
+  border-radius: emmy(100);
   color: $color-dark-s;
 
   width: 52px;
@@ -89,11 +89,11 @@ body.page-pets .btn-double-arrow__left,
 body.page-pets .pagination-slider {
   width: 52px;
   height: 52px;
-  border-radius: 100px;
+  border-radius: emmy(100);
 
   font-family: $primary-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: convertRem(20);
   line-height: 115%;
   letter-spacing: 0.06em;
   text-align: center;
@@ -101,7 +101,7 @@ body.page-pets .pagination-slider {
 body.page-pets .btn-single-arrow__right,
 .btn-double-arrow__right,
 .btn-number {
-  border: 2px solid $color-primary;
+  border: emmy(2) solid $color-primary;
 }
 body.page-pets .btn-number {
   background: $color-primary;

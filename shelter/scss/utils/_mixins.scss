@@ -32,3 +32,6 @@
 @function toProcent($child, $parent) {
   @return calc(($child/$parent) * 100%);
 }
+@function emmy($px){
+  @return calc($px/16)+em;
+}
