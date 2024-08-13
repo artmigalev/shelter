@@ -9,37 +9,96 @@ const pets = await fetch("../../assets/data/pets.json")
   .catch((error) => console.log(error));
 console.log(pets);
 
-//*--------VARIABLES---- *//
-const BTN_BURGER = document.querySelector(".burger__menu");
-const navigation = document.querySelector(".header__navigation");
-const listNav = document.querySelector(".nav__list");
+//*--------VARIABLES-------*//
 
-function check() {
-  if (window.matchMedia("(min-width: 767px)").matches) {
-    navigation.classList.add("header__navigation-hidden");
-    listNav.classList.add("nav__list-active");
-  } else {
-    navigation.classList.remove("header__navigation-hidden");
-  }
+const BTN_BURGER = document.querySelector(".burger-btn");
+const HEADER = document.querySelector(".header");
+
+
+/!!----------BURGER MENU AND BURGER-BTN CLICKED-----!!/
+
+//*--------ADDED BURGER MENU INTO DOM -------*//
+
+const MENU_BURGER = document.querySelector(".nav__list");
+
+function createdMenuBurger() {
+  let menuBg = document.createElement("div");
+  menuBg.className = "burger__menu-bg";
+  document.querySelector(".header").appendChild(menuBg);
+  let clone = MENU_BURGER.cloneNode(true);
+  menuBg.appendChild(clone);
 }
+if (document.readyState == "complete") createdMenuBurger();
+
 function clickedBurger() {
-  BTN_BURGER.classList.toggle("burger__menu-turn");
+  BTN_BURGER.classList.toggle("burger-btn-turn");
   console.log("click");
-  if (BTN_BURGER.classList.contains("burger__menu-turn")) {
-    navigation.classList.remove("header__navigation-hidden");
-    navigation.classList.add("header__navigation-active");
-    listNav.classList.add("nav__list-active");
+  const burgerMenu = document.querySelector(".burger__menu-bg");
+  if (BTN_BURGER.classList.contains("burger-btn-turn")) {
+    burgerMenu.classList.remove("burger__menu-bg-hidden");
+    burgerMenu.classList.add("burger__menu-bg-visibility");
+    // listNav.classList.add("nav__list-active");
   } else {
-    navigation.classList.remove("header__navigation-active");
-    navigation.classList.add("header__navigation-hidden");
+    burgerMenu.classList.remove("burger__menu-bg-visibility");
+    burgerMenu.classList.add("burger__menu-bg-hidden");
   }
 }
 
-check();
-window.addEventListener("resize", check);
 BTN_BURGER.addEventListener("click", clickedBurger);
 
-//***************************************************/
+
+//!----------------Infinite slider carousel on Main page--------/
+
+
+function cardCreated(pets){
+  return `<div class="pets__card" id="card__${pets.name.toLowerCase()}">
+                <img class="card__img src=${pets.img} alt="pets-${pets.name.toLowerCase()}" />
+                <span class="card__name">${pets.name}</span>
+                <button class="card__btn">Learn more</button>
+              </div>`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//!! ------------MODAL------------------!!//
 
 async function createdModalWindow(pets) {
   let dialog = `<dialog class="dialog-window">
@@ -64,15 +123,11 @@ async function createdModalWindow(pets) {
               <li class="pet-list__item">
                 <span class="list__item-text pet-inoculations"
                   >Inoculations:&nbsp</span
-                ><span class="pet-list__item-data">${pets.inoculations.join(
-                  " ",
-                )}</span>
+                ><span class="pet-list__item-data">${pets.inoculations.join(" ")}</span>
               </li>
               <li class="pet-list__item">
                 <span class="list__item-text pet-diseases">Diseases:&nbsp</span
-                ><span class="pet-list__item-data">${pets.diseases.join(
-                  " ",
-                )}</span>
+                ><span class="pet-list__item-data">${pets.diseases.join(" ")}</span>
               </li>
               <li class="pet-list__item">
                 <span class="list__item-text pet-parasites"
@@ -87,19 +142,7 @@ async function createdModalWindow(pets) {
   return document.body.insertAdjacentHTML("afterbegin", dialog);
 }
 createdModalWindow(pets[2]);
-console.log(pets[2].inoculations.join(" "));
 
-//********Carousel******//
 
-const btnSliderArray = document.querySelectorAll(".button-slider");
 
-btnSliderArray.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    const click = event.target;
-    if (click.classList.contains("pets__button-left")){console.log(click);}
-  });
-});
 
-function moveCard(event) {
-  
-}

@@ -723,7 +723,7 @@ body.page-pets .logo__description {
   .content__title {
     font-size: 1.5625rem;
     text-align: center;
-    word-spacing: 0.1em;
+    word-spacing: 0.2em;
   }
   .not-only__text {
     font-size: 0.9375rem;
@@ -834,38 +834,77 @@ li {
     padding-bottom: 2.625rem;
   }
 }
-.burger__menu {
+.burger-btn {
+  position: relative;
   display: none;
   flex-direction: column;
   width: 30px;
   height: 22px;
-  position: relative;
-  z-index: 4;
-  transition: 0.3s;
-  position: relative;
   z-index: 4;
   transition: 0.3s;
   justify-content: space-between;
   cursor: pointer;
   padding-left: 0;
 }
-.burger__menu .burger__line {
+.burger-btn .burger__line {
   width: 100%;
   border: 2px solid #f1cdb3;
   cursor: pointer;
 }
 
+.burger__menu-bg {
+  position: fixed;
+  z-index: 1;
+  background: #292929;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: transform 1.3s ease-in;
+  visibility: visible;
+  transform: translateX(100%);
+}
+.burger__menu-bg .nav__list {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  position: relative;
+  align-items: center;
+  top: 24.8vh;
+  gap: 2.5rem;
+  margin: 0 auto;
+  max-width: 75.9375%;
+}
+.burger__menu-bg .nav__list .list .nav-list__links {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  color: #cdcdcd;
+}
+
+.burger__menu-bg-hidden {
+  transform: translateX(100%);
+}
+
+.header .burger__menu-bg-visibility {
+  transition: 1.3s;
+  transform: translateX(0);
+  transition: transform 1.3s ease-in;
+}
+.header .burger__menu-bg-visibility .nav__list-active {
+  flex-direction: column;
+  z-index: 3;
+  position: relative;
+  align-items: center;
+  top: 24.8vh;
+}
+
 @media (max-width: 320px) {
-  .burger__menu {
+  .burger-btn {
     display: flex;
   }
 }
-.burger__menu-turn {
-  transform: rotate(90deg);
-  transition: 0.3s;
-}
-
-.burger__menu-turn {
+.burger-btn-turn {
   transform: rotate(90deg);
   transition: 0.3s;
 }
@@ -1069,6 +1108,9 @@ body.page-pets .btn-number {
     display: flex;
     flex-direction: column;
   }
+  .header .header__navigation {
+    display: flex;
+  }
   .header .header__navigation .nav__list {
     display: flex;
     flex-direction: row;
@@ -1080,7 +1122,7 @@ body.page-pets .btn-number {
   .header .header__navigation {
     display: none;
   }
-  .header .burger__menu {
+  .header .burger-btn {
     display: flex;
   }
 }
@@ -1110,60 +1152,6 @@ body.page-pets .btn-number {
   transform: translateX(100%);
   transition: transform 1.3s ease-in;
   visibility: visible;
-}
-.header__navigation-hidden .nav__list {
-  flex-direction: column;
-  z-index: 3;
-  position: relative;
-  align-items: center;
-  top: 24.8vh;
-}
-
-.header .header__navigation-active {
-  visibility: visible;
-  z-index: 3;
-  position: fixed;
-  left: 0;
-  top: 0;
-  transition: 1.3s;
-  width: 100vw;
-  height: 100vh;
-  background: #292929;
-  transform: translateX(0);
-  transition: transform 1.3s ease-in;
-}
-.header .header__navigation-active .nav__list-active {
-  flex-direction: column;
-  z-index: 3;
-  position: relative;
-  align-items: center;
-  top: 24.8vh;
-}
-
-.header__navigation-hidden {
-  visibility: hidden;
-  display: flex;
-  position: fixed;
-  z-index: 1;
-  background: #292929;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  transform: translateX(100%);
-  transition: transform 1.3s ease-in;
-  visibility: visible;
-}
-.header__navigation-hidden .nav__list {
-  flex-direction: column;
-  z-index: 3;
-  position: relative;
-  align-items: center;
-  top: 24.8vh;
 }
 
 .header .header__navigation-active {
@@ -1572,7 +1560,6 @@ body.page-pets .btn-number {
 }
 .footer {
   background-image: url("../assets/images/footer-gradient-background.png");
-  background-image: url("../assets/images/footer-gradient-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1590,36 +1577,44 @@ body.page-pets .btn-number {
     gap: 3.75rem;
   }
 }
-.footer .footer__wrapper .footer__contact {
-  width: 278px;
+@media (max-width: 940px) and (max-width: 940px) {
+  .footer .footer__wrapper {
+    justify-content: center;
+    gap: 3.75rem;
+  }
 }
-.footer .footer__wrapper .footer__location {
-  width: 302px;
-}
-.footer .footer__wrapper .footer-block {
-  display: flex;
-  flex-direction: column;
-}
-.footer .footer__wrapper .footer-block .contact__list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  margin: 2.275rem 0;
-}
-.footer .footer__wrapper .footer-block .location__list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin: 1.9625rem 0;
-}
-.footer .footer__wrapper .footer-block ul .footer__list {
-  display: flex;
-  flex-direction: row;
-  gap: 1.25rem;
-  align-items: center;
-}
-.footer .footer__wrapper .footer__location {
-  right: 0.875rem;
+@media (max-width: 940px) {
+  .footer .footer__wrapper .footer__contact {
+    width: 278px;
+  }
+  .footer .footer__wrapper .footer__location {
+    width: 302px;
+  }
+  .footer .footer__wrapper .footer-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .footer__wrapper .footer-block .contact__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 2.275rem 0;
+  }
+  .footer .footer__wrapper .footer-block .location__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1.9625rem 0;
+  }
+  .footer .footer__wrapper .footer-block ul .footer__list {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  .footer .footer__wrapper .footer__location {
+    right: 0.875rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1687,10 +1682,10 @@ body.page-pets .btn-number {
   .page-pets .pets__wrapper .header .header__navigation {
     display: none;
   }
-  .page-pets .pets__wrapper .header .burger__menu {
+  .page-pets .pets__wrapper .header .burger-btn {
     display: flex;
   }
-  .page-pets .pets__wrapper .header .burger__menu .burger__line {
+  .page-pets .pets__wrapper .header .burger-btn .burger__line {
     border-color: #000;
   }
 }

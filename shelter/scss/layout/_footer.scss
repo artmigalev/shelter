@@ -10,45 +10,45 @@
     width: 100%;
     padding-top: convertRem(40);
 
-    @media (max-width:940px)  {
-
-        justify-content: center;
-        gap: convertRem(60);
-
     @media (max-width: 940px) {
       justify-content: center;
       gap: convertRem(60);
-    }
 
-    .footer__contact {
-      width: 278px;
-    }
-    .footer__location {
-      width: 302px;
-    }
-    .footer-block {
-      @include fl-clmn;
+      @media (max-width: 940px) {
+        justify-content: center;
+        gap: convertRem(60);
+      }
 
-      .contact__list {
-        @include fl-clmn;
-        gap: convertRem(40);
-        margin: convertRem(36.4) 0;
+      .footer__contact {
+        width: 278px;
       }
-      .location__list {
-        @include fl-clmn;
-        gap: convertRem(32);
-        margin: convertRem(31.4) 0;
+      .footer__location {
+        width: 302px;
       }
-      ul {
-        .footer__list {
-          @include fl-row;
-          gap: convertRem(20);
-          align-items: center;
+      .footer-block {
+        @include fl-clmn;
+
+        .contact__list {
+          @include fl-clmn;
+          gap: convertRem(40);
+          margin: convertRem(36.4) 0;
+        }
+        .location__list {
+          @include fl-clmn;
+          gap: convertRem(32);
+          margin: convertRem(31.4) 0;
+        }
+        ul {
+          .footer__list {
+            @include fl-row;
+            gap: convertRem(20);
+            align-items: center;
+          }
         }
       }
-    }
-    .footer__location {
-      right: convertRem(14);
+      .footer__location {
+        right: convertRem(14);
+      }
     }
   }
 }
