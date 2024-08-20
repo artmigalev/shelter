@@ -18,14 +18,17 @@
       }
       .pets__block-card {
         width: 82%;
-        @include fl-row;
-        align-items: center;
-        justify-content: space-between;
-        @media (max-width: 1055px) {
-          overflow: hidden;
-          flex-wrap: wrap;
-          max-height: 435px;
-          justify-content: space-around;
+        overflow: hidden;
+        .block-card__slider {
+         
+          transition: 1.5s ease-in;
+          @include fl-row;
+          align-items: center;
+          justify-content: space-between;
+          @media (max-width: 1055px) {
+            max-height: 435px;
+            justify-content: space-around;
+          }
         }
       }
     }

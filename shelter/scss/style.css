@@ -935,10 +935,13 @@ button:hover {
 .button-slider {
   width: 52px;
   height: 52px;
-  border-radius: 6.25em;
+  border-radius: 100%;
   border: 0.125em solid #f1cdb3;
   background: transparent;
   font-size: 0%;
+}
+.button-slider .arr-right, .button-slider .arr-right {
+  cursor: pointer;
 }
 
 .button-slider:hover {
@@ -1043,6 +1046,7 @@ body.page-pets .btn-number {
 }
 .pets__card .card__img {
   width: -webkit-fill-available;
+  width: 100%;
 }
 
 .pets__card:hover {
@@ -1051,6 +1055,7 @@ body.page-pets .btn-number {
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
   transform: scale(1.05);
   transition: box-shadow 0.5s, transform 0.5s;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -1344,15 +1349,17 @@ body.page-pets .btn-number {
 }
 .section-pets .pets__wrapper .pets__container .pets__block-card {
   width: 82%;
+  overflow: hidden;
+}
+.section-pets .pets__wrapper .pets__container .pets__block-card .block-card__slider {
+  transition: 1.5s ease-in;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 @media (max-width: 1055px) {
-  .section-pets .pets__wrapper .pets__container .pets__block-card {
-    overflow: hidden;
-    flex-wrap: wrap;
+  .section-pets .pets__wrapper .pets__container .pets__block-card .block-card__slider {
     max-height: 435px;
     justify-content: space-around;
   }

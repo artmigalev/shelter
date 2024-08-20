@@ -1,4 +1,6 @@
-const pets = await fetch("../../assets/data/pets.json")
+import {clickedBtn, loadedCards} from "../../js/infinite-slider-carousel.js";
+
+export const pets = await fetch("../../assets/data/pets.json")
   .then((response) => {
     return response.json();
   })
@@ -11,15 +13,25 @@ console.log(pets);
 
 //*--------VARIABLES-------*//
 
+const MENU_BURGER = document.querySelector(".nav__list");
 const BTN_BURGER = document.querySelector(".burger-btn");
 const HEADER = document.querySelector(".header");
+const sliderButtons = document.querySelectorAll(".button-slider");
 
 
-/!!----------BURGER MENU AND BURGER-BTN CLICKED-----!!/
+/!!----------BURGER MENU AND BURGER-BTN CLICKED-----!!/;
 
 //*--------ADDED BURGER MENU INTO DOM -------*//
 
-const MENU_BURGER = document.querySelector(".nav__list");
+if (document.readyState == "complete") createdMenuBurger();
+BTN_BURGER.addEventListener("click", clickedBurger);
+
+loadedCards();// added pet cards to dom
+window.addEventListener("resize", loadedCards);      // changes the number of cards when changing the size of the window
+sliderButtons.forEach((btn) => btn.addEventListener('click', clickedBtn))
+
+
+
 
 function createdMenuBurger() {
   let menuBg = document.createElement("div");
@@ -28,7 +40,6 @@ function createdMenuBurger() {
   let clone = MENU_BURGER.cloneNode(true);
   menuBg.appendChild(clone);
 }
-if (document.readyState == "complete") createdMenuBurger();
 
 function clickedBurger() {
   BTN_BURGER.classList.toggle("burger-btn-turn");
@@ -44,52 +55,8 @@ function clickedBurger() {
   }
 }
 
-BTN_BURGER.addEventListener("click", clickedBurger);
-
 
 //!----------------Infinite slider carousel on Main page--------/
-
-
-function cardCreated(pets){
-  return `<div class="pets__card" id="card__${pets.name.toLowerCase()}">
-                <img class="card__img src=${pets.img} alt="pets-${pets.name.toLowerCase()}" />
-                <span class="card__name">${pets.name}</span>
-                <button class="card__btn">Learn more</button>
-              </div>`;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -142,7 +109,3 @@ async function createdModalWindow(pets) {
   return document.body.insertAdjacentHTML("afterbegin", dialog);
 }
 createdModalWindow(pets[2]);
-
-
-
-
