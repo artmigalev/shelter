@@ -1,4 +1,9 @@
-import {clickedBtn, loadedCards} from "../../js/infinite-slider-carousel.js";
+import {
+  loadedCards,
+  nextBtn,
+  
+  handle,
+} from "../../js/infinite-slider-carousel.js";
 
 export const pets = await fetch("../../assets/data/pets.json")
   .then((response) => {
@@ -16,9 +21,6 @@ console.log(pets);
 const MENU_BURGER = document.querySelector(".nav__list");
 const BTN_BURGER = document.querySelector(".burger-btn");
 const HEADER = document.querySelector(".header");
-const sliderButtons = document.querySelectorAll(".button-slider");
-
-
 /!!----------BURGER MENU AND BURGER-BTN CLICKED-----!!/;
 
 //*--------ADDED BURGER MENU INTO DOM -------*//
@@ -26,12 +28,9 @@ const sliderButtons = document.querySelectorAll(".button-slider");
 if (document.readyState == "complete") createdMenuBurger();
 BTN_BURGER.addEventListener("click", clickedBurger);
 
-loadedCards();// added pet cards to dom
-window.addEventListener("resize", loadedCards);      // changes the number of cards when changing the size of the window
-sliderButtons.forEach((btn) => btn.addEventListener('click', clickedBtn))
-
-
-
+loadedCards(); // added pet cards to dom
+window.addEventListener("resize", loadedCards); // changes the number of cards when changing the size of the window
+nextBtn.addEventListener("click", handle);
 
 function createdMenuBurger() {
   let menuBg = document.createElement("div");
@@ -55,15 +54,7 @@ function clickedBurger() {
   }
 }
 
-
 //!----------------Infinite slider carousel on Main page--------/
-
-
-
-
-
-
-
 
 //!! ------------MODAL------------------!!//
 

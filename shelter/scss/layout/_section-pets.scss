@@ -19,8 +19,9 @@
       .pets__block-card {
         width: 82%;
         overflow: hidden;
+
         .block-card__slider {
-         
+          width: 100%;
           transition: 1.5s ease-in;
           @include fl-row;
           align-items: center;

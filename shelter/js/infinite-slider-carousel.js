@@ -1,5 +1,11 @@
 import { pets } from "../pages/main/index.js";
 export const sliderContainer = document.querySelector(".block-card__slider");
+const nextBtn = document.querySelector(".pets__button-right");
+const prevBtn = document.querySelector(".pets__button-left");
+const offset = sliderContainer.offsetWidth;
+const liveCollectionSlider = sliderContainer.getElementsByClassName("pets__card");
+
+
 
 export class Component {
   node = null;
@@ -153,40 +159,45 @@ export function loadedCards() {
   }
 
   let count = returnedCountCards(sliderContainer);
-  console.log(count);
+
   sliderContainer.innerHTML = "";
   return sliderContainer.append(...getRandomCards(pets, count));
 }
 
-//* listener to btn card
-export function clickedBtn(event) {
-  const click = event.target;
-  const oldSlides = sliderContainer.getElementsByClassName("pets__card");
-  const newCards = returnedNewSlides(oldSlides, returnedCountCards(sliderContainer));
-  if (click.closest("pets__button-left") || click.classList.contains("pets__button-left")) {
-    sliderContainer.style.width ="max-content";
-    sliderContainer.append(...newCards);
-
-    console.log(typeof oldSlides);
 
 
-
-    console.log(click);
-  } else if (click.closest("pets__button-right") || click.classList.contains("pets__button-right")) {
-    console.log(click);
+function handle(event){
+  const click = event.currentTarget;
+  if(event.currentTarget.classList.contains("pets__button-right")){
+    moveNext(offset, sliderContainer, getRandomCards(pets, returnedCountCards(sliderContainer)), liveCollectionSlider);
   }
+
 }
 
-function returnedNewSlides(oldSlides, count) {
-  let newSlides = getRandomCards(pets, count);
-  for (let i = 0; i < oldSlides.length; i++) {
-    for (let j = 0; j < newSlides.length; j++) {
-      if (oldSlides[i].id === newSlides[j].id) {
-        j = 0;
-        i = 0;
-        newSlides = getRandomCards(pets, count);
-      }
+function moveNext(offset,slider,cards,liveColl){
+
+  const lengthCards = cards.length
+  slider.style.width = 'max-width';
+  if(lengthCards === 3){slider.style.gap ='90px' }
+  if(lengthCards === 2){slider.style.gap ='40px' }
+  slider.append(...cards)
+  slider.style.transform = `translate(${-offset}px)`
+  let lengthSlider = slider.childNodes.length;
+
+
+  if(liveColl.length> (lengthCards*2)){
+    console.log(true);
+
+    while(liveColl.length!==(lengthCards*2)){
+      console.log(slider.firstElementChild);
+      slider.removeChild(slider.firstElementChild)
+      console.log(lengthCards, liveColl.length);
     }
+
+    slider.style.transform = `translate(0px)`;
   }
-  return newSlides;
+  console.log(slider);
+
 }
+
+export {nextBtn,prevBtn,handle,}

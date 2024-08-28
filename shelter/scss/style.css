@@ -1352,6 +1352,7 @@ body.page-pets .btn-number {
   overflow: hidden;
 }
 .section-pets .pets__wrapper .pets__container .pets__block-card .block-card__slider {
+  width: 100%;
   transition: 1.5s ease-in;
   display: flex;
   flex-direction: row;
