@@ -8,6 +8,7 @@
     @include fl-clmn;
     gap: convertRem(10);
   }
+
   .header__navigation {
     .nav__list {
       gap: convertRem(35);
@@ -55,6 +56,8 @@
       }
       .burger-btn {
         display: flex;
+        .burger__line {
+        }
       }
     }
   }
@@ -87,7 +90,6 @@
   transform: translateX(100%);
   transition: transform 1.3s ease-in;
   visibility: visible;
-
 }
 
 //**----------if burger menu active--------**//

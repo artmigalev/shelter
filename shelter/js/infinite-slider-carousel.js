@@ -1,11 +1,10 @@
 import { pets } from "../pages/main/index.js";
-export const sliderContainer = document.querySelector(".block-card__slider");
+import { modalWindow } from "./modal-window.js";
+export const slider = document.querySelector(".block-card__slider");
 const nextBtn = document.querySelector(".pets__button-right");
 const prevBtn = document.querySelector(".pets__button-left");
-const offset = sliderContainer.offsetWidth;
-const liveCollectionSlider = sliderContainer.getElementsByClassName("pets__card");
-
-
+const offset = slider.parentNode.offsetWidth;
+export const lengthCards = returnedCountCards(slider.parentNode);
 
 export class Component {
   node = null;
@@ -132,7 +131,7 @@ export function getRandomCards(pets, count) {
       new Button({
         className: "card__btn",
         onClick: () => {
-          console.log("hello I am button card");
+          modalWindow.showModal();
         },
         text: "Learn more",
       }),
@@ -143,61 +142,55 @@ export function getRandomCards(pets, count) {
   return arrCards;
 }
 export function loadedCards() {
-  const windowWidth = window.innerWidth;
-  const container = document.querySelector(".block-card__slider");
-  switch (windowWidth) {
-    case 1280:
-      container.style.gap = "90px";
-      break;
-
-    case 786:
-      container.style.gap = "40px";
-      break;
-
-    default:
-      break;
-  }
-
-  let count = returnedCountCards(sliderContainer);
-
-  sliderContainer.innerHTML = "";
-  return sliderContainer.append(...getRandomCards(pets, count));
+  const slide = document.createElement("div");
+  slide.className = "slide";
+  slide.innerHTML = "";
+  slide.append(...getRandomCards(pets, lengthCards));
+  slider.appendChild(slide);
 }
+let countClick = 0;
 
+function handle(event) {
+  const target = event.currentTarget;
+  let slides = slider.children;
+  const slideWidth = slides[0].offsetWidth;
 
-
-function handle(event){
-  const click = event.currentTarget;
-  if(event.currentTarget.classList.contains("pets__button-right")){
-    moveNext(offset, sliderContainer, getRandomCards(pets, returnedCountCards(sliderContainer)), liveCollectionSlider);
+  if(slider.childNodes.length === 1){
+    slider.insertBefore(loadedToStartCards(), slider.firstElementChild);
+    loadedCards();
   }
 
-}
-
-function moveNext(offset,slider,cards,liveColl){
-
-  const lengthCards = cards.length
-  slider.style.width = 'max-width';
-  if(lengthCards === 3){slider.style.gap ='90px' }
-  if(lengthCards === 2){slider.style.gap ='40px' }
-  slider.append(...cards)
-  slider.style.transform = `translate(${-offset}px)`
-  let lengthSlider = slider.childNodes.length;
+  if (target.classList.contains("pets__button-right")) {
+    countClick--;
+    loadedCards()
 
 
-  if(liveColl.length> (lengthCards*2)){
-    console.log(true);
 
-    while(liveColl.length!==(lengthCards*2)){
-      console.log(slider.firstElementChild);
-      slider.removeChild(slider.firstElementChild)
-      console.log(lengthCards, liveColl.length);
-    }
+    // slider.style.transform = `translateX(${countClick * slideWidth}px)`;
+    setTimeout(() => {
+      slider.firstChild.remove()
+    }, 0);
+    countClick =0
+  } else if (target.classList.contains("pets__button-left")) {
+    slider.insertBefore(loadedToStartCards(), slider.firstElementChild)
+    setTimeout(() => {
+      slider.lastChild.remove();
+    }, 0);
+    countClick++;
 
-    slider.style.transform = `translate(0px)`;
+    // slider.style.transform = `translateX(${countClick * slideWidth}px)`;
   }
-  console.log(slider);
+
+
 
 }
 
-export {nextBtn,prevBtn,handle,}
+export { nextBtn, prevBtn, handle };
+
+function loadedToStartCards(){
+  const slide = document.createElement("div");
+  slide.className = "slide";
+  slide.innerHTML = "";
+  slide.append(...getRandomCards(pets, lengthCards));
+  return slide
+}

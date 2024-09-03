@@ -24,10 +24,10 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 320px;
   transition: transform 1.3s ease-in;
   visibility: visible;
-  transform: translateX(100%);
+
 
   .nav__list {
     @include fl-clmn;
@@ -49,7 +49,7 @@
   }
 }
 .burger__menu-bg-hidden{
-  transform: translateX(100%);
+  transform: translateX(100vw);
 
 }
 //**----------if burger menu active--------**//
@@ -59,8 +59,8 @@
 
     transition: 1.3s;
 
-    transform: translateX(0);
-    transition: transform 1.3s ease-in;
+    transform: translateX(140%);
+    transition: transform 1.5s ease-in;
 
     .nav__list-active {
       flex-direction: column;
@@ -73,11 +73,7 @@
 }
 
 
-@include mobile-width {
-  .burger-btn {
-    display: flex;
-  }
-}
+
 //**----------if burger menu clicked--------**//
 
 .burger-btn-turn {
