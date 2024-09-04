@@ -2,6 +2,7 @@ import { nextBtn, handle, loadedCards, prevBtn } from "../../js/infinite-slider-
 import { createdMenuBurger,clickedBurger,BTN_BURGER } from "../../js/burger.js";
 import { getModalWindow } from "../../js/modal-window.js";
 
+
 //*____________________________________________________//
 
 export const pets = await fetch("../../assets/data/pets.json")
@@ -28,7 +29,7 @@ BTN_BURGER.addEventListener("click", clickedBurger);
 
 
 loadedCards(); // added pet cards to dom
-getModalWindow()
+getModalWindow(pets[1]).showModal()
 window.addEventListener("resize", () => {
   document.querySelector(".block-card__slider").innerHTML = "";
   loadedCards();

@@ -1,70 +1,57 @@
 import { Component, Image, Button } from "./infinite-slider-carousel.js";
+import { pets } from "../pages/main/index.js";
 const modalWindow = document.querySelector(".modal-window");
-async function createdModalWindow(pets) {
-  let dialog = `<dialog class="dialog-window">
-      <div class="dialog-body">
-      <button class="btn__popup-close">&times</button>
-        <div class="popup-container">
-          <img
-            src=${pets.img}
-            alt=${pets.name}
-            class="img-popup" />
-          <div class="popup-content">
-            <h3 class="pet-name">${pets.name}</h3>
-            <h4 class="pet-typeBreed">${pets.type} - ${pets.breed}</h4>
-            <h5 class="pet-description">
-              ${pets.description}
-            </h5>
-            <ul class="pet-list">
-              <li class="pet-list__item">
-                <span class="list__item-text pet-age">Age:&nbsp</span
-                ><span class="pet-list__item-data">${pets.age}</span>
-              </li>
-              <li class="pet-list__item">
-                <span class="list__item-text pet-inoculations"
-                  >Inoculations:&nbsp</span
-                ><span class="pet-list__item-data">${pets.inoculations.join(" ")}</span>
-              </li>
-              <li class="pet-list__item">
-                <span class="list__item-text pet-diseases">Diseases:&nbsp</span
-                ><span class="pet-list__item-data">${pets.diseases.join(" ")}</span>
-              </li>
-              <li class="pet-list__item">
-                <span class="list__item-text pet-parasites"
-                  >Parasites:&nbsp</span
-                ><span class="pet-list__item-data">${pets.parasites}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </dialog>`;
-  return document.body.insertAdjacentHTML("afterbegin", dialog);
-}
 
- function getModalWindow(){
-  const dialog = new Component(
-    {
-      tag: "dialog",
-      className: "modal-window",
+
+function getModalWindow(data) {
+  const dialog = new Component({
+    tag: "dialog",
+    className: "modal-window",
+  });
+  const btnClose = new Button({
+    className: "button-slider btn-modal",
+
+    onClick: () => {
+      this.parentNode.close();
     },
-    new Button({
-      className: "button-slider btn-modal",
-      text: "&#10006;",
-      onClick: () => {
-        this.parentNode.close();
-      },
-    }),
-    new Component(
-      {
-        className: "popup-container",
-      },
-      new Image({ className: "img-popup",src:'pates.img',alt:'pets.nema '}),
-    ),
+  });
+  btnClose.getNode().innerHTML = `&times;`;
+  dialog.append(btnClose);
+  const container = new Component({
+    className: "modal-container",
+  });
+
+  const modalImg = new Image({ className: "modal-img" });
+  modalImg.addSrc(data.img);
+  modalImg.setAltText(data.name);
+
+  container.append(modalImg);
+  const modalContent = new Component({ className: "modal-content" });
+  const childContent = new Component(
+    { className: "modal-description" },
+    new Component({ tag: "h3", className: "pet-name", text: data.name }),
+    new Component({ tag: "h4", className: "pet-typeBreed", text: `${data.type} - ${data.breed}` }),
+    new Component({ tag: "h5", className: "pet-description", text: data.description }),
   );
+  modalContent.append(childContent);
 
-  return document.body.appendChild( dialog.getNode());
+  const listContent = new Component({ tag: "ul", className: "modal-list" });
 
+  const arrKeysData = Object.keys(data);
+  for (let i = 5; i <= arrKeysData.length - 1; i++) {
+    const textItem = arrKeysData[i].replace(arrKeysData[i][0], arrKeysData[i][0].toUpperCase())
+    const itemList = new Component(
+      { tag: "li", className: "list-item" },
+      new Component({ tag: "span", className: "name-item", text: `${textItem} : ` }),
+      new Component({ tag: "span", className: "text-item", text: data[arrKeysData[i]] }),
+    );
+    listContent.append(itemList);
+  }
+  modalContent.append(listContent);
+
+  container.append(modalContent);
+  dialog.append(container);
+  return document.body.appendChild(dialog.getNode());
 }
 
-export {getModalWindow,modalWindow}
+export { getModalWindow, modalWindow };

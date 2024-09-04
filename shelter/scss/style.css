@@ -1696,6 +1696,94 @@ body.page-pets .btn-number {
     height: 16.81rem;
   }
 }
+.modal-window {
+  width: 88.8020833333%;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.modal-window .btn-modal {
+  font-size: 2.2625rem;
+  position: relative;
+  right: -91%;
+  top: 1px;
+}
+.modal-window .modal-container {
+  width: 92.3753665689%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #fafafa;
+  border-radius: 0.5625rem;
+}
+.modal-window .modal-container .modal-img {
+  width: 21.8125rem;
+  height: 21.875rem;
+  border-radius: 9px 0 0 9px;
+}
+.modal-window .modal-container .modal-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 41.2698412698%;
+  margin-top: 0.625rem;
+  margin-right: 0.5625rem;
+}
+.modal-window .modal-container .modal-content .modal-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.modal-window .modal-container .modal-content .modal-description h3,
+.modal-window .modal-container .modal-content .modal-description h4,
+.modal-window .modal-container .modal-content .modal-description h5 {
+  margin: 0;
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.modal-window .modal-container .modal-content .modal-description .pet-name {
+  font-size: 2.1875rem;
+  line-height: 130%;
+}
+.modal-window .modal-container .modal-content .modal-description .pet-typeBreed {
+  font-size: 1.25rem;
+  line-height: 115%;
+}
+.modal-window .modal-container .modal-content .modal-description .pet-description {
+  margin-top: 0.625rem;
+  font-size: 0.8125rem;
+  line-height: 110%;
+}
+.modal-window .modal-container .modal-content .modal-list {
+  padding-left: 0.9375rem;
+  margin: 1.25rem 0 1.25rem 0;
+}
+.modal-window .modal-container .modal-content .modal-list li {
+  list-style: unset;
+}
+.modal-window .modal-container .modal-content .modal-list li::marker {
+  color: #f1cdb3;
+}
+.modal-window .modal-container .modal-content .modal-list .list-item span {
+  font-family: "Georgia", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+.modal-window .modal-container .modal-content .modal-list .list-item .name-item {
+  font-weight: 700;
+}
+.modal-window .modal-container .modal-content .modal-list .list-item .text-item {
+  font-weight: 400;
+}
+
+.modal-window::backdrop {
+  background: rgba(84, 84, 84, 0.7294117647);
+}
+
 .page-pets {
   display: flex;
   flex-direction: column;

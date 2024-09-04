@@ -1,0 +1,86 @@
+.modal-window {
+  width: toProcent(682, 768);
+  background: transparent;
+  border: none;
+  padding: 0;
+  .btn-modal {
+    font-size: convertRem(36.2);
+    position: relative;
+    right: -91%;
+    top: 1px;
+  }
+  .modal-container {
+    width: toProcent(630, 682);
+    @include fl-row;
+    justify-content: space-between;
+    background: $color-light-s;
+    border-radius: convertRem(9);
+
+    .modal-img {
+      width: convertRem(349);
+      height: convertRem(350);
+      border-radius: 9px 0 0 9px;
+    }
+    .modal-content {
+      @include fl-clmn;
+      flex-wrap: nowrap;
+      width: toProcent(260, 630);
+      margin-top: convertRem(10);
+      margin-right: convertRem(9);
+      .modal-description {
+        @include fl-clmn;
+        gap: convertRem(10);
+        h3,
+        h4,
+        h5 {
+          margin: 0;
+          font-family: $primary-family;
+          font-weight: 400;
+          letter-spacing: 0.06em;
+          color: #000;
+        }
+        .pet-name {
+          font-size: convertRem(35);
+          line-height: 130%;
+        }
+        .pet-typeBreed {
+          font-size: convertRem(20);
+          line-height: 115%;
+        }
+        .pet-description {
+          margin-top: convertRem(10);
+          font-size: convertRem(13);
+          line-height: 110%;
+        }
+      }
+      .modal-list {
+        padding-left: convertRem(15);
+        margin: convertRem(20) 0 convertRem(20) 0;
+        li {
+          list-style: unset;
+        }
+        li::marker {
+          color: $color-primary;
+        }
+        .list-item {
+          span {
+            font-family: $primary-family;
+            font-size: convertRem(15);
+            line-height: 110%;
+            letter-spacing: 0.06em;
+            color: #000;
+          }
+          .name-item {
+            font-weight: 700;
+          }
+          .text-item {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+.modal-window::backdrop {
+  background: #545454ba;
+}
