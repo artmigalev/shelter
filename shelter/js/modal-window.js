@@ -12,7 +12,8 @@ function getModalWindow(data) {
     className: "button-slider btn-modal",
 
     onClick: () => {
-      this.parentNode.close();
+      dialog.getNode().close();
+      document.body.classList.remove("stopScroll");
     },
   });
   btnClose.getNode().innerHTML = `&times;`;

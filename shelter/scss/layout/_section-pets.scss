@@ -23,23 +23,22 @@
         flex-direction: row;
         justify-content: center;
 
-
         .block-card__slider {
-            transition: all 1.5s ease-in;
+          transition: all 1.5s ease-in;
 
-          .slide{
+          .slide {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             width: convertRem(990);
-            @include screen-width{
+            @include screen-width {
               gap: convertRem(90);
             }
-            @include tablet-width{
+            @include tablet-width {
               gap: convertRem(40);
               width: convertRem(580);
             }
-            @include mobile-width{
+            @include mobile-width {
               width: convertRem(270);
             }
             transition: 1.5s ease-in;
@@ -64,8 +63,8 @@
       gap: convertRem(60);
       .pets__container {
         width: 100%;
-        .pets__block-card{
-          width: toProcent(580,708);
+        .pets__block-card {
+          width: toProcent(580, 708);
         }
       }
     }

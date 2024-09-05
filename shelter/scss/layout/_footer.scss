@@ -6,13 +6,14 @@
   .footer__wrapper {
     @include fl-row;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     padding-top: convertRem(40);
 
     @media (max-width: 940px) {
       justify-content: center;
       gap: convertRem(60);
+      flex-wrap: wrap;
 
       @media (max-width: 940px) {
         justify-content: center;

@@ -1,32 +1,54 @@
 .modal-window {
-  width: toProcent(682, 768);
+  max-width: 952px;
+  width: toProcent(952, 1280);
+  height: 500px;
+  @include tablet-width{
+    width: toProcent(682,768);
+    height: 402px;
+  }
   background: transparent;
   border: none;
   padding: 0;
   .btn-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
     font-size: convertRem(36.2);
-    position: relative;
-    right: -91%;
-    top: 1px;
+
+
   }
   .modal-container {
-    width: toProcent(630, 682);
+    position: absolute;
+    bottom: 0;
+    width: toProcent(900, 952);
+    @include tablet-width{
+      width: toProcent(630,682);
+
+    }
     @include fl-row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     background: $color-light-s;
     border-radius: convertRem(9);
-
+    align-items: center;
     .modal-img {
-      width: convertRem(349);
-      height: convertRem(350);
+      width: convertRem(500);
+      height: convertRem(500);
       border-radius: 9px 0 0 9px;
+      @include tablet-width{
+        width: toProcent(350,630);
+        height: 350px;
+      }
     }
     .modal-content {
       @include fl-clmn;
       flex-wrap: nowrap;
       width: toProcent(260, 630);
-      margin-top: convertRem(10);
-      margin-right: convertRem(9);
+      gap: convertRem(40);
+      @include tablet-width{
+        gap: convertRem(20)
+
+      }
       .modal-description {
         @include fl-clmn;
         gap: convertRem(10);
@@ -48,14 +70,19 @@
           line-height: 115%;
         }
         .pet-description {
-          margin-top: convertRem(10);
-          font-size: convertRem(13);
+          margin-top: convertRem(30);
+          font-size: convertRem(15);
           line-height: 110%;
+          @include tablet-width{
+            font-size: convertRem(13);
+            margin-top: 10;
+          }
         }
       }
       .modal-list {
         padding-left: convertRem(15);
-        margin: convertRem(20) 0 convertRem(20) 0;
+        margin: 0;
+
         li {
           list-style: unset;
         }
@@ -83,4 +110,8 @@
 }
 .modal-window::backdrop {
   background: #545454ba;
+}
+
+.stopScroll{
+  overflow: hidden;
 }

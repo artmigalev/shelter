@@ -1,5 +1,5 @@
 import { pets } from "../pages/main/index.js";
-import { modalWindow } from "./modal-window.js";
+import { getModalWindow, modalWindow } from "./modal-window.js";
 export const slider = document.querySelector(".block-card__slider");
 const nextBtn = document.querySelector(".pets__button-right");
 const prevBtn = document.querySelector(".pets__button-left");
@@ -131,7 +131,17 @@ export function getRandomCards(pets, count) {
       new Button({
         className: "card__btn",
         onClick: () => {
-          modalWindow.showModal();
+          const nameCard = card.getNode().id;
+          const clikedCard = pets.find((e)=>{
+            if(e.name === nameCard){
+              return e
+            }
+          })
+          getModalWindow(clikedCard).showModal()
+          console.log('click btn');
+          document.body.classList.add("stopScroll");
+
+
         },
         text: "Learn more",
       }),
