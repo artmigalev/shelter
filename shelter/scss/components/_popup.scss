@@ -1,10 +1,14 @@
 .modal-window {
   max-width: 952px;
   width: toProcent(952, 1280);
-  height: 500px;
-  @include tablet-width{
-    width: toProcent(682,768);
+  height: max-content;
+  @include tablet-width {
+    width: toProcent(682, 768);
     height: 402px;
+  }
+  @include mobile-width {
+    width: toProcent(271, 320);
+    @include fl-clmn;
   }
   background: transparent;
   border: none;
@@ -14,19 +18,19 @@
     top: 0;
     right: 0;
     font-size: convertRem(36.2);
-
-
   }
   .modal-container {
     position: absolute;
     bottom: 0;
     width: toProcent(900, 952);
-    @include tablet-width{
-      width: toProcent(630,682);
-
+    @include tablet-width {
+      width: toProcent(630, 682);
+    }
+    @include mobile-width {
+      padding: convertRem(10);
     }
     @include fl-row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: $color-light-s;
     border-radius: convertRem(9);
@@ -35,9 +39,12 @@
       width: convertRem(500);
       height: convertRem(500);
       border-radius: 9px 0 0 9px;
-      @include tablet-width{
-        width: toProcent(350,630);
+      @include tablet-width {
+        width: toProcent(350, 630);
         height: 350px;
+      }
+      @include mobile-width {
+        display: none;
       }
     }
     .modal-content {
@@ -45,13 +52,20 @@
       flex-wrap: nowrap;
       width: toProcent(260, 630);
       gap: convertRem(40);
-      @include tablet-width{
-        gap: convertRem(20)
-
+      @include tablet-width {
+        gap: convertRem(20);
+      }
+      @include mobile-width {
+       width: 100%;
+      }
+      @include mobile-width{
+        gap: convertRem(24);
+        width: 100%;
       }
       .modal-description {
         @include fl-clmn;
         gap: convertRem(10);
+
         h3,
         h4,
         h5 {
@@ -64,16 +78,25 @@
         .pet-name {
           font-size: convertRem(35);
           line-height: 130%;
+          @include mobile-width {
+            text-align: center;
+          }
         }
         .pet-typeBreed {
           font-size: convertRem(20);
           line-height: 115%;
+          @include mobile-width {
+            text-align: center;
+          }
         }
         .pet-description {
           margin-top: convertRem(30);
+          @include tablet-width {
+            margin-top: convertRem(20);
+          }
           font-size: convertRem(15);
           line-height: 110%;
-          @include tablet-width{
+          @include tablet-width {
             font-size: convertRem(13);
             margin-top: 10;
           }
@@ -112,6 +135,6 @@
   background: #545454ba;
 }
 
-.stopScroll{
+.stopScroll {
   overflow: hidden;
 }

@@ -1,6 +1,7 @@
 import { Component, Image, Button } from "./infinite-slider-carousel.js";
 import { pets } from "../pages/main/index.js";
 const modalWindow = document.querySelector(".modal-window");
+const modals = document.querySelectorAll('modal-window')
 
 
 function getModalWindow(data) {
@@ -55,4 +56,48 @@ function getModalWindow(data) {
   return document.body.appendChild(dialog.getNode());
 }
 
-export { getModalWindow, modalWindow };
+//*show modal whith clicked card
+function showModalToClickedCard(ev) {
+  const click = ev.target;
+  let nameCard;
+  if (click.classList.contains("card__btn")) {
+    return false;
+  } else if (click.closest(".pets__card") && !click.classList.contains("pets__card")) {
+    nameCard = click.parentNode.id;
+  } else if (click.classList.contains("pets__card")) {
+    nameCard = click.id;
+  }
+  let clikedCard = pets.find((e) => {
+    if (e.name === nameCard) {
+      return e;
+    }
+  });
+  getModalWindow(clikedCard).showModal();
+  document.body.classList.add("stopScroll");
+  const modal = document.querySelector(".modal-window");
+  modal.addEventListener("click", (event) => {
+
+
+      document.querySelectorAll('.modal-window').forEach((md) => {
+        md.remove()
+      })
+
+
+  });
+
+}
+
+
+//* close modal
+function closemodal(){
+  const backdrop = document.querySelector('modal-window::backdrop');
+  backdrop.addEventListener('click', ()=>{
+    modals.forEach(md => md.close())
+  })
+
+}
+
+
+
+
+export { getModalWindow, modalWindow, showModalToClickedCard,closemodal };

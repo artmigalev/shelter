@@ -138,8 +138,13 @@ export function getRandomCards(pets, count) {
             }
           })
           getModalWindow(clikedCard).showModal()
-          console.log('click btn');
           document.body.classList.add("stopScroll");
+          const modal = document.querySelector(".modal-window");
+          modal.addEventListener("click", (event) => {
+            document.querySelectorAll(".modal-window").forEach((md) => {
+              md.remove();
+            });
+          });
 
 
         },
