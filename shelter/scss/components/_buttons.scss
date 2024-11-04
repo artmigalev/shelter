@@ -22,9 +22,12 @@ button:hover {
 .button-slider {
   width: 52px;
   height: 52px;
-  border-radius: emmy(100);
+  border-radius: 100%;
   border: emmy(2) solid $color-primary;
   background: transparent;
+  .arr-right, .arr-right{
+    cursor: pointer;
+  }
 
   font-size: 0%;
 }

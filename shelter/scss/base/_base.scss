@@ -34,6 +34,7 @@ li {
 
 @include screen-width {
 
+
   .wrapper {
     max-width: toProcent(1200, 1280);
   }
