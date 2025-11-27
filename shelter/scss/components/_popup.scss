@@ -1,7 +1,8 @@
 .modal-window {
   max-width: 952px;
+  width: 100%;
   width: toProcent(952, 1280);
-  height: max-content;
+  height: 80%;
   @include tablet-width {
     width: toProcent(682, 768);
     height: 402px;
