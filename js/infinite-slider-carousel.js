@@ -1,10 +1,10 @@
-import { pets } from "../pages/main/index.js";
+import { pets } from "../index.js";
 import { getModalWindow, modalWindow } from "./modal-window.js";
 export const slider = document.querySelector(".block-card__slider");
-const nextBtn = document.querySelector(".pets__button-right");
-const prevBtn = document.querySelector(".pets__button-left");
-const offset = slider.parentNode.offsetWidth;
-export const lengthCards = returnedCountCards(slider.parentNode);
+export const nextBtn = document.querySelector(".pets__button-right");
+export const prevBtn = document.querySelector(".pets__button-left");
+// export const offset = slider.parentNode.offsetWidth;
+// export const lengthCards = returnedCountCards(slider.parentNode);
 
 export class Component {
   node = null;
@@ -165,7 +165,7 @@ export function loadedCards() {
 }
 let countClick = 0;
 
-function handle(event) {
+export function handle(event) {
   const target = event.currentTarget;
   let slides = slider.children;
   const slideWidth = slides[0].offsetWidth;
@@ -199,9 +199,6 @@ function handle(event) {
 
 
 }
-
-export { nextBtn, prevBtn, handle };
-
 function loadedToStartCards(){
   const slide = document.createElement("div");
   slide.className = "slide";
@@ -209,3 +206,4 @@ function loadedToStartCards(){
   slide.append(...getRandomCards(pets, lengthCards));
   return slide
 }
+

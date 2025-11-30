@@ -1,5 +1,5 @@
 import { Component, Image, Button } from "./infinite-slider-carousel.js";
-import { pets } from "../pages/main/index.js";
+import { pets } from "../index.js";
 const modalWindow = document.querySelector(".modal-window");
 const modals = document.querySelectorAll('modal-window')
 
