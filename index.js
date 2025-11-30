@@ -1,4 +1,4 @@
-import { nextBtn, handle, loadedCards, prevBtn, returnedCountCards } from "/js/infinite-slider-carousel.js";
+import { nextBtn, handle, loadedCards, prevBtn, returnedCountCards } from "./js/infinite-slider-carousel.js";
 import { createdMenuBurger, clickedBurger, BTN_BURGER } from "./js/burger.js";
 import { showModalToClickedCard,closemodal } from "./js/modal-window.js";
 
@@ -10,6 +10,7 @@ export const pets = await fetch(`${base}/assets/data/pets.json`)
   })
   .then(function (data) {
     const dta = data;
+    
     return dta;
   })
   .catch((error) => console.log(error));

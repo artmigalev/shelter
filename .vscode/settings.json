@@ -2,10 +2,11 @@
   "commentTranslate.hover.enabled": true,
   "liveSassCompile.settings.rootIsWorkspace":true,
   // "liveSassCompile.settings.forceBaseDirectory": "",
+  "liveServer.settings.root": "../",
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
-      // "extensionName": "style.css",
+      "extensionName": ".css",
       "savePath": "/scss",
       "savePathReplacementPairs": null
     }
