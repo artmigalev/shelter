@@ -1,12 +1,12 @@
 {
   "commentTranslate.hover.enabled": true,
   "liveSassCompile.settings.rootIsWorkspace":true,
-  "liveSassCompile.settings.forceBaseDirectory": "/shelter/scss",
+  // "liveSassCompile.settings.forceBaseDirectory": "",
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
       // "extensionName": "style.css",
-      "savePath": "/shelter/scss",
+      "savePath": "/scss",
       "savePathReplacementPairs": null
     }
   ]

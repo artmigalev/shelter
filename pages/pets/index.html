@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -13,14 +14,14 @@
   <body class="page-pets">
     <div class="wrapper pets__wrapper">
       <header class="header">
-        <a href="../main/index.html" class="header__logo">
+        <a href="/index.html" class="header__logo">
           <h1 class="logo__name">Cozy House</h1>
           <span class="logo__description">Shelter for pets in Boston</span>
         </a>
         <nav class="header__navigation">
           <ul class="nav__list">
             <li class="list">
-              <a href="../main/index.html" class="nav-list__links"
+              <a href="/index.html" class="nav-list__links"
                 >About the shelter</a
               >
             </li>
@@ -30,7 +31,7 @@
               >
             </li>
             <li class="list">
-              <a href="../main/index.html#help" class="nav-list__links"
+              <a href="/index.html#help" class="nav-list__links"
                 >Help the shelter</a
               >
             </li>
@@ -104,7 +105,7 @@
           <div class="pets__card" id="card__scarlett">
             <img
               class="card__img"
-              src="../../assets/images/scarlet.png"
+              src="../../assets/images/scarlett.png"
               alt="pets-scarlett" />
             <span class="card__name">Scarlett</span>
             <button class="card__btn">Learn more</button>
@@ -191,6 +192,6 @@
           alt="footer-puppy" />
       </div>
     </footer>
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

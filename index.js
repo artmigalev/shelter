@@ -1,11 +1,9 @@
-import { nextBtn, handle, loadedCards, prevBtn, returnedCountCards } from "./js/infinite-slider-carousel.js";
+import { nextBtn, handle, loadedCards, prevBtn, returnedCountCards } from "/js/infinite-slider-carousel.js";
 import { createdMenuBurger, clickedBurger, BTN_BURGER } from "./js/burger.js";
 import { showModalToClickedCard,closemodal } from "./js/modal-window.js";
 
 //*____________________________________________________//
 const base = window.location.pathname.split('/')[1] === "shelter" ? "/shelter" : ".";
-  console.log(base)
-console.log(window.location)
 export const pets = await fetch(`${base}/assets/data/pets.json`)
   .then((response) => {
     return response.json();
@@ -17,7 +15,10 @@ export const pets = await fetch(`${base}/assets/data/pets.json`)
   .catch((error) => console.log(error));
 
 
-if (document.readyState == "complete") createdMenuBurger();
+if (document.readyState == "interactive"){
+  
+  createdMenuBurger();
+} 
 BTN_BURGER.addEventListener("click", clickedBurger);
 
 loadedCards(); // added pet cards to dom
