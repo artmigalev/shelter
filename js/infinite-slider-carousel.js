@@ -3,8 +3,8 @@ import { getModalWindow, modalWindow } from "./modal-window.js";
 export const slider = document.querySelector(".block-card__slider");
 export const nextBtn = document.querySelector(".pets__button-right");
 export const prevBtn = document.querySelector(".pets__button-left");
-// export const offset = slider.parentNode.offsetWidth;
-// export const lengthCards = returnedCountCards(slider.parentNode);
+export const offset = slider.parentNode.offsetWidth;
+export const lengthCards = returnedCountCards(slider.parentNode);
 
 export class Component {
   node = null;
